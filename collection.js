@@ -1,7 +1,7 @@
-const end = new Date(document.body.dataset.date).getTime();
+const end = new Date(window.weddingDate || document.body.dataset.date).getTime();
 const units = document.querySelectorAll('[data-unit]');
 function updateCountdown() {
-  const total = Math.max(0, Math.floor((end - Date.now()) / 1000));
+  const total = Math.max(0, Math.floor((new Date(window.weddingDate || end).getTime() - Date.now()) / 1000));
   const values = [Math.floor(total / 86400), Math.floor(total % 86400 / 3600), Math.floor(total % 3600 / 60), total % 60];
   units.forEach((el, i) => { el.textContent = String(values[i]).padStart(2, '0'); });
 }
