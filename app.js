@@ -1,0 +1,4 @@
+const target=new Date('2027-06-19T16:00:00+03:00').getTime();
+function tick(){let n=Math.max(0,Math.floor((target-Date.now())/1000));const values=[Math.floor(n/86400),Math.floor(n%86400/3600),Math.floor(n%3600/60),n%60];['days','hours','minutes','seconds'].forEach((id,i)=>document.getElementById(id).textContent=String(values[i]).padStart(2,'0'))}tick();setInterval(tick,1000);
+if('IntersectionObserver'in window){document.documentElement.classList.add('js');const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}
+document.querySelector('form').addEventListener('submit',e=>{e.preventDefault();const status=document.getElementById('status');status.hidden=false;status.textContent='Спасибо! Это предпросмотр: ваш ответ не был отправлен.'});
