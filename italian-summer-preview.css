@@ -1,0 +1,6 @@
+/* Only the Italian Summer card; other collection previews are unchanged. */
+.gallery .italian-summer.card .preview{background:#f6f3e9;border:1px solid #c9cbb8;padding:105px 55px 32px}
+.gallery .italian-summer.card .preview img{border-radius:0;border:12px solid #414b36;object-position:center 32%}
+.gallery .italian-summer.card .preview-name{color:#414b36;font:400 40px/1.1 'Cormorant Garamond',Georgia,serif;top:28px}
+.gallery .italian-summer.card .preview>small{color:#414b36;bottom:10px;font-size:7px}
+@media(max-width:700px){.gallery .italian-summer.card .preview{padding:100px 30px 30px}.gallery .italian-summer.card .preview-name{font-size:36px}.gallery .italian-summer.card .preview img{border-width:10px}}

@@ -1,0 +1,36 @@
+/* Royal Classic only: layered velvet folds, original ornament, no image assets. */
+.rc-curtain{--rc-ready:1;--rc-gold:#dec18b;position:fixed;inset:0;width:100%;max-width:none;height:100%;height:100dvh;max-height:none;margin:0;padding:70px 28px 45px;border:0;background:transparent;color:#fbf2df;overflow:hidden;isolation:isolate;align-items:center;justify-content:center}
+.rc-curtain:not([open]){display:none!important}.rc-curtain[open]{display:flex}.rc-curtain::backdrop{background:transparent}
+html:has(#royal-curtain[open]){overflow:hidden;scrollbar-gutter:stable}
+.rc-panel{position:absolute;top:0;bottom:0;width:calc(50% + 2px);z-index:-1;background:linear-gradient(180deg,#19050d55,transparent 19%,#26061122 65%,#15040b88),repeating-linear-gradient(90deg,#280813 0%,#4c1227 4%,#782840 8%,#9e47543d 11%,#5f1930 14%,#360a1c 18%,#280813 20%);box-shadow:inset 0 0 70px #19030b66}
+.rc-panel-left{left:0;--rc-direction:-1;transform-origin:left top}.rc-panel-right{right:0;--rc-direction:1;transform-origin:right top;background-position:right top}
+.rc-panel::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,#fff0e403 0 1px,transparent 1px 3px),radial-gradient(ellipse at 50% 14%,#eaa09318,transparent 65%);pointer-events:none}
+.rc-panel::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,transparent 24px,#d0a66588 25px,transparent 26px,transparent 31px,#d0a66555 32px,transparent 33px);box-shadow:inset -12px 0 24px #12030b55;pointer-events:none}
+.rc-panel-right::after{transform:scaleX(-1)}
+.rc-rail{position:absolute;inset:0 0 auto;height:17px;z-index:1;background:linear-gradient(#38210e,#c19a59 35%,#f0d7a0 43%,#8a632e 56%,#4d2e19 74%,#230910);box-shadow:0 6px 20px #19040d88}
+.rc-skip{position:absolute;top:29px;right:max(27px,4vw);z-index:4}
+.rc-curtain .rc-skip button{margin:0;padding:10px 0;display:inline-flex;width:auto;gap:18px;border:0;border-bottom:1px solid #b89a6977;background:transparent;color:#ecd6ae;font:11px/1.5 Manrope,Arial,sans-serif;cursor:pointer}
+.rc-content{position:relative;max-width:760px;width:100%;text-align:center;padding:34px 36px 28px}
+.rc-content::before{content:'';position:absolute;inset:0;border:1px solid #d2ad7040;outline:1px solid #d2ad7025;outline-offset:-8px;pointer-events:none}
+.rc-eyebrow{margin:0;font:9px/1.8 Manrope,Arial,sans-serif;letter-spacing:3.1px;color:var(--rc-gold)}
+.rc-crest{display:block;width:150px;height:52px;margin:25px auto 20px;color:var(--rc-gold)}
+.royal-classic .rc-curtain h2{margin:0;font:400 clamp(34px,4.6vw,65px)/1.25 Prata,Georgia,serif;letter-spacing:-1.1px;overflow-wrap:anywhere;text-wrap:balance;color:#fff4df}
+.rc-curtain h2>span{display:block}.rc-curtain h2 i{display:block;margin:10px 0;font:italic 38px/1 'Cormorant Garamond',Georgia,serif;color:var(--rc-gold)}
+.rc-curtain #rc-curtain-description{margin:26px 0 0;font:12px/1.9 Manrope,Arial,sans-serif;color:#eedfc7}
+.rc-fine-rule{width:64px;height:1px;margin:28px auto;background:linear-gradient(90deg,transparent,var(--rc-gold),transparent)}
+.rc-curtain .rc-open{display:inline-flex;justify-content:space-between;align-items:center;gap:35px;width:auto;min-width:280px;max-width:100%;margin:0;padding:18px 27px;border:1px solid #d9b978;background:linear-gradient(115deg,#c0995a1c,#f0ce8d0c);color:#fff1d5;font:12px/1.5 Manrope,Arial,sans-serif;cursor:pointer;box-shadow:inset 0 0 0 3px #e2be7c0c,0 7px 22px #16030b22;transition:background .2s}
+.rc-curtain .rc-open:hover{background:#d9b97826;opacity:1}.rc-curtain .rc-open:disabled{cursor:default}
+.rc-curtain button:focus-visible{outline:2px solid #f3dca6;outline-offset:6px}
+.rc-signature{margin:25px 0 0;font:italic 22px/1.4 'Cormorant Garamond',Georgia,serif;color:#dec69d}
+.rc-curtain.rc-is-opening .rc-panel{will-change:transform;animation:rc-curtain-draw 1500ms cubic-bezier(.25,.65,.2,1) both}
+.rc-curtain.rc-is-opening .rc-content{animation:rc-curtain-copy-away 260ms ease-out both;pointer-events:none}
+.rc-curtain.rc-is-opening .rc-rail{animation:rc-curtain-copy-away 400ms 1050ms ease-out both}
+@keyframes rc-curtain-draw{0%{transform:translateX(0) skewY(0) scaleX(1)}12%{transform:translateX(0) skewY(calc(var(--rc-direction) * .35deg)) scaleX(1.018)}24%{transform:translateX(calc(var(--rc-direction) * 2%)) skewY(0) scaleX(1)}100%{transform:translateX(calc(var(--rc-direction) * 108%)) skewY(calc(var(--rc-direction) * -.8deg)) scaleX(.94)}}
+@keyframes rc-curtain-copy-away{to{opacity:0;transform:translateY(-9px)}}
+.rc-curtain[data-rc-long] h2{font-size:clamp(26px,3.5vw,46px)}
+.rc-replay[hidden]{display:none!important}
+.royal-classic .cover h1:has(>span:empty){visibility:hidden}
+.royal-classic .cover h1[data-rc-focus]:focus{outline:none}
+@media(max-width:700px){.rc-curtain{padding:70px 22px 36px}.rc-content{padding:29px 19px 27px}.rc-eyebrow{font-size:8px;letter-spacing:1.8px}.rc-crest{width:126px;height:44px;margin:21px auto}.royal-classic .rc-curtain h2{font-size:clamp(30px,9vw,46px);letter-spacing:-.6px}.rc-curtain h2 i{font-size:30px;margin:12px 0}.rc-curtain #rc-curtain-description{font-size:11px;line-height:1.9;margin-top:22px}.rc-fine-rule{margin:24px auto}.rc-curtain .rc-open{min-width:0;width:100%;gap:15px;padding:17px 19px;font-size:11px}.rc-signature{font-size:20px;margin-top:23px}.rc-curtain[data-rc-long] h2{font-size:25px}.personal-toolbar .rc-replay{grid-column:1/-1}}
+@media(max-height:620px){.rc-curtain{overflow:auto;align-items:flex-start;padding-top:65px}.rc-content{padding-block:20px}.rc-crest{height:30px;margin:12px auto}.royal-classic .rc-curtain h2{font-size:30px}.rc-curtain h2 i{font-size:24px;margin:5px 0}.rc-curtain #rc-curtain-description{display:none}.rc-fine-rule{margin:18px auto}.rc-signature{margin-top:14px}}
+@media(prefers-reduced-motion:reduce){.rc-curtain *{animation:none!important;transition:none!important}}
