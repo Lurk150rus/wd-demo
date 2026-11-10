@@ -1,0 +1,41 @@
+/* Lightweight looping samples on collection cards. Links and full intros are unchanged. */
+.gallery .card{--op-delay:0s}.gallery .card:nth-child(2){--op-delay:-1.2s}.gallery .card:nth-child(3){--op-delay:-2.4s}.gallery .card:nth-child(4){--op-delay:-.6s}
+.gallery .opening-preview{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;background:#f4e6ea;animation:op-scene 7.4s ease-in-out infinite;animation-delay:var(--op-delay)}
+.gallery .op-stage{position:absolute;inset:22% 10% 20%;perspective:800px}
+.gallery .op-paper{position:absolute;inset:4%;border:1px solid #d7b7c1;background:#fff9f3;box-shadow:0 16px 35px #5d384e26;animation:op-paper 7.4s ease-in-out infinite;animation-delay:var(--op-delay)}
+.gallery .op-door{position:absolute;inset:0 50% 0 0;border:1px solid #d0adb9;background:radial-gradient(ellipse at 10% 90%,#d6b2c466,transparent 65%),linear-gradient(115deg,#fff9f2,#ecd9df);transform-origin:left center;animation:op-left 7.4s ease-in-out infinite;animation-delay:var(--op-delay)}
+.gallery .op-door::after{content:'';position:absolute;inset:9px;border:1px solid #c399ab77;border-radius:70% 0 65% 0}
+.gallery .op-right{inset:0 0 0 50%;transform-origin:right center;animation-name:op-right}
+.gallery .op-names{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:22px;text-align:center;color:#633e50;font:27px/1.2 'Cormorant Garamond',Georgia,serif;overflow-wrap:anywhere;animation:op-type 7.4s ease-in-out infinite;animation-delay:var(--op-delay)}
+.gallery .op-names small{font:8px/1.7 Manrope,Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase}
+.gallery .op-flap,.gallery .op-seal{display:none}
+.gallery .opening-badge{position:absolute;right:12px;bottom:12px;z-index:4;padding:6px 10px;border:1px solid #c8bcb288;border-radius:2px;background:#fffaf1eb;color:#514b43;font:8px/1.5 Manrope,Arial,sans-serif;letter-spacing:.5px;pointer-events:none}
+.gallery .italian-summer .opening-preview{background:#f3f0e5}
+.gallery .italian-summer .op-stage{inset:28% 9% 24%}
+.gallery .italian-summer .op-paper{inset:4% 6%;background:#fffdf4;border-color:#b8bea3;animation-name:op-letter}
+.gallery .italian-summer .op-door{inset:0;transform:none;animation:none;border-color:#cabc9f;background:linear-gradient(25deg,#dccbad,#f1e5cb);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
+.gallery .italian-summer .op-door::after{display:none}.gallery .italian-summer .op-right{background:linear-gradient(0deg,#e4d5b7,#fbf1dc);clip-path:polygon(0 100%,50% 43%,100% 100%)}
+.gallery .italian-summer .op-flap{display:block;position:absolute;inset:0 0 43%;background:linear-gradient(#fbf2df,#deceb0);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:center top;animation:op-flap 7.4s ease-in-out infinite;animation-delay:var(--op-delay)}
+.gallery .italian-summer .op-seal{display:block;position:absolute;left:43%;top:40%;width:14%;aspect-ratio:1;border-radius:47% 53% 49% 51%;background:radial-gradient(circle at 35% 30%,#9ba487,#526044 75%);box-shadow:inset 0 0 0 3px #758263,1px 3px 6px #3c452f55;animation:op-type 7.4s ease-in-out infinite;animation-delay:var(--op-delay);z-index:4}
+.gallery .italian-summer .op-seal::after{content:'';position:absolute;inset:15%;background:url('/wd-demo/art/italian-olive.svg') center/contain no-repeat;filter:brightness(0) invert(.8)}
+.gallery .italian-summer .op-names{justify-content:end;gap:5px;padding:0 12px 8%;font-size:23px;color:#48533a}.gallery .italian-summer .op-names small{font-size:7px}
+.gallery .royal-classic .opening-preview{background:transparent}.gallery .royal-classic .op-stage{inset:0}
+.gallery .royal-classic .op-paper{display:none}.gallery .royal-classic .op-door{border:0;background:linear-gradient(180deg,#18040d55,transparent 25%,#1a040a77),repeating-linear-gradient(90deg,#290812 0%,#64192d 8%,#9c435522 12%,#370c1c 20%);box-shadow:inset -14px 0 25px #16030b66;transform-origin:left top;animation-name:op-curtain-left}
+.gallery .royal-classic .op-right{transform-origin:right top;animation-name:op-curtain-right}.gallery .royal-classic .op-door::after{inset:12px 0 24px;border:0;border-top:2px solid #cfac6e88;border-bottom:1px solid #cfac6e88;border-radius:0}
+.gallery .royal-classic .op-names{color:#f5dfb8;font-family:Prata,Georgia,serif;font-size:24px;padding:25px;gap:22px}.gallery .royal-classic .op-names small{color:#e0c18b}
+.gallery .modern-editorial .opening-preview{background:#242528}.gallery .modern-editorial .op-stage{inset:9% 18% 12%;perspective:850px}
+.gallery .modern-editorial .op-paper{inset:0;transform-origin:left center;border:1px solid #c9c7c0;background:linear-gradient(0deg,#192f9c 0 12%,transparent 12% 77%,#f4f2ea 77%),url('/wd-demo/photos/modern-editorial.jpg') center/cover;box-shadow:12px 18px 30px #0007;animation-name:op-magazine}
+.gallery .modern-editorial .op-door{display:none}.gallery .modern-editorial .op-names{align-items:start;justify-content:space-between;text-align:left;padding:14px 12px 22%;color:#fff;font:600 26px/1 Manrope,Arial,sans-serif;letter-spacing:-1px;text-shadow:0 2px 8px #0005;transform-origin:left center;animation-name:op-magazine}
+.gallery .modern-editorial .op-names small{order:-1;color:#192f9c;text-shadow:none;font-size:13px;line-height:1;letter-spacing:-.5px;font-weight:600;max-width:120px}
+@keyframes op-scene{0%,48%{opacity:1}65%,92%{opacity:0}100%{opacity:1}}
+@keyframes op-type{0%,24%{opacity:1}38%,94%{opacity:0}100%{opacity:1}}
+@keyframes op-left{0%,24%,100%{transform:rotateY(0)}50%,94%{transform:rotateY(-150deg)}}
+@keyframes op-right{0%,24%,100%{transform:rotateY(0)}50%,94%{transform:rotateY(150deg)}}
+@keyframes op-paper{0%,25%,100%{transform:scale(1);opacity:1}57%,94%{transform:scale(1.28);opacity:0}}
+@keyframes op-letter{0%,30%,100%{transform:translateY(0)}53%,94%{transform:translateY(-55%)}}
+@keyframes op-flap{0%,24%,100%{transform:rotateX(0)}40%,94%{transform:rotateX(-178deg)}}
+@keyframes op-curtain-left{0%,24%,100%{transform:translateX(0)}52%,94%{transform:translateX(-105%)}}
+@keyframes op-curtain-right{0%,24%,100%{transform:translateX(0)}52%,94%{transform:translateX(105%)}}
+@keyframes op-magazine{0%,24%,100%{transform:rotateY(0);opacity:1}56%,94%{transform:rotateY(-115deg);opacity:0}}
+@media(max-width:700px){.gallery .op-names{font-size:25px}.gallery .royal-classic .op-names{font-size:21px}.gallery .modern-editorial .op-names{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.gallery .opening-preview{display:none}.gallery .opening-preview *{animation:none!important}}
