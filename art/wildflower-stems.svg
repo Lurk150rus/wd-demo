@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 440" fill="none">
+  <defs>
+    <radialGradient id="rose"><stop stop-color="#b17c8c"/><stop offset="1" stop-color="#e0b3bb" stop-opacity=".52"/></radialGradient>
+    <radialGradient id="violet"><stop stop-color="#7b779e"/><stop offset="1" stop-color="#a9a0c6" stop-opacity=".42"/></radialGradient>
+    <path id="bloom" d="M0-6c-17-26-31-6-17 3-25 4-11 28 6 15-4 23 22 25 23 4 17 15 34-4 15-14 17-14-3-30-16-14C11-26-4-24 0-6Z"/>
+  </defs>
+  <g stroke="#71805c" stroke-width="1.4">
+    <path d="M127 434Q146 271 107 77m20 349q-9-113-75-225m81 203q26-134 73-215m-75 211q-2-130 38-262m-37 267q20-81 84-109"/>
+    <path d="M137 318q20-73 51-76-7 35-51 76Zm-7-9q-47-63-61-43 18 27 61 43Zm-7 53q-24-40-56-30 27 23 56 30Zm34-107q7-43 26-44-7 33-26 44Z" fill="#a6aa7d" fill-opacity=".57"/>
+  </g>
+  <use href="#bloom" transform="translate(106 72) scale(1.05)" fill="url(#rose)"/>
+  <use href="#bloom" transform="translate(206 183) scale(.64)" fill="url(#violet)"/>
+  <use href="#bloom" transform="translate(51 196) scale(.73)" fill="url(#rose)"/>
+  <use href="#bloom" transform="translate(170 135) scale(.51)" fill="url(#violet)"/>
+  <use href="#bloom" transform="translate(220 294) scale(.44)" fill="url(#rose)"/>
+  <g fill="#9f7547"><circle cx="106" cy="73" r="5"/><circle cx="206" cy="184" r="3"/><circle cx="51" cy="196" r="3"/></g>
+  <path d="M120 429Q103 354 35 305m104 105q53-82 100-84m-107 66q-18-90-38-125" stroke="#8f8d67"/>
+</svg>

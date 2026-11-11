@@ -158,3 +158,19 @@
 .gallery .art-deco .op-names { color: #f3e7d1; font-family: Prata,Georgia,serif; text-shadow: 0 1px 9px #000; }
 @keyframes op-deco-left { 0%,27%,100% { transform: translateX(0); } 54%,95% { transform: translateX(-105%); } }
 @keyframes op-deco-right { 0%,27%,100% { transform: translateX(0); } 54%,95% { transform: translateX(105%); } }
+
+.gallery .cinema-love .preview { background: #211f20; color: #f2ebe0; }
+.gallery .cinema-love .preview-name, .gallery .cinema-love .op-names { color: #f2ebe0; }
+.gallery .cinema-love .opening-preview { background: #211f20; }
+.gallery .cinema-love .op-door, .gallery .cinema-love .op-paper { display: none; }
+.gallery .cinema-love .op-stage { inset: 8% 12% 15%; }
+.gallery .cinema-love .op-stage::before { content: ""; display: block; width: 18%; aspect-ratio: 1; border: 3px double #71635b; border-radius: 50%; margin: 4% auto; background: conic-gradient(#b49586 90deg,#e8dfd0 90deg); animation: op-projector 1s linear infinite; }
+@keyframes op-projector { to { transform: rotate(1turn); } }
+.gallery .wildflower-meadow .preview { background: #eee8d9; }
+.gallery .wildflower-meadow .preview-name, .gallery .wildflower-meadow .op-names { color: #536143; }
+.gallery .wildflower-meadow .opening-preview { background: #f5f0e2; }
+.gallery .wildflower-meadow .op-stage { inset: 0; }
+.gallery .wildflower-meadow .op-paper { display: none; }
+.gallery .wildflower-meadow .op-door { border: 0; background: url('/wd-demo/art/wildflower-stems.svg') center bottom / contain no-repeat; animation-name: op-curtain-left; }
+.gallery .wildflower-meadow .op-right { animation-name: op-curtain-right; }
+.gallery .wildflower-meadow .op-door::after { display: none; }
