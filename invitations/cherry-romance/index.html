@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Майя &amp; Филипп · Cherry Romance</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/cherry-romance.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script type="module" src="/wd-demo/cherry-romance.js"></script>
+</head>
+<body class="cherry-romance" data-date="2027-09-25T16:30:00+03:00">
+<header class="occasion-nav">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Cherry Romance</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="cr-cover">
+        <div class="cr-cover-inner">
+            <p class="overline">Приглашение на свадьбу</p>
+            <h1><span>Майя</span><i>&amp;</i><span>Филипп</span></h1>
+            <p class="cover-date">25 сентября 2027 · 16:30</p>
+        </div>
+    </section>
+    <div class="cr-letter">
+        <figure><img src="/wd-demo/photos/art-deco.jpg" alt="Фотография пары" fetchpriority="high"></figure>
+        <section id="welcome" class="welcome">
+            <p class="overline">Дорогие наши</p><h2>С любовью,<br><i>для вас</i></h2>
+            <p>Будем счастливы провести с вами этот вечер. После церемонии останемся ужинать, танцевать и слушать истории, которые знают только самые близкие.</p><div class="sign">Майя &amp; Филипп</div>
+        </section>
+    </div>
+    <div class="cr-date"><section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">25 сентября 2027 · 16:30</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+</div>
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>Наш вечер</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>16:30</time><div><h3>Встреча</h3><p>Приветствуем гостей.</p></div></li>
+                    <li><span class="event-number">02</span><time>17:15</time><div><h3>Церемония</h3><p>Наши обещания.</p></div></li>
+                    <li><span class="event-number">03</span><time>18:30</time><div><h3>Ужин</h3><p>Тосты и разговоры.</p></div></li>
+                    <li><span class="event-number">04</span><time>21:00</time><div><h3>Танцы</h3><p>Празднуем до позднего вечера.</p></div></li>
+            </ol>
+</section>
+    <section class="cr-venue">
+        <div class="location-copy"><p class="overline">Место встречи</p><h2>Дом на Покровке</h2><p>Москва</p></div>
+        <figure><img src="/wd-demo/photos/art-deco.jpg" alt="Фотография пары" loading="lazy"></figure>
+    </section>
+    <section class="dress cr-dress"><p class="overline">Дресс-код</p><h2>Вишня и <i>бархат</i></h2><p>Бархат, шёлк, глубокие ягодные и тёплые нейтральные оттенки.</p></section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Разделите этот вечер с нами?</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="cr-footer"><span>Майя &amp; Филипп</span><p>25 сентября 2027 · 16:30 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
+<dialog class="cr-opening" data-occasion-opening aria-label="Приглашение с лентой" hidden>
+    <div class="cr-opening-stage">
+        <div class="cr-gift">
+            <h2 data-opening-names></h2><p data-opening-date></p>
+            <span class="cr-ribbon" aria-hidden="true"><i></i><i></i></span>
+        </div>
+        <button type="button" data-open>Развязать ленту</button>
+        <form method="dialog"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body></html>

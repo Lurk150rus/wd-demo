@@ -174,3 +174,21 @@
 .gallery .wildflower-meadow .op-door { border: 0; background: url('/wd-demo/art/wildflower-stems.svg') center bottom / contain no-repeat; animation-name: op-curtain-left; }
 .gallery .wildflower-meadow .op-right { animation-name: op-curtain-right; }
 .gallery .wildflower-meadow .op-door::after { display: none; }
+
+.gallery .newspaper-wedding .preview { background: #e8e1d4; }
+.gallery .newspaper-wedding .preview img { filter: grayscale(1); }
+.gallery .newspaper-wedding .opening-preview { background: #d9d1c1; }
+.gallery .newspaper-wedding .op-paper { background: #f0ebdf; border-color: #8d8175; }
+.gallery .newspaper-wedding .op-left { display: none; }
+.gallery .newspaper-wedding .op-right { inset: 60% 4% 4%; transform-origin: top; background: repeating-linear-gradient(#b5aa99 0 1px,#eee8d9 1px 6px); animation-name: op-news-fold; }
+.gallery .newspaper-wedding .op-right::after { display: none; }
+.gallery .newspaper-wedding .op-names { color: #392e27; }
+@keyframes op-news-fold { 0%,23%,100% { transform: rotateX(0); } 52%,95% { transform: rotateX(-177deg); } }
+.gallery .cherry-romance .preview { background: #5f2138; color: #f7e7da; }
+.gallery .cherry-romance .preview-name { color: #f7e7da; }
+.gallery .cherry-romance .opening-preview { background: #682641; }
+.gallery .cherry-romance .op-paper { background: #f7ede3; border: 4px double #be8a92; }
+.gallery .cherry-romance .op-door { display: none; }
+.gallery .cherry-romance .op-seal { display: block; position: absolute; left: 0; right: 0; bottom: 19%; height: 9px; background: linear-gradient(#621b33,#be6884,#621b33); animation: op-ribbon-pull 7.4s ease-in-out infinite; z-index: 4; }
+.gallery .cherry-romance .op-names { color: #60283c; }
+@keyframes op-ribbon-pull { 0%,23%,100% { transform: none; opacity: 1; } 54%,95% { transform: translateX(69%) rotate(12deg); opacity: 0; } }
