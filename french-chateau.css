@@ -1,0 +1,101 @@
+.french-chateau {
+  --paper: #faf6ec;
+  --ink: #273f53;
+  --line: #b8bdba;
+  --blue: #e1e9ee;
+  --gold: #957649;
+  --frame: min(88vw, 1160px);
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+.french-chateau .occasion-nav { padding: 17px 6vw; color: var(--ink); text-transform: uppercase; }
+.french-chateau :is(h1,h2,h3) { text-wrap: balance; }
+.french-chateau .overline { text-transform: uppercase; letter-spacing: .18em; }
+.fc-cover { text-align: center; }
+.fc-title { width: var(--frame); margin: auto; padding: clamp(29px, 4vw, 65px) 0 clamp(22px, 3vw, 42px); }
+.fc-ornament { display: block; width: min(155px, 60%); height: 32px; margin: 0 auto; background: url('/wd-demo/art/chateau-flourish.svg') center / contain no-repeat; }
+.fc-title .overline { margin-top: 4px; }
+.fc-title h1 { margin: 10px auto 13px; font-size: clamp(54px, 9.4vw, 138px); line-height: .93; letter-spacing: -.045em; }
+.fc-title h1 i { margin-inline: .14em; color: #7f6340; font-size: .55em; vertical-align: .14em; }
+.fc-title .cover-date { margin: 0; letter-spacing: .15em; }
+.fc-panorama { padding-block: 5px; border-block: 1px solid #ae9b7b; background: var(--blue); }
+.fc-panorama img { height: clamp(285px, 48vw, 590px); object-position: 50% 32%; }
+.fc-welcome.welcome {
+  position: relative;
+  width: var(--frame);
+  max-width: 1060px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: minmax(0,.7fr) minmax(0,1fr);
+  align-items: start;
+  gap: 0 10%;
+  padding: clamp(48px,8vw,102px) 0;
+}
+.fc-engraving { grid-row: 1 / 5; min-height: 245px; align-self: stretch; background: url('/wd-demo/art/chateau-engraving.svg') center / min(100%, 310px) auto no-repeat; border-right: 1px solid var(--line); padding-right: 12px; background-origin: content-box; }
+.fc-welcome .overline { margin: 0; }
+.fc-welcome h2 { margin: 14px 0 4px; }
+.fc-welcome h2 i { color: #526c81; }
+.fc-welcome > p:not(.overline), .fc-dress > p:not(.overline) { white-space: pre-line; }
+.fc-welcome > p:not(.overline) { margin: 14px 0 0; }
+.fc-welcome .sign { margin-top: 18px; }
+.fc-calendar { background: var(--blue); border-block: 4px double #9babb6; }
+.fc-calendar .ni-date { width: var(--frame); margin: auto; padding: clamp(29px,6vw,69px) 0; text-align: center; }
+.fc-calendar .overline { margin: 0; }
+.fc-calendar h2 { margin-top: 10px; font-size: clamp(36px,6.5vw,86px); }
+.fc-calendar .digits { display: grid; grid-template-columns: repeat(4,minmax(0,82px)); gap: clamp(6px,4vw,38px); }
+.fc-calendar .digits b { min-width: 0; font-size: clamp(33px,5vw,62px); }
+.fc-calendar .digits span { letter-spacing: .08em; }
+.french-chateau .schedule { width: var(--frame); display: block; padding-inline: 0; }
+.french-chateau .section-title { text-align: center; margin-bottom: 32px; }
+.french-chateau .section-title h2 { margin-top: 14px; }
+.french-chateau .schedule ol { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: clamp(22px,6vw,84px); }
+.french-chateau .schedule li { display: grid; grid-template-columns: 58px minmax(0,1fr); border-bottom: 0; border-top: 1px solid var(--line); gap: 12px; }
+.french-chateau .event-number { display: none; }
+.french-chateau .schedule time { color: #785c37; }
+.french-chateau .schedule li p { margin-top: 6px; font-size: 13px; }
+.fc-venue { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; width: var(--frame); margin: auto; background: #eee7d8; }
+.fc-venue figure { padding: clamp(12px,3vw,39px); }
+.fc-venue img { height: auto; aspect-ratio: 5/4; object-position: 50% 36%; }
+.fc-venue .location-copy { padding: clamp(22px,5vw,76px); }
+.fc-venue .location-copy h2 { font-size: clamp(36px,5vw,68px); }
+.fc-palette { display: flex; justify-content: center; margin-top: 28px; }
+.fc-palette span { width: min(17vw,80px); height: 14px; background: var(--swatch); border-block: 1px solid #8c78643a; }
+.french-chateau .response { width: var(--frame); background: var(--blue); border: 4px double #a3b1bc; margin-bottom: clamp(44px,8vw,104px); grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(23px,6vw,70px); }
+.french-chateau .response button { min-height: 44px; }
+.fc-footer { background: #e6edf0; border-top: 4px double #a3b1bc; }
+.fc-footer .sign { font-size: clamp(38px,7vw,86px); margin-top: 8px; }
+.fc-opening[hidden] { display: none; }
+.fc-opening { --opening-ready: 1; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; padding: 0; border: 0; background: transparent; color: var(--ink); }
+.fc-opening::backdrop { background: transparent; }
+.fc-doors { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(2,1fr); perspective: 1100px; overflow: clip; pointer-events: none; }
+.fc-door { position: relative; border: 1px solid #8299ad; background: linear-gradient(115deg,#b9cbd8,#e4edf2 42%,#c6d6e0); box-shadow: inset 0 0 25px #617d9545; transform-origin: left center; }
+.fc-door + .fc-door { transform-origin: right center; background: linear-gradient(245deg,#b9cbd8,#e4edf2 42%,#c6d6e0); }
+.fc-door::before, .fc-door::after { content: ""; position: absolute; inset: 5% 7%; border: 4px double #9f9278; border-radius: 48% 48% 1px 1px / 14% 14% 1px 1px; }
+.fc-door::after { inset: 10% 12%; border-width: 1px; }
+.fc-door span { position: absolute; bottom: 18%; right: 10%; width: 12px; height: 30px; border: 1px solid #7d653f; border-radius: 45%; background: linear-gradient(90deg,#ad8c5c,#e0c695,#a68a5d); }
+.fc-door + .fc-door span { left: 10%; right: auto; }
+.fc-opening-copy { position: relative; max-width: min(660px,86%); width: max-content; margin: auto; text-align: center; padding: clamp(18px,4vw,38px); background: #faf6ec; border: 4px double #9f9278; }
+.fc-opening[open] { display: grid; }
+.fc-opening-copy h2 { font-size: clamp(39px,7vw,82px); margin-top: 10px; }
+.fc-opening-copy p { margin-top: 12px; }
+.fc-opening-copy button { padding: 8px 16px; min-height: 44px; color: var(--ink); background: transparent; border: 0; }
+.fc-opening-copy [data-open] { background: var(--ink); color: var(--paper); margin-top: 14px; }
+.fc-opening-copy form button { text-decoration: underline; text-underline-offset: .3em; }
+.fc-opening.is-opening .fc-door { animation: fc-door-left 1.48s .08s cubic-bezier(.55,.08,.22,1) both; }
+.fc-opening.is-opening .fc-door + .fc-door { animation-name: fc-door-right; }
+.fc-opening.is-opening .fc-opening-copy { animation: fc-card-out .46s ease-in both; }
+@keyframes fc-door-left { to { transform: rotateY(-96deg); } }
+@keyframes fc-door-right { to { transform: rotateY(96deg); } }
+@keyframes fc-card-out { to { opacity: 0; transform: translateY(-9px) scale(.98); } }
+@media (max-width: 700px) {
+  .fc-title h1 { font-size: clamp(50px,14vw,76px); }
+  .fc-title h1 span { display: block; }
+  .fc-title h1 i { display: block; margin: .13em 0; }
+  .fc-panorama img { height: clamp(300px,85vw,450px); object-position: 50% 35%; }
+  .fc-welcome.welcome { display: block; text-align: center; }
+  .fc-engraving { min-height: 98px; background-size: auto 100%; padding: 0; border: 0; margin-bottom: 20px; }
+  .fc-welcome > p:not(.overline) { margin-inline: auto; }
+  .french-chateau .schedule ol, .fc-venue, .french-chateau .response { grid-template-columns: minmax(0,1fr); }
+  .fc-venue figure { padding-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .fc-opening * { animation: none !important; } }

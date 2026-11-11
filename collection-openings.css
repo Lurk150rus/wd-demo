@@ -118,3 +118,22 @@
 .gallery .midnight-elegance .op-paper { inset: -20%; border: 0; box-shadow: none; background: radial-gradient(ellipse,#b28b5675,transparent 65%); animation-name: op-starlight; }
 .gallery .midnight-elegance .op-names { color: #eedfc9; animation-name: op-starlight; }
 @keyframes op-starlight { 0%,21%,100% { opacity: .64; } 47%,78% { opacity: 1; } }
+
+.gallery .french-chateau .preview { background: #e1e9ee; }
+.gallery .french-chateau .preview-name { color: #273f53; }
+.gallery .french-chateau .opening-preview { background: transparent; }
+.gallery .french-chateau .op-stage { inset: 0; }
+.gallery .french-chateau .op-paper { display: none; }
+.gallery .french-chateau .op-door { border-color: #849aac; background: linear-gradient(115deg,#becfdc,#e6eef3,#b9cbd7); }
+.gallery .french-chateau .op-door::after { inset: 8%; border: 4px double #9f9278; border-radius: 46% 46% 0 0 / 14% 14% 0 0; }
+.gallery .french-chateau .op-names { color: #273f53; text-shadow: 0 1px #fff5; }
+.gallery .minimal-ivory .preview { background: #f5f1e8; }
+.gallery .minimal-ivory .preview-name { color: #242421; text-align: left; }
+.gallery .minimal-ivory .opening-preview { background: #e8e3d8; }
+.gallery .minimal-ivory .op-stage { inset: 16% 13% 20%; }
+.gallery .minimal-ivory .op-paper { inset: 0; background: #faf7f0; border: 0; box-shadow: 0 10px 30px #3d35221a; }
+.gallery .minimal-ivory .op-left { display: none; }
+.gallery .minimal-ivory .op-right { inset: 0 0 0 59%; border: 0; border-left: 1px solid #c8beb0; transform-origin: left; background: linear-gradient(90deg,#e3dcd0,#f2ede3 14%); z-index: 4; animation-name: op-ivory-fold; }
+.gallery .minimal-ivory .op-right::after { display: none; }
+.gallery .minimal-ivory .op-names { color: #242421; text-align: left; align-items: start; gap: 7px; padding: 12px 44% 12px 7%; font-size: clamp(18px,3vw,30px); }
+@keyframes op-ivory-fold { 0%,24%,100% { transform: rotateY(0); opacity: 1; } 54%,93% { transform: rotateY(-165deg); opacity: 0; } }

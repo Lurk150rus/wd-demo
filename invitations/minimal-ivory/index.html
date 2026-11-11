@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ника &amp; Андрей · Minimal Ivory</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/minimal-ivory.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script type="module" src="/wd-demo/minimal-ivory.js"></script>
+</head>
+<body class="minimal-ivory" data-date="2027-09-11T15:00:00+03:00">
+<header class="occasion-nav">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Minimal Ivory</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="iv-cover">
+        <div class="iv-cover-copy">
+            <p class="overline">Приглашение на свадьбу</p>
+            <h1><span>Ника</span><i>&amp;</i><span>Андрей</span></h1>
+            <p class="cover-date">11 сентября 2027 · 15:00</p>
+        </div>
+        <figure><img src="/wd-demo/photos/modern-editorial.jpg" alt="Свадебный портрет" fetchpriority="high"></figure>
+        <a class="iv-text-link" href="#welcome">К приглашению ↓</a>
+    </section>
+
+    <section id="welcome" class="welcome iv-welcome">
+        <p class="overline">Дорогие наши</p>
+        <h2>Мы женимся.</h2>
+        <p>В сентябре мы станем семьёй. Приходите обнять нас, вместе поужинать и провести вечер в кругу тех, кого мы любим.</p>
+        <div class="sign">Ника &amp; Андрей</div>
+    </section>
+
+    <div class="iv-agenda">
+        <section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">11 сентября 2027 · 15:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+        <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>Программа</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>15:00</time><div><h3>Встреча</h3><p>Приветствуем гостей.</p></div></li>
+                    <li><span class="event-number">02</span><time>15:45</time><div><h3>Церемония</h3><p>Говорим друг другу «да».</p></div></li>
+                    <li><span class="event-number">03</span><time>17:00</time><div><h3>Ужин</h3><p>Садимся за общий стол.</p></div></li>
+                    <li><span class="event-number">04</span><time>20:00</time><div><h3>Танцы</h3><p>Встречаемся на танцполе.</p></div></li>
+            </ol>
+</section>
+    </div>
+
+    <section class="iv-place">
+        <figure><img src="/wd-demo/photos/modern-editorial.jpg" alt="Фотография пары" loading="lazy"></figure>
+        <div class="location-copy">
+            <p class="overline">Место встречи</p>
+            <h2>Студия «Линия»</h2>
+            <p>Санкт-Петербург</p>
+        </div>
+    </section>
+
+    <section class="dress iv-dress">
+        <p class="overline">Дресс-код</p>
+        <h2>Как одеться</h2>
+        <p>Будем рады спокойным оттенкам и простым силуэтам. Выбирайте то, в чём вам удобно провести весь вечер.</p>
+    </section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Подтвердите участие</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+
+<footer class="iv-footer">
+    <span>Ника &amp; Андрей</span>
+    <p>11 сентября 2027 · 15:00 · С любовью</p>
+    <a href="/wd-demo/">Вся коллекция ↗</a>
+    <p><a href="https://www.pexels.com/photo/29741200/">Фото: Pexels</a></p></footer>
+
+<dialog class="iv-opening" data-occasion-opening aria-label="Открытие приглашения" hidden>
+    <div class="iv-opening-stage">
+        <div class="iv-fold">
+            <div class="iv-fold-copy">
+                <p class="overline">Приглашение на свадьбу</p>
+                <h2 data-opening-names></h2>
+                <p data-opening-date></p>
+            </div>
+            <div class="iv-leaf" aria-hidden="true"></div>
+        </div>
+        <div class="iv-opening-actions">
+            <button type="button" data-open>Открыть приглашение</button>
+            <form method="dialog"><button type="submit">Пропустить</button></form>
+        </div>
+    </div>
+</dialog>
+</body>
+</html>
