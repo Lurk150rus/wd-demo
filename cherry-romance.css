@@ -69,3 +69,5 @@
   .cr-letter .welcome { padding-top: 15px; }
 }
 @media(prefers-reduced-motion:reduce) { .cr-opening * { animation: none !important; } }
+
+.cr-venue img[src$="/cherry-romance-detail.webp"] { object-position: center 48%; }

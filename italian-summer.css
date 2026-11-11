@@ -192,3 +192,6 @@ time{font:27px/1.15 var(--serif);white-space:nowrap}
 }
 @media(max-width:360px){.cover h1{font-size:67px}.summer-header{padding-inline:18px;font-size:7px}.header-rsvp{font-size:9px}.digits{gap:13px}.schedule li{gap:9px;grid-template-columns:13px 47px minmax(0,1fr)}.schedule h3{font-size:25px}.section-pad{padding-inline:22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.js .reveal{opacity:1;transform:none}}
+
+.cover-portrait img[src$="/italian-summer.webp"] { object-position: 65% 48%; }
+.story-photo img[src$="/italian-summer-terrace.webp"] { object-position: 69% 51%; }

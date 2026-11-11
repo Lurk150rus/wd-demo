@@ -78,3 +78,6 @@
   .nw-column.welcome,.nw-dress.dress { padding: 20px 0; border-left: 0; }
 }
 @media(prefers-reduced-motion:reduce) { .nw-opening * { animation: none !important; } }
+
+.nw-front-grid img[src$="/newspaper-wedding.webp"],
+.nw-venue img[src$="/newspaper-wedding.webp"] { object-position: center 73%; }

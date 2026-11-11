@@ -15,3 +15,9 @@
 .italian-summer.card .preview{background:#e5a176}.italian-summer.card .preview-name{color:#235b70}.royal-classic.card .preview-name{color:#672b3f}.modern-editorial.card .preview-name{color:#192f9c}
 
 .create-invitation{display:inline-flex;align-items:center;gap:28px;margin-top:28px;padding:16px 24px;background:#633e50;color:#fff5f7;border-radius:3px;font-size:12px;transition:background .25s}.create-invitation:hover{background:#925c73}.create-invitation:focus-visible{outline:2px solid #633e50;outline-offset:5px}@media(max-width:480px){.create-invitation{display:flex;justify-content:space-between;width:100%}}
+
+/* Demo thumbnails keep the subjects in view independently of invitation crops. */
+.gallery .wildflower-meadow .preview img { object-position: center 56%; }
+.gallery .newspaper-wedding .preview img { object-position: center 73%; }
+.gallery .french-chateau .preview img { object-position: center 62%; }
+.gallery .retro-love .preview img { object-position: 61% 48%; }

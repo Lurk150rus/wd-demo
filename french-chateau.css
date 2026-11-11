@@ -99,3 +99,6 @@
   .fc-venue figure { padding-bottom: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .fc-opening * { animation: none !important; } }
+
+.fc-panorama img[src$="/french-chateau.webp"] { object-position: center 65%; }
+.fc-venue img[src$="/french-chateau-venue.webp"] { object-position: 60% 57%; }

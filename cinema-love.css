@@ -78,3 +78,6 @@
   .cl-location img { min-height: 0; height: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .cl-opening * { animation: none !important; } }
+
+.cl-screen img[src$="/cinema-love.webp"] { object-position: center 45%; }
+.cl-location img[src$="/cinema-love.webp"] { object-position: center 45%; }

@@ -110,3 +110,6 @@
   .me-place .location-copy { padding-bottom: 28px; }
 }
 @media (prefers-reduced-motion: reduce) { .me-opening * { animation: none !important; } }
+
+.me-cover-image img[src$="/midnight-elegance.webp"] { object-position: center 52%; }
+.me-place img[src$="/midnight-elegance.webp"] { object-position: center 52%; }
