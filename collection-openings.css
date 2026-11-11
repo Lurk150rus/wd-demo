@@ -206,3 +206,18 @@
 .gallery .tropical-paradise .op-door { border: 0; background: url('/wd-demo/art/tropical-leaf.svg') center / contain no-repeat; animation-name: op-curtain-left; }
 .gallery .tropical-paradise .op-door::after { display: none; }
 .gallery .tropical-paradise .op-right { animation-name: op-curtain-right; }
+
+.gallery .celestial-love .preview { background: #23283c; color: #f1eadf; }
+.gallery .celestial-love .preview-name, .gallery .celestial-love .op-names { color: #f1eadf; }
+.gallery .celestial-love .opening-preview { background: #23283c; }
+.gallery .celestial-love .op-stage { inset: 0; }
+.gallery .celestial-love .op-paper { inset: 0; border: 0; box-shadow: none; background: url('/wd-demo/art/celestial-chart.svg') center / auto 125% no-repeat; animation-name: op-chart; }
+.gallery .celestial-love .op-door { display: none; }
+@keyframes op-chart { 0%,22%,100% { transform: scale(.82) rotate(-13deg); opacity: .5; } 52%,94% { transform: scale(1.1); opacity: 1; } }
+.gallery .old-money .preview { background: #ebe5d0; }
+.gallery .old-money .preview-name { color: #354232; }
+.gallery .old-money .opening-preview { background: #e3e3d0; }
+.gallery .old-money .op-paper { background: #f5f0df; border: 4px double #a7aa93; animation-name: op-letter; }
+.gallery .old-money .op-door { display: none; }
+.gallery .old-money .op-flap { display: block; position: absolute; inset: 0 0 42%; clip-path: polygon(0 0,100% 0,50% 100%); background: linear-gradient(#f0ead5,#d6d3b9); transform-origin: top; animation: op-flap 7.4s ease-in-out infinite; }
+.gallery .old-money .op-names { color: #354232; }

@@ -1,0 +1,71 @@
+.old-money {
+  --paper: #f6f0e2;
+  --ink: #354232;
+  --line: #a7aa93;
+  --edge: clamp(19px,7vw,112px);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.old-money .occasion-nav { padding-inline: var(--edge); text-transform: uppercase; }
+.old-money .overline { text-transform: uppercase; letter-spacing: .18em; }
+.om-main { width: min(100%,1410px); margin: auto; padding-inline: var(--edge); }
+.om-cover { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.83fr); gap: clamp(16px,6vw,93px); align-items: center; margin-block: clamp(24px,5vw,75px); padding: clamp(12px,2vw,25px); border: 1px solid var(--line); outline: 1px solid var(--line); outline-offset: -6px; }
+.om-title { text-align: center; padding: clamp(15px,3vw,45px) 0; }
+.om-crest { display: block; width: clamp(64px,9vw,130px); aspect-ratio: 168/150; margin: 0 auto; background: url('/wd-demo/art/old-money-crest.svg') center / contain no-repeat; }
+.om-title .overline { margin-top: 8px; }
+.om-title h1 { font-size: clamp(55px,8.7vw,126px); line-height: .87; letter-spacing: -.051em; margin: 15px 0 24px; }
+.om-title h1 :is(span,i) { display: block; }
+.om-title h1 i { font-size: .47em; margin-block: .16em; color: #677257; }
+.om-title .cover-date { margin: 0; letter-spacing: .15em; }
+.om-title a { display: inline-block; margin-top: 15px; padding-block: 5px; border-bottom: 1px solid var(--line); font-size: 10px; text-transform: uppercase; letter-spacing: .13em; }
+.om-cover img { height: auto; aspect-ratio: 4/5; object-position: 53% 45%; filter: saturate(.69); }
+.om-letter { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.8fr); gap: clamp(24px,8vw,115px); align-items: center; border-top: 1px solid var(--line); padding-block: clamp(34px,7vw,91px); }
+.om-letter .welcome { max-width: none; text-align: left; padding: 0; margin: 0; }
+.om-letter .welcome > p:not(.overline), .om-dress > p:not(.overline) { margin-inline: 0; white-space: pre-line; }
+.om-letter h2 i { color: #69765d; }
+.om-letter .ni-date { padding: clamp(18px,3vw,39px); border: 4px double var(--line); text-align: center; }
+.om-letter .overline { margin-top: 0; }
+.om-letter .ni-date h2 { font-size: clamp(29px,4.5vw,67px); margin-top: 10px; }
+.om-letter .digits { display: grid; grid-template-columns: repeat(4,minmax(0,68px)); gap: 7px; }
+.om-letter .digits b { min-width: 0; font-size: clamp(27px,4.2vw,54px); }
+.om-letter .digits span { letter-spacing: .045em; }
+.om-venue { background: #e9e9d9; display: grid; grid-template-columns: minmax(0,.86fr) minmax(0,1.14fr); align-items: center; }
+.om-venue img { height: auto; aspect-ratio: 5/4; object-position: 54% 51%; filter: saturate(.72); }
+.om-venue .location-copy { padding: clamp(22px,5vw,69px); }
+.om-venue h2 { font-size: clamp(34px,5vw,71px); }
+.old-money .schedule { grid-template-columns: minmax(0,.72fr) minmax(0,1.28fr); padding-inline: 0; max-width: none; }
+.old-money .schedule li { display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 12px; }
+.old-money .event-number { display: none; }
+.old-money .schedule li p { font-size: 13px; }
+.om-dress.dress { padding: clamp(29px,6vw,73px) 0; text-align: left; border-block: 1px solid var(--line); }
+.old-money .response { max-width: none; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(22px,7vw,100px); padding-inline: 0; border: 0; }
+.old-money .response button { min-height: 44px; background: #465741; color: #fff9ec; }
+.om-footer { background: #e9e9d9; border-top: 4px double var(--line); }
+.om-footer .sign { font-size: clamp(42px,8vw,106px); line-height: 1; margin-top: 11px; }
+.om-opening[hidden] { display: none; }
+.om-opening { --opening-ready: 1; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; padding: 0; border: 0; background: #e3e3d0; color: var(--ink); }
+.om-opening::backdrop { background: transparent; }
+.om-opening-stage { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 20px; text-align: center; }
+.om-envelope { position: relative; isolation: isolate; width: min(520px,100%); perspective: 900px; background: #dddac1; margin-top: 40px; box-shadow: 0 17px 37px #3e483323; }
+.om-insert { min-height: 155px; padding: 24px 17px; background: #fbf6e7; border: 4px double #a8ac92; position: relative; z-index: 2; }
+.om-insert h2 { font-size: clamp(32px,7vw,67px); }
+.om-insert p { margin-top: 8px; }
+.om-flap { position: absolute; inset: 0; z-index: 4; clip-path: polygon(0 0,100% 0,50% 62%); background: linear-gradient(#efebd8,#d6d3b9); transform-origin: top center; }
+.om-pocket { position: absolute; inset: 0; z-index: 3; clip-path: polygon(0 10%,50% 64%,100% 10%,100% 100%,0 100%); background: linear-gradient(150deg,#dddac1,#f4efdc 65%); }
+.om-monogram { display: grid; place-items: center; position: absolute; width: 57px; aspect-ratio: 1; left: calc(50% - 28px); top: calc(59% - 28px); z-index: 5; border: 4px double #9b9e81; border-radius: 50%; background: #eae4cc; color: #4a563d; font: 500 24px/1 'Cormorant Garamond',Georgia,serif; text-shadow: 1px 1px #fff7de; }
+.om-opening-stage button { min-height: 44px; color: inherit; background: transparent; border: 0; padding: 8px 15px; }
+.om-opening-stage [data-open] { margin-top: 12px; border: 1px solid #66705a; }
+.om-opening-stage form button { text-decoration: underline; text-underline-offset: .3em; }
+.om-opening.is-opening .om-monogram { animation: om-seal-out .47s ease-out both; }
+.om-opening.is-opening .om-flap { animation: om-flap-open .74s .17s ease-in-out both; }
+.om-opening.is-opening .om-insert { animation: om-letter-rise 1.13s .5s cubic-bezier(.27,.07,.19,1) both; }
+@keyframes om-seal-out { to { opacity: 0; transform: scale(.87); } }
+@keyframes om-flap-open { to { transform: rotateX(176deg); } }
+@keyframes om-letter-rise { 48% { z-index: 2; } 49%,100% { z-index: 5; } to { transform: translateY(-41%) scale(1.06); } }
+@media(max-width:700px) {
+  .om-cover,.om-letter,.om-venue,.old-money .schedule,.old-money .response { grid-template-columns: minmax(0,1fr); }
+  .om-title { padding-bottom: 0; }
+  .om-title h1 { font-size: clamp(54px,14vw,88px); }
+  .om-cover img { aspect-ratio: 5/4; }
+}
+@media(prefers-reduced-motion:reduce) { .om-opening * { animation: none !important; } }

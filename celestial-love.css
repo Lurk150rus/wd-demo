@@ -1,0 +1,77 @@
+.celestial-love {
+  --paper: #23283c;
+  --ink: #f1eadf;
+  --line: #85899d;
+  --starlight: #ded0ad;
+  --edge: clamp(19px,7vw,110px);
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+.celestial-love .occasion-nav { padding-inline: var(--edge); text-transform: uppercase; }
+.celestial-love .overline { text-transform: uppercase; letter-spacing: .2em; }
+.ce-cover { position: relative; display: grid; place-items: center; min-height: min(72vw,660px); isolation: isolate; padding: clamp(35px,8vw,125px) var(--edge); background: #252b43; overflow: clip; }
+.ce-sky { position: absolute; inset: -15%; background: url('/wd-demo/art/celestial-chart.svg') center / auto 113% no-repeat; opacity: .51; pointer-events: none; z-index: -2; }
+.ce-cover::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at 50% 51%,#242940 8%,#242940c7 32%,transparent 68%); }
+.ce-title { text-align: center; }
+.ce-title .overline { color: var(--starlight); margin-top: 0; }
+.ce-title h1 { font-size: clamp(60px,11vw,154px); line-height: .89; margin: 18px 0 22px; letter-spacing: -.057em; }
+.ce-title h1 i { font-size: .48em; margin-inline: .2em; color: var(--starlight); vertical-align: .14em; }
+.ce-title .cover-date { margin-top: 0; letter-spacing: .18em; }
+.ce-title a { display: inline-block; margin-top: 17px; padding-block: 6px; border-bottom: 1px solid var(--starlight); text-transform: uppercase; font-size: 10px; letter-spacing: .13em; }
+.ce-story { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: clamp(22px,8vw,132px); align-items: center; padding: clamp(42px,9vw,125px) var(--edge); background: #e8e4eb; color: #30354b; }
+.ce-story .welcome { padding: 0; text-align: left; max-width: none; margin: 0; }
+.ce-story .welcome > p:not(.overline), .ce-dress > p:not(.overline) { margin-inline: 0; white-space: pre-line; }
+.ce-story h2 i { color: #646482; }
+.ce-story img { height: auto; aspect-ratio: 4/3; filter: saturate(.75); }
+.ce-date { padding: clamp(26px,6vw,76px) var(--edge); border-bottom: 1px solid var(--line); }
+.ce-date .ni-date { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); align-items: center; }
+.ce-date .overline { color: var(--starlight); margin: 0; }
+.ce-date h2 { grid-column: 1; font-size: clamp(35px,6vw,84px); }
+.ce-date .digits { grid-column: 2; grid-row: 1/3; display: grid; grid-template-columns: repeat(4,minmax(0,74px)); margin: 0; gap: 7px; text-align: center; }
+.ce-date .digits b { min-width: 0; font-size: clamp(31px,5vw,62px); }
+.ce-date .digits span { letter-spacing: .05em; }
+.celestial-love .schedule { display: block; width: calc(100% - 2 * var(--edge)); max-width: none; padding-inline: 0; }
+.celestial-love .section-title { margin-bottom: 30px; }
+.celestial-love .schedule ol { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: clamp(12px,3vw,40px); }
+.celestial-love .schedule li { position: relative; display: block; border-block: 1px solid var(--line); padding-top: 22px; }
+.celestial-love .schedule li::before { content: ""; position: absolute; left: 2px; top: -4px; width: 7px; aspect-ratio: 1; transform: rotate(45deg); background: var(--starlight); }
+.celestial-love .schedule time { display: block; color: var(--starlight); margin-bottom: 8px; }
+.celestial-love .event-number { display: none; }
+.celestial-love .schedule li p { font-size: 13px; }
+.ce-details { background: #30364e; }
+.ce-venue { display: grid; grid-template-columns: minmax(0,1.16fr) minmax(0,.84fr); align-items: center; }
+.ce-venue img { height: auto; aspect-ratio: 5/3; object-position: center 56%; filter: saturate(.7); }
+.ce-venue .location-copy { padding: clamp(22px,6vw,75px); }
+.ce-venue h2 { font-size: clamp(33px,5vw,67px); }
+.ce-dress.dress { padding: clamp(27px,5vw,73px) var(--edge); text-align: left; border-bottom: 1px solid var(--line); }
+.celestial-love .response { width: calc(100% - 2 * var(--edge)); grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(24px,7vw,87px); border: 0; padding-inline: 0; }
+.celestial-love .response :is(input,textarea) { color: var(--ink); color-scheme: dark; }
+.celestial-love .response ::placeholder { color: #c9c5d2; }
+.celestial-love .response button { min-height: 44px; }
+.ce-footer { background: #1c2032; }
+.ce-footer > span { font-size: clamp(45px,8vw,104px); line-height: 1; }
+.ce-opening[hidden] { display: none; }
+.ce-opening { --opening-ready: 1; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; padding: 0; border: 0; background: radial-gradient(ellipse,#353954,#1c2032); color: var(--ink); }
+.ce-opening::backdrop { background: transparent; }
+.ce-opening-stage { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 100%; padding: 18px; text-align: center; }
+.ce-constellation { width: min(64vw,320px); height: auto; fill: var(--starlight); overflow: visible; }
+.ce-constellation path { fill: none; stroke: #e0d3b4; stroke-width: 1.15; stroke-dasharray: 360; stroke-dashoffset: 360; }
+.ce-constellation circle { transform: translate(var(--x),var(--y)); }
+.ce-opening-stage h2 { font-size: clamp(39px,8vw,102px); }
+.ce-opening-stage p { margin: 0; }
+.ce-opening-stage button { min-height: 44px; color: inherit; background: transparent; border: 0; padding: 8px 16px; }
+.ce-opening-stage [data-open] { margin-top: 9px; border: 1px solid var(--starlight); }
+.ce-opening-stage form button { text-decoration: underline; text-underline-offset: .3em; }
+.ce-opening.is-opening .ce-constellation circle { animation: ce-gather .79s ease-in-out both; }
+.ce-opening.is-opening .ce-constellation path { animation: ce-trace .65s .72s ease-out both; }
+@keyframes ce-gather { to { transform: translate(0,0); } }
+@keyframes ce-trace { to { stroke-dashoffset: 0; } }
+@media(max-width:700px) {
+  .ce-cover { min-height: 390px; }
+  .ce-title h1 :is(span,i) { display: block; }
+  .ce-title h1 i { margin-block: .13em; }
+  .ce-story,.ce-date .ni-date,.ce-venue,.celestial-love .response { grid-template-columns: minmax(0,1fr); }
+  .ce-date .digits { grid-column: 1; grid-row: auto; text-align: left; justify-content: start; margin-top: 14px; }
+  .celestial-love .schedule ol { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(prefers-reduced-motion:reduce) { .ce-opening * { animation: none !important; } }

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Алина &amp; Денис · Celestial Love</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/celestial-love.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script type="module" src="/wd-demo/celestial-love.js"></script>
+</head>
+<body class="celestial-love" data-date="2027-09-04T18:00:00+03:00">
+<header class="occasion-nav">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Celestial Love</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="ce-cover">
+        <div class="ce-sky" aria-hidden="true"></div>
+        <div class="ce-title">
+            <p class="overline">Приглашение на свадьбу</p>
+            <h1><span>Алина</span><i>&amp;</i><span>Денис</span></h1>
+            <p class="cover-date">4 сентября 2027 · 18:00</p><a href="#welcome">К приглашению ↓</a>
+        </div>
+    </section>
+    <div class="ce-story">
+        <section id="welcome" class="welcome">
+            <p class="overline">Дорогие наши</p><h2>Встретимся<br><i>под звёздами</i></h2>
+            <p>Мы хотим провести этот вечер с теми, кто был рядом в самые важные моменты. После церемонии поужинаем вместе и выйдем на террасу встречать первые звёзды.</p><div class="sign">Алина &amp; Денис</div>
+        </section>
+        <figure><img src="/wd-demo/photos/art-deco.jpg" alt="Фотография пары" fetchpriority="high"></figure>
+    </div>
+    <div class="ce-date"><section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">4 сентября 2027 · 18:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+</div>
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>Орбита вечера</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>18:00</time><div><h3>Встреча</h3><p>Приветствуем гостей.</p></div></li>
+                    <li><span class="event-number">02</span><time>18:45</time><div><h3>Церемония</h3><p>Наши обещания.</p></div></li>
+                    <li><span class="event-number">03</span><time>19:30</time><div><h3>Ужин</h3><p>Собираемся за столом.</p></div></li>
+                    <li><span class="event-number">04</span><time>22:00</time><div><h3>Вечер на террасе</h3><p>Танцы под открытым небом.</p></div></li>
+            </ol>
+</section>
+    <div class="ce-details">
+        <section class="ce-venue">
+            <figure><img src="/wd-demo/photos/art-deco.jpg" alt="Фотография пары" loading="lazy"></figure>
+            <div class="location-copy"><p class="overline">Место встречи</p><h2>Павильон «Орбита»</h2><p>Москва</p></div>
+        </section>
+        <section class="dress ce-dress"><p class="overline">Дресс-код</p><h2>Оттенки ночи</h2><p>Глубокий синий, графит и прохладные оттенки. Серебряная или жемчужная деталь подойдёт в качестве акцента.</p></section>
+    </div>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Будете с нами?</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="ce-footer"><span>Алина &amp; Денис</span><p>4 сентября 2027 · 18:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
+<dialog class="ce-opening" data-occasion-opening aria-label="Созвездие" hidden>
+    <div class="ce-opening-stage">
+        <svg class="ce-constellation" viewBox="0 0 240 150" aria-hidden="true">
+            <path d="M20 107 61 62 108 81 145 35 211 48 221 103"/>
+            <circle cx="20" cy="107" r="3" style="--x:46px;--y:27px"/>
+            <circle cx="61" cy="62" r="3" style="--x:-23px;--y:-38px"/>
+            <circle cx="108" cy="81" r="4" style="--x:6px;--y:49px"/>
+            <circle cx="145" cy="35" r="3" style="--x:25px;--y:11px"/>
+            <circle cx="211" cy="48" r="4" style="--x:-31px;--y:23px"/>
+            <circle cx="221" cy="103" r="3" style="--x:11px;--y:23px"/>
+        </svg>
+        <h2 data-opening-names></h2><p data-opening-date></p>
+        <button type="button" data-open>Соединить звёзды</button>
+        <form method="dialog"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body></html>
