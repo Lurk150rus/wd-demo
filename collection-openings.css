@@ -85,3 +85,36 @@
   animation: none;
 }
 @keyframes op-record { 0%, 22%, 100% { transform: translateX(0) rotate(0); } 53%, 94% { transform: translateX(40%) rotate(330deg); } }
+
+.gallery .rustic-boho .preview { background: #efe0c9; }
+.gallery .rustic-boho .preview-name { color: #623d2e; }
+.gallery .rustic-boho .preview img { transform: rotate(4deg); border: 5px solid #fff7e9; }
+.gallery .rustic-boho .opening-preview { background: url('/wd-demo/art/boho-meadow.svg') right bottom / auto 80% no-repeat, #ecdbc2; }
+.gallery .rustic-boho .op-paper {
+  background: linear-gradient(#d9ba94,#fff2db 45% 55%,#d9ba94);
+  border-radius: 5px;
+  animation-name: op-unroll;
+}
+.gallery .rustic-boho .op-door { display: none; }
+.gallery .rustic-boho .op-seal {
+  position: absolute; display: block; inset: 28% auto 28% calc(50% - 4px); width: 8px;
+  background: #954d39; box-shadow: 1px 2px 4px #5a302555; animation: op-type 7.4s ease-in-out infinite;
+}
+.gallery .rustic-boho .op-names { color: #60382a; animation-name: op-paper-names; }
+@keyframes op-unroll { 0%,23%,100% { transform: scaleY(.35) rotate(-5deg); } 52%,94% { transform: scaleY(1); } }
+@keyframes op-paper-names { 0%,33%,100% { opacity: 0; } 50%,86% { opacity: 1; } }
+
+.gallery .midnight-elegance .preview { background: #1a181c; color: #e8d6be; }
+.gallery .midnight-elegance .preview-name { color: #eedfc9; }
+.gallery .midnight-elegance .preview img { filter: saturate(.62) brightness(.77); }
+.gallery .midnight-elegance .opening-preview {
+  background:
+    radial-gradient(circle at 19% 35%, #e4bf8b 0 1px, transparent 3px),
+    radial-gradient(circle at 34% 72%, #c9a579 0 1px, transparent 2px),
+    radial-gradient(circle at 79% 29%, #efcca0 0 1px, transparent 2px),
+    radial-gradient(circle at 89% 65%, #ad875f 0 1px, transparent 3px), #151318;
+}
+.gallery .midnight-elegance .op-door { display: none; }
+.gallery .midnight-elegance .op-paper { inset: -20%; border: 0; box-shadow: none; background: radial-gradient(ellipse,#b28b5675,transparent 65%); animation-name: op-starlight; }
+.gallery .midnight-elegance .op-names { color: #eedfc9; animation-name: op-starlight; }
+@keyframes op-starlight { 0%,21%,100% { opacity: .64; } 47%,78% { opacity: 1; } }

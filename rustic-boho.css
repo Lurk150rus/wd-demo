@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Instrument+Serif:ital@0;1&display=swap');
+
+.rustic-boho {
+  --paper: #f8f1e5;
+  --ink: #442d25;
+  --line: #cbb49a;
+  --clay: #874833;
+  --sage: #555d46;
+  --frame: min(88vw, 1160px);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+  background-image: repeating-linear-gradient(113deg, #8e634606 0 1px, transparent 1px 4px);
+}
+.rustic-boho main { overflow: clip; }
+.rustic-boho :is(h1,h2,h3) { text-wrap: balance; }
+.rustic-boho :is(.overline,.occasion-nav,.rb-link) { text-transform: uppercase; letter-spacing: .18em; }
+.rustic-boho .occasion-nav { padding: 17px 6vw; }
+.rb-frame { width: var(--frame); margin-inline: auto; }
+.rb-cover {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.03fr);
+  align-items: center;
+  gap: 6%;
+  margin-block: clamp(30px,7vw,112px) clamp(55px,10vw,155px);
+}
+.rb-title { position: relative; z-index: 1; padding: 14px 0 24px; }
+.rb-title .overline { color: var(--clay); }
+.rb-title h1 { font-family: 'Instrument Serif','Cormorant Garamond',Georgia,serif; font-size: clamp(51px,9vw,132px); line-height: .89; margin: 21px 0 26px; letter-spacing: -.04em; }
+.rb-title h1 span { display: block; }
+.rb-title h1 i { display: block; color: var(--clay); font-size: .46em; line-height: 1.25; }
+.rb-title .cover-date { display: table; border-bottom: 1px solid var(--line); padding-bottom: 10px; letter-spacing: .09em; }
+.rb-link { display: inline-block; margin-top: 17px; font-size: 9px; text-decoration: underline; text-underline-offset: 4px; }
+.rb-portrait { position: relative; padding: 10px 10px 32px; background: #fffbef; transform: rotate(3deg); box-shadow: 0 16px 32px #643a281e; }
+.rb-portrait img { height: auto; aspect-ratio: 4/4.6; object-position: 50% 44%; }
+.rb-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  height: 25px;
+  margin: -11px auto auto;
+  background: #c9a77b70;
+  transform: rotate(-8deg);
+}
+.rb-portrait::after {
+  content: "";
+  position: absolute;
+  width: 35%;
+  aspect-ratio: 240/340;
+  right: -7%;
+  bottom: -10%;
+  transform: rotate(12deg);
+  background: url('/wd-demo/art/boho-meadow.svg') center/contain no-repeat;
+  pointer-events: none;
+}
+.rb-note.welcome {
+  max-width: 960px;
+  position: relative;
+  padding: clamp(42px,7vw,98px) clamp(20px,8vw,105px);
+  border-block: 1px solid var(--line);
+  background: radial-gradient(ellipse at 100% 100%, #ead9c0, transparent 65%), #fcf7ec;
+}
+.rustic-boho :is(.rb-note,.rb-dress) h2 i, .rustic-boho .sign { color: var(--clay); }
+.rustic-boho .sign { font: 22px/1.55 'Bad Script','Cormorant Garamond',cursive; }
+.rustic-boho :is(.welcome,.dress) > p:not(.overline) { white-space: pre-line; }
+.rb-calendar { width: var(--frame); margin: clamp(48px,8vw,95px) auto 0; background: var(--sage); color: #fff6e7; padding: 8px; }
+.rb-calendar .ni-date {
+  border: 1px solid #e2dab37d;
+  padding: clamp(28px,6vw,66px) 14px;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 120%, #ffffff12, transparent 65%);
+}
+.rb-calendar .overline { margin: 0; }
+.rb-calendar h2 { font-size: clamp(30px,5vw,63px); margin-top: 15px; }
+.rb-calendar .digits { display: grid; grid-template-columns: repeat(4,minmax(0,76px)); gap: clamp(5px,3vw,30px); }
+.rb-calendar .digits b { min-width: 0; font-size: clamp(31px,6vw,56px); }
+.rb-calendar .digits span { letter-spacing: .08em; }
+.rustic-boho .schedule { width: var(--frame); padding-inline: 0; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); }
+.rustic-boho .schedule ol { border-left: 1px solid #a97057; margin-left: 6px; }
+.rustic-boho .schedule li { display: grid; position: relative; grid-template-columns: auto minmax(0,1fr); padding-left: 27px; gap: 13px; }
+.rustic-boho .schedule .event-number { display: none; }
+.rustic-boho .schedule li::before { content: ""; position: absolute; left: -5px; top: 35px; width: 9px; height: 9px; background: #a45f46; border: 2px solid var(--paper); border-radius: 50%; }
+.rustic-boho .schedule li p { font-size: 13px; }
+.rb-place { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); align-items: center; background: #e9d7bf; }
+.rb-place img { height: auto; aspect-ratio: 5/4; }
+.rb-place .location-copy { padding: clamp(22px,5vw,65px); }
+.rb-place h2 { font-size: clamp(34px,5vw,60px); }
+.rb-swatches { display: flex; justify-content: center; gap: 6px; margin-top: 32px; }
+.rb-swatches span { width: clamp(38px,12vw,68px); aspect-ratio: .9; background: var(--swatch); border-radius: 46% 54% 50% 50% / 40% 46% 54% 60%; box-shadow: inset 0 0 0 1px #442d2522; transform: rotate(-8deg); }
+.rb-swatches span:nth-child(even) { transform: translateY(7px) rotate(10deg); }
+.rustic-boho .response { width: var(--frame); background: #fff9ef; border: 1px solid var(--line); gap: clamp(24px,6vw,85px); margin-bottom: 68px; }
+.rustic-boho .response :is(input,textarea) { color: var(--ink); }
+.rustic-boho .response button { background: var(--clay); color: #fff9ef; min-height: 44px; }
+.rb-farewell {
+  color: #fff7e8;
+  background: url('/wd-demo/art/boho-meadow.svg') 5% bottom / min(22vw,230px) auto no-repeat, #54372c;
+  padding: clamp(72px,12vw,145px) 24px;
+}
+.rb-farewell > span { font-size: clamp(42px,8vw,94px); line-height: 1; }
+
+.rb-opening[hidden] { display: none; }
+.rb-opening {
+  --opening-ready: 1;
+  inset: 0; width: 100%; height: 100%; max-width: none; max-height: none;
+  padding: 0; border: 0; background: var(--paper); color: var(--ink);
+  overscroll-behavior: contain;
+}
+.rb-opening::backdrop { background: transparent; }
+.rb-opening-stage {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; min-height: 100%; padding: 22px;
+  background: url('/wd-demo/art/boho-meadow.svg') right bottom / min(30vw,350px) auto no-repeat, radial-gradient(ellipse, #fbf4e6 18%, #e3c6a5);
+}
+.rb-scroll { width: min(480px,100%); position: relative; margin-block: 16px; isolation: isolate; }
+.rb-scroll-paper {
+  position: relative; display: grid; place-items: center; min-height: 170px; padding: 30px 22px;
+  border-radius: 17px 12px 12px 17px;
+  background: repeating-linear-gradient(9deg,#65402309 0 1px,transparent 1px 4px), linear-gradient(0deg,#c2a37e,#f7e9ce 20%,#fff5e1 55%,#d7b992);
+  box-shadow: 0 24px 30px -12px #58392265, inset 10px 0 0 #d4b998;
+  transform: scaleY(.32) rotate(-5deg);
+}
+.rb-scroll-message { opacity: 0; text-align: center; }
+.rb-scroll-message p { margin-top: 8px; }
+.rb-scroll-message h2 { font-size: clamp(28px,7vw,62px); }
+.rb-ribbon,.rb-bow { position: absolute; display: block; background: #914e3c; left: 50%; top: 50%; }
+.rb-ribbon { width: 14px; height: 64px; border-radius: 2px; transform: translate(-50%,-50%) rotate(-5deg); box-shadow: inset 2px 0 #d798756b; }
+.rb-bow { width: 19px; height: 13px; border-radius: 4px; transform: translate(-50%,-60%) rotate(-8deg); }
+.rb-bow::before,.rb-bow::after { content: ""; position: absolute; top: -10px; width: 29px; height: 19px; border: 4px solid #a25843; border-radius: 55% 35% 20% 50%; }
+.rb-bow::before { right: 9px; transform: rotate(24deg); }
+.rb-bow::after { left: 9px; transform: rotate(-23deg) scaleX(-1); }
+.rb-open,.rb-skip { min-height: 44px; }
+.rb-open { color: #fff5e5; background: var(--clay); border: 1px solid var(--clay); padding: 8px 22px; }
+.rb-skip { border: 0; background: none; color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+.is-opening .rb-ribbon { animation: rb-untie .56s ease-in both; }
+.is-opening .rb-bow { animation: rb-untie .45s ease-in both; }
+.is-opening .rb-scroll-paper { animation: rb-unroll 1.15s .24s cubic-bezier(.19,.82,.29,1) both; }
+.is-opening .rb-scroll-message { animation: rb-letter .54s .66s ease-out both; }
+@keyframes rb-untie { to { opacity: 0; transform: translate(360%,30%) rotate(35deg) scaleX(1.8); } }
+@keyframes rb-unroll { to { transform: scaleY(1) rotate(0); border-radius: 3px; } }
+@keyframes rb-letter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 700px) {
+  .rb-cover { grid-template-columns: minmax(0,1fr); gap: 12px; margin-top: 16px; }
+  .rb-title h1 { font-size: clamp(52px,14vw,82px); margin-block: 10px 16px; }
+  .rb-title { padding-bottom: 6px; }
+  .rb-portrait { width: 81%; margin: 11px 4% 0 auto; padding-bottom: 20px; }
+  .rb-portrait img { aspect-ratio: 5/4; }
+  .rb-portrait::after { right: -12%; }
+  .rustic-boho .schedule,.rb-place { grid-template-columns: minmax(0,1fr); }
+  .rustic-boho .response { padding-inline: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .rb-opening * { animation: none !important; } }

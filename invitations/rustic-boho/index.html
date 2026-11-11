@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Маша &amp; Илья · Rustic Boho</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/rustic-boho.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script type="module" src="/wd-demo/rustic-boho.js"></script>
+</head>
+<body class="rustic-boho" data-date="2027-08-07T15:30:00+03:00">
+<header class="occasion-nav">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Rustic Boho</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="rb-cover rb-frame">
+        <div class="rb-title">
+            <p class="overline">Тепло нашего дня</p>
+            <h1><span>Маша</span><i>&amp;</i><span>Илья</span></h1>
+            <p class="cover-date">7 августа 2027 · 15:30</p>
+            <a class="rb-link" href="#welcome">К приглашению ↓</a>
+        </div>
+        <figure class="rb-portrait">
+            <img src="/wd-demo/photos/romantic.jpg" alt="Фотография пары" fetchpriority="high">
+        </figure>
+    </section>
+    <section id="welcome" class="welcome rb-note rb-frame">
+        <p class="overline">Дорогие наши</p>
+        <h2>Приезжайте<br> <i>обниматься</i></h2>
+        <p>Нам хочется провести этот день за большим столом под открытым небом. Приезжайте пораньше, чтобы успеть обняться, погулять по траве и вместе дождаться, когда зажгутся гирлянды.</p>
+        <div class="sign">Маша &amp; Илья</div>
+    </section>
+    <div class="rb-calendar"><section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">7 августа 2027 · 15:30</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+</div>
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>Как пройдёт день</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>15:30</time><div><h3>Встречаемся у дома</h3><p>Лимонад на веранде и первые объятия.</p></div></li>
+                    <li><span class="event-number">02</span><time>16:30</time><div><h3>Скажем друг другу «да»</h3><p>Церемония на поляне.</p></div></li>
+                    <li><span class="event-number">03</span><time>18:00</time><div><h3>Ужин за общим столом</h3><p>Домашняя еда и самые тёплые тосты.</p></div></li>
+                    <li><span class="event-number">04</span><time>20:30</time><div><h3>Танцы под гирляндами</h3><p>Вечер у костра и музыка до темноты.</p></div></li>
+            </ol>
+</section>
+    <section class="rb-place rb-frame">
+        <figure><img src="/wd-demo/photos/romantic.jpg" alt="Фотография пары" loading="lazy"></figure>
+        <div class="location-copy">
+            <p class="overline">Место встречи</p>
+            <h2>Загородный дом «Ивы»</h2>
+            <p>Московская область</p>
+        </div>
+    </section>
+    <section class="dress rb-dress">
+        <p class="overline">Дресс-код</p>
+        <h2>Краски <i>тёплого дня</i></h2>
+        <p>Будем рады льну, хлопку и тёплым природным оттенкам. Выбирайте обувь, в которой удобно гулять по траве.</p>
+        <div class="rb-swatches" aria-hidden="true">
+            <span style="--swatch:#f4e5cb"></span><span style="--swatch:#c8a97e"></span><span style="--swatch:#ae6d53"></span><span style="--swatch:#879078"></span>        </div>
+    </section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Приедете к нам?</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="rb-farewell">
+    <span>Маша &amp; Илья</span>
+    <p>7 августа 2027 · 15:30 · С любовью</p>
+    <a href="/wd-demo/">Вся коллекция ↗</a>
+    <p><a href="https://www.pexels.com/photo/7119188/">Фото: Pexels</a></p></footer>
+<dialog class="rb-opening" data-occasion-opening aria-label="Письмо из загородного дома" hidden>
+    <div class="rb-opening-stage">
+        <div class="rb-scroll">
+            <div class="rb-scroll-paper">
+                <div class="rb-scroll-message">
+                    <p class="overline">Приглашение на свадьбу</p>
+                    <h2 data-opening-names></h2>
+                    <p data-opening-date></p>
+                </div>
+            </div>
+            <span class="rb-ribbon" aria-hidden="true"></span>
+            <span class="rb-bow" aria-hidden="true"></span>
+        </div>
+        <button class="rb-open" type="button" data-open>Развернуть приглашение</button>
+        <form method="dialog"><button class="rb-skip" type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body>
+</html>
