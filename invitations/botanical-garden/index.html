@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вера &amp; Лев · Botanical Garden</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/new-invitations.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script defer src="/wd-demo/new-openings.js"></script>
+</head>
+<body class="new-invitation botanical-garden" data-date="2027-06-26T16:00:00+03:00">
+<header class="ni-header">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Botanical Garden</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="ni-cover bg-cover">
+        <div class="bg-letter">
+            <p class="overline">Сад нашей любви</p>
+            <h1><span>Вера</span><i>&amp;</i><span>Лев</span></h1>
+            <p class="cover-date">26 июня 2027 · 16:00</p>
+            <a href="#welcome">К приглашению ↓</a>
+        </div>
+        <figure><img src="/wd-demo/photos/romantic.jpg" alt="Фотография пары"></figure>
+    </section>
+    <section id="welcome" class="welcome bg-welcome">
+        <p class="overline">Дорогие наши</p>
+        <h2>Там, где всё <i>расцветает</i></h2>
+        <p>В конце июня, когда сад в цвету, мы скажем друг другу «да». Приезжайте провести с нами этот день среди зелени, тёплого света и самых близких людей.</p>
+        <div class="sign">Вера &amp; Лев</div>
+    </section>
+    <section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">26 июня 2027 · 16:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>День в саду</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>16:00</time><div><h3>Встречаемся в саду</h3><p>Лёгкие напитки и время обняться.</p></div></li>
+                    <li><span class="event-number">02</span><time>16:45</time><div><h3>Церемония</h3><p>Обещания друг другу под открытым небом.</p></div></li>
+                    <li><span class="event-number">03</span><time>18:00</time><div><h3>Ужин в оранжерее</h3><p>Длинный стол, свечи и разговоры.</p></div></li>
+                    <li><span class="event-number">04</span><time>20:30</time><div><h3>Танцы в сумерках</h3><p>Зажигаем огни и танцуем до темноты.</p></div></li>
+            </ol>
+</section>
+    <section class="ni-location bg-location">
+        <figure><img src="/wd-demo/photos/romantic.jpg" alt="Фотография пары" loading="lazy"></figure>
+        <div class="location-copy">
+            <p class="overline">Место встречи</p>
+            <h2>Оранжерея «Зелёный дом»</h2>
+            <p>Московская область</p>
+        </div>
+    </section>
+    <section class="dress bg-dress">
+        <p class="overline">Дресс-код</p>
+        <h2>Оттенки <i>сада</i></h2>
+        <p>Будем рады оттенкам шалфея, тёплого песка и пыльной розы. Выбирайте лёгкие ткани и обувь, в которой удобно гулять по саду.</p>
+        <div class="colors" aria-hidden="true">
+            <span style="--swatch:#b4bf9c"></span><span style="--swatch:#d5c9ae"></span><span style="--swatch:#778662"></span><span style="--swatch:#c7a89b"></span>        </div>
+    </section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Ждём вас в саду</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer>
+    <span>Вера &amp; Лев</span><p>26 июня 2027 · 16:00 · С любовью</p>
+    <a href="/wd-demo/">Вся коллекция ↗</a>
+    <p><a href="https://www.pexels.com/photo/7119188/">Фото: Pexels</a></p></footer>
+<dialog class="ni-opening" id="ni-opening" data-kind="garden" aria-labelledby="ni-opening-names" hidden>
+    <div class="ni-opening-stage">
+                    <div class="ni-bloom" aria-hidden="true">
+                <span class="ni-stem"></span>
+                                    <span class="ni-petal" style="--spread:-64deg;--closed:-10.666666666667deg"></span>
+                                    <span class="ni-petal" style="--spread:-38deg;--closed:-6.3333333333333deg"></span>
+                                    <span class="ni-petal" style="--spread:-16deg;--closed:-2.6666666666667deg"></span>
+                                    <span class="ni-petal" style="--spread:16deg;--closed:2.6666666666667deg"></span>
+                                    <span class="ni-petal" style="--spread:38deg;--closed:6.3333333333333deg"></span>
+                                    <span class="ni-petal" style="--spread:64deg;--closed:10.666666666667deg"></span>
+                            </div>
+                <div class="ni-opening-copy">
+            <p class="overline">Botanical Garden</p>
+            <h2 id="ni-opening-names"></h2>
+            <button type="button" class="ni-open">Раскрыть приглашение</button>
+        </div>
+        <form method="dialog" class="ni-skip"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body>
+</html>

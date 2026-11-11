@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лиза &amp; Роман · Retro Love</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/new-invitations.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script defer src="/wd-demo/new-openings.js"></script>
+</head>
+<body class="new-invitation retro-love" data-date="2027-08-14T17:00:00+03:00">
+<header class="ni-header">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Retro Love</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="ni-cover rl-cover">
+        <div class="rl-cover-copy">
+            <p class="overline">Love is on the air</p>
+            <h1><span>Лиза</span><i>&amp;</i><span>Роман</span></h1>
+            <p class="cover-date">14 августа 2027 · 17:00</p>
+            <a href="#welcome">Сторона A ↓</a>
+        </div>
+        <figure>
+            <img src="/wd-demo/photos/modern-editorial.jpg" alt="Фотография пары">
+            <figcaption><span>Wedding edition</span><span>33⅓ RPM</span></figcaption>
+        </figure>
+    </section>
+    <section id="welcome" class="welcome rl-welcome">
+        <p class="overline">Сторона A · Приглашение</p>
+        <h2>У любви есть <i>свой ритм</i></h2>
+        <p>У каждой пары есть песня, под которую хочется танцевать снова и снова. Для нас этот вечер станет такой песней. Приходите, чтобы вместе записать её самый тёплый припев.</p>
+        <div class="sign">Лиза &amp; Роман</div>
+    </section>
+    <section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">14 августа 2027 · 17:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>Трек-лист вечера</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>17:00</time><div><h3>Первый трек</h3><p>Встречаем гостей и поднимаем первый бокал.</p></div></li>
+                    <li><span class="event-number">02</span><time>17:45</time><div><h3>Та самая песня</h3><p>Церемония и наши обещания.</p></div></li>
+                    <li><span class="event-number">03</span><time>19:00</time><div><h3>Сторона B</h3><p>Ужин, тосты и длинные разговоры.</p></div></li>
+                    <li><span class="event-number">04</span><time>21:00</time><div><h3>На повторе</h3><p>Торт и танцы до последней песни.</p></div></li>
+            </ol>
+</section>
+    <section class="ni-location rl-location">
+        <div class="location-copy">
+            <p class="overline">Место встречи</p>
+            <h2>Клуб «Мелодия»</h2>
+            <p>Москва</p>
+        </div>
+        <figure><img src="/wd-demo/photos/modern-editorial.jpg" alt="Фотография пары" loading="lazy"></figure>
+    </section>
+    <section class="dress rl-dress">
+        <p class="overline">Дресс-код</p>
+        <h2>В тёплых <i>тонах</i></h2>
+        <p>Терракота, карамель, бордо и кремовый. Если хочется добавить винтажную деталь, самое время достать любимые серьги, платок или пиджак.</p>
+        <div class="colors" aria-hidden="true">
+            <span style="--swatch:#a63c22"></span><span style="--swatch:#e9a175"></span><span style="--swatch:#d4ae79"></span><span style="--swatch:#5b2031"></span>        </div>
+    </section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Увидимся на танцполе?</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer>
+    <span>Лиза &amp; Роман</span><p>14 августа 2027 · 17:00 · С любовью</p>
+    <a href="/wd-demo/">Вся коллекция ↗</a>
+    <p><a href="https://www.pexels.com/photo/29741200/">Фото: Pexels</a></p></footer>
+<dialog class="ni-opening" id="ni-opening" data-kind="record" aria-labelledby="ni-opening-names" hidden>
+    <div class="ni-opening-stage">
+                    <div class="ni-record-scene" aria-hidden="true">
+                <span class="ni-disc"></span>
+                <span class="ni-sleeve"><i>Love<br>is on the air</i></span>
+            </div>
+                <div class="ni-opening-copy">
+            <p class="overline">Retro Love</p>
+            <h2 id="ni-opening-names"></h2>
+            <button type="button" class="ni-open">Запустить нашу историю</button>
+        </div>
+        <form method="dialog" class="ni-skip"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body>
+</html>

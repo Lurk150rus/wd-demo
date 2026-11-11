@@ -39,3 +39,49 @@
 @keyframes op-magazine{0%,24%,100%{transform:rotateY(0);opacity:1}56%,94%{transform:rotateY(-115deg);opacity:0}}
 @media(max-width:700px){.gallery .op-names{font-size:25px}.gallery .royal-classic .op-names{font-size:21px}.gallery .modern-editorial .op-names{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.gallery .opening-preview{display:none}.gallery .opening-preview *{animation:none!important}}
+
+.gallery .botanical-garden .preview { background: #e3e8d8; }
+.gallery .botanical-garden .preview-name { color: #2f432f; }
+.gallery .botanical-garden .preview img { border-radius: 48% 48% 0 0 / 34% 34% 0 0; }
+.gallery .botanical-garden .opening-preview { background: url('/wd-demo/art/garden-sprig.svg') left bottom / auto 80% no-repeat, #edf0e4; }
+.gallery .botanical-garden .op-stage { inset: 10% 10% 20%; }
+.gallery .botanical-garden .op-paper { display: none; }
+.gallery .botanical-garden .op-door {
+  inset: 6% 41% 36%;
+  border-radius: 56% 44% 55% 45% / 62% 62% 38% 38%;
+  border-color: #bd9d82;
+  background: radial-gradient(ellipse at 32% 20%, #fff4dd, #e8c4a3 65%, #b27f6a);
+  transform-origin: center 96%;
+  animation-name: op-bloom-left;
+}
+.gallery .botanical-garden .op-door::after { display: none; }
+.gallery .botanical-garden .op-right { animation-name: op-bloom-right; }
+.gallery .botanical-garden .op-names { justify-content: end; gap: 5px; padding: 0; color: #304633; }
+@keyframes op-bloom-left { 0%, 22%, 100% { transform: rotate(-7deg); } 50%, 94% { transform: rotate(-68deg) scale(1.15); } }
+@keyframes op-bloom-right { 0%, 22%, 100% { transform: rotate(7deg); } 50%, 94% { transform: rotate(68deg) scale(1.15); } }
+.gallery .retro-love .preview { background: linear-gradient(145deg, #fff0d7 55%, #e9a175 55% 63%, #b74d2f 63% 70%, #5b2031 70%); }
+.gallery .retro-love .preview-name { color: #5b2031; }
+.gallery .retro-love .preview img { transform: rotate(3deg); border: 5px solid #fff0d7; filter: sepia(.22); }
+.gallery .retro-love .opening-preview { background: #edb18a; }
+.gallery .retro-love .op-stage { inset: 14% 15%; }
+.gallery .retro-love .op-paper {
+  inset: 5% auto 5% 45%;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #5b2031 0 4%, #e9a175 5% 21%, transparent 22%),
+              conic-gradient(transparent, #ffffff35, transparent 35%, transparent 62%, #ffffff25, transparent),
+              repeating-radial-gradient(circle, #18171b 0 2px, #333033 3px, #211e23 4px);
+  animation-name: op-record;
+}
+.gallery .retro-love .op-door { display: none; }
+.gallery .retro-love .op-names {
+  inset: 0 25% 0 0;
+  background: #fff0d7;
+  color: #5b2031;
+  border: 1px solid #5b2031;
+  transform: rotate(-5deg);
+  box-shadow: 4px 7px 16px #54203145;
+  animation: none;
+}
+@keyframes op-record { 0%, 22%, 100% { transform: translateX(0) rotate(0); } 53%, 94% { transform: translateX(40%) rotate(330deg); } }
