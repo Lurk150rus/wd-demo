@@ -1,0 +1,81 @@
+.ocean-breeze {
+  --paper: #f7f6ed;
+  --ink: #173e4c;
+  --line: #b1c5c4;
+  --mist: #dce9e7;
+  --sand: #e9e2d3;
+  --edge: clamp(20px,7vw,112px);
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+.ocean-breeze .occasion-nav { padding: 16px var(--edge); text-transform: uppercase; }
+.ocean-breeze .overline { letter-spacing: .18em; text-transform: uppercase; }
+.ob-cover { display: grid; grid-template-columns: minmax(0,.87fr) minmax(0,1.13fr); align-items: stretch; padding-left: var(--edge); }
+.ob-title { position: relative; padding: clamp(30px,7vw,110px) 22px clamp(30px,6vw,92px) 0; align-self: center; }
+.ob-title .overline { margin-top: 0; }
+.ob-title h1 { font-size: clamp(61px,9vw,146px); line-height: .83; letter-spacing: -.058em; margin: 22px 0 26px; }
+.ob-title h1 span { display: block; }
+.ob-title h1 i { display: block; font-size: .48em; margin: .18em 0 .2em .42em; color: #4e7784; }
+.ob-title .cover-date { margin: 0; letter-spacing: .14em; }
+.ob-link { display: inline-block; margin-top: 16px; padding-block: 8px; border-bottom: 1px solid var(--line); text-transform: uppercase; font-size: 10px; letter-spacing: .14em; transition: border-color .25s; }
+.ob-link:hover { border-color: var(--ink); }
+.ob-cover figure { min-width: 0; position: relative; min-height: min(65vw,640px); }
+.ob-cover img { position: absolute; inset: 0; object-position: 61% center; }
+.ob-welcome.welcome { max-width: none; width: min(100%, 1370px); padding: clamp(48px,9vw,130px) var(--edge); text-align: left; background: url('/wd-demo/art/ocean-contours.svg') right bottom / 60% 115px no-repeat; }
+.ob-welcome h2 { max-width: 18ch; font-size: clamp(44px,7.9vw,113px); line-height: .91; }
+.ob-welcome h2 i { color: #4e7784; }
+.ob-welcome > p:not(.overline) { margin: 20px 0 0; }
+.ob-welcome .sign { margin: 14px 0 0; }
+.ob-welcome > p:not(.overline), .ob-dress > p:not(.overline) { white-space: pre-line; }
+.ob-calendar { background: var(--mist); border-block: 1px solid var(--line); padding: 26px var(--edge); }
+.ob-calendar .ni-date { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); gap: 10px 40px; align-items: center; max-width: 1240px; margin: auto; }
+.ob-calendar .overline { margin: 0; }
+.ob-calendar h2 { grid-column: 1; font-size: clamp(34px,5.9vw,82px); }
+.ob-calendar .digits { grid-column: 2; grid-row: 1 / 3; margin: 0; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; text-align: center; }
+.ob-calendar .digits b { min-width: 0; font-size: clamp(34px,5vw,64px); }
+.ob-calendar .digits span { letter-spacing: .07em; }
+.ob-place { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.75fr); margin: clamp(45px,9vw,132px) var(--edge) 0; gap: clamp(16px,6vw,90px); }
+.ob-place img { aspect-ratio: 3/2; height: auto; object-position: 72% 58%; }
+.ob-place .location-copy { padding: 14px 0; }
+.ob-place h2 { font-size: clamp(39px,6vw,87px); }
+.ocean-breeze .schedule { max-width: none; display: block; margin: 0 var(--edge); padding: clamp(46px,8vw,115px) 0; }
+.ocean-breeze .section-title { margin-bottom: 31px; }
+.ocean-breeze .schedule ol { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: clamp(13px,3vw,42px); }
+.ocean-breeze .schedule li { display: block; padding-block: 18px; border-block: 1px solid var(--line); }
+.ocean-breeze .schedule time { display: block; margin-bottom: 10px; color: #426a77; }
+.ocean-breeze .event-number { display: none; }
+.ocean-breeze .schedule li p { font-size: 13px; margin-top: 6px; }
+.ob-dress.dress { background: var(--sand); padding: clamp(44px,8vw,95px) var(--edge); }
+.ob-colors { display: flex; justify-content: center; margin-top: 24px; }
+.ob-colors span { width: min(16vw,65px); height: 26px; background: var(--swatch); border-radius: 60% 40% 45% 55%; }
+.ocean-breeze .response { max-width: 1100px; width: calc(100% - 2 * var(--edge)); grid-template-columns: minmax(0,1fr) minmax(0,1fr); padding: clamp(43px,8vw,100px) 0; gap: clamp(25px,7vw,90px); border-top: 0; }
+.ocean-breeze .response button { min-height: 44px; }
+.ob-footer { padding: clamp(65px,11vw,145px) 20px; background: url('/wd-demo/art/ocean-contours.svg') bottom center / 100% 110px no-repeat, #dce9e7; }
+.ob-footer > span { font-size: clamp(45px,9vw,116px); line-height: .9; }
+.ob-opening[hidden] { display: none; }
+.ob-opening { --opening-ready: 1; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; padding: 0; background: transparent; color: var(--ink); overflow: clip; }
+.ob-opening::backdrop { background: transparent; }
+.ob-tide { position: relative; display: grid; place-items: center; min-height: 100%; max-height: 100%; overflow: auto; padding: 20px; background: linear-gradient(180deg,#f2f4ec 0%,#e2ece7 50%,#81a8b0 50.15%,#d9e7e3 100%); }
+.ob-opening.is-opening .ob-tide { overflow: visible; }
+.ob-tide::after { content: ""; position: absolute; top: 96%; left: -10%; width: 120%; height: 13vh; background: #d9e7e3; border-radius: 0 0 58% 39% / 0 0 88% 47%; opacity: 0; pointer-events: none; }
+.ob-opening.is-opening .ob-tide::after { opacity: 1; }
+.ob-opening-copy { position: relative; z-index: 1; text-align: center; width: min(740px,100%); }
+.ob-opening-copy .overline { margin: 0 0 9px; }
+.ob-opening-copy h2 { font-size: clamp(41px,9vw,112px); }
+.ob-opening-copy p { margin-top: 12px; }
+.ob-opening-copy button { min-height: 44px; padding: 8px 16px; border: 0; background: transparent; color: var(--ink); }
+.ob-opening-copy [data-open] { background: var(--ink); color: var(--paper); margin-top: 12px; }
+.ob-opening-copy form button { text-decoration: underline; text-underline-offset: .3em; }
+.ob-opening.is-opening .ob-opening-copy { animation: ob-copy-away .5s ease-out both; }
+@keyframes ob-copy-away { to { opacity: 0; transform: translateY(-7px); } }
+@media (max-width: 700px) {
+  .ob-cover { grid-template-columns: minmax(0,1fr); padding-left: 0; }
+  .ob-title { padding: 20px var(--edge) 23px; }
+  .ob-title h1 { font-size: clamp(61px,16vw,93px); margin-block: 13px 18px; }
+  .ob-cover figure { min-height: clamp(300px,87vw,455px); margin-left: var(--edge); }
+  .ob-welcome.welcome { background-size: 85% 52px; }
+  .ob-calendar .ni-date, .ob-place, .ocean-breeze .response { grid-template-columns: minmax(0,1fr); }
+  .ob-calendar .digits { grid-column: 1; grid-row: auto; text-align: left; margin-top: 10px; }
+  .ocean-breeze .schedule ol { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (prefers-reduced-motion: reduce) { .ob-opening *, .ob-link { animation: none !important; transition: none; } }

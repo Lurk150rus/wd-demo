@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мила &amp; Алекс · Ocean Breeze</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/ocean-breeze.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script type="module" src="/wd-demo/ocean-breeze.js"></script>
+</head>
+<body class="ocean-breeze" data-date="2027-07-10T17:00:00+03:00">
+<header class="occasion-nav">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Ocean Breeze</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="ob-cover">
+        <div class="ob-title">
+            <p class="overline">Приглашение на свадьбу</p>
+            <h1><span>Мила</span><i>&amp;</i><span>Алекс</span></h1>
+            <p class="cover-date">10 июля 2027 · 17:00</p>
+            <a href="#welcome" class="ob-link">К приглашению ↓</a>
+        </div>
+        <figure><img src="/wd-demo/photos/ocean-breeze.jpg" alt="Свадебный портрет пары" fetchpriority="high"></figure>
+    </section>
+
+    <section id="welcome" class="welcome ob-welcome">
+        <p class="overline">Дорогие наши</p>
+        <h2>Там, где море<br><i>встречается с небом</i></h2>
+        <p>В июле мы скажем друг другу «да» на берегу Эгейского моря. Приезжайте разделить этот день с нами. После церемонии останемся на террасе ужинать, смотреть на закат и танцевать.</p>
+        <div class="sign">Мила &amp; Алекс</div>
+    </section>
+
+    <div class="ob-calendar"><section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">10 июля 2027 · 17:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+</div>
+
+    <section class="ob-place">
+        <figure><img src="/wd-demo/photos/ocean-breeze.jpg" alt="Фотография пары" loading="lazy"></figure>
+        <div class="location-copy">
+            <p class="overline">Место встречи</p>
+            <h2>Терраса «Акротири»</h2>
+            <p>Санторини, Греция</p>
+        </div>
+    </section>
+
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>День у моря</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>17:00</time><div><h3>Встреча на террасе</h3><p>Собираемся у моря.</p></div></li>
+                    <li><span class="event-number">02</span><time>17:45</time><div><h3>Церемония</h3><p>Обещания на открытом воздухе.</p></div></li>
+                    <li><span class="event-number">03</span><time>19:00</time><div><h3>Ужин</h3><p>Накрываем стол к закату.</p></div></li>
+                    <li><span class="event-number">04</span><time>21:00</time><div><h3>Танцы</h3><p>Остаёмся под звёздами.</p></div></li>
+            </ol>
+</section>
+
+    <section class="dress ob-dress">
+        <p class="overline">Дресс-код</p>
+        <h2>Оттенки побережья</h2>
+        <p>Лёгкие ткани, спокойные голубые и песочные оттенки. На террасе к вечеру бывает ветрено, поэтому пригодится лёгкая накидка.</p>
+        <div class="ob-colors" aria-hidden="true">
+            <span style="--swatch:#f7f4e9"></span><span style="--swatch:#d7c5ab"></span><span style="--swatch:#93b8bd"></span><span style="--swatch:#4d7384"></span>        </div>
+    </section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Увидимся у моря?</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+
+<footer class="ob-footer">
+    <span>Мила &amp; Алекс</span>
+    <p>10 июля 2027 · 17:00 · С любовью</p>
+    <a href="/wd-demo/">Вся коллекция ↗</a>
+</footer>
+
+<dialog class="ob-opening" data-occasion-opening aria-label="Навстречу морю" hidden>
+    <div class="ob-tide">
+        <div class="ob-opening-copy">
+            <p class="overline">Навстречу морю</p>
+            <h2 data-opening-names></h2>
+            <p data-opening-date></p>
+            <button type="button" data-open>Открыть приглашение</button>
+            <form method="dialog"><button type="submit">Пропустить</button></form>
+        </div>
+    </div>
+</dialog>
+</body>
+</html>
