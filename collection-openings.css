@@ -192,3 +192,17 @@
 .gallery .cherry-romance .op-seal { display: block; position: absolute; left: 0; right: 0; bottom: 19%; height: 9px; background: linear-gradient(#621b33,#be6884,#621b33); animation: op-ribbon-pull 7.4s ease-in-out infinite; z-index: 4; }
 .gallery .cherry-romance .op-names { color: #60283c; }
 @keyframes op-ribbon-pull { 0%,23%,100% { transform: none; opacity: 1; } 54%,95% { transform: translateX(69%) rotate(12deg); opacity: 0; } }
+
+.gallery .winter-fairytale .preview { background: #e3edf1; }
+.gallery .winter-fairytale .preview-name { color: #314656; }
+.gallery .winter-fairytale .opening-preview { background: url('/wd-demo/art/winter-frost.svg') left top / 73% auto no-repeat,radial-gradient(ellipse,#ecf6fa,#a6bfcc); }
+.gallery .winter-fairytale .op-door, .gallery .winter-fairytale .op-paper { display: none; }
+.gallery .winter-fairytale .op-names { color: #314656; }
+.gallery .tropical-paradise .preview { background: #143c2d; color: #f9eed5; }
+.gallery .tropical-paradise .preview-name, .gallery .tropical-paradise .op-names { color: #f9eed5; }
+.gallery .tropical-paradise .opening-preview { background: #143c2d; }
+.gallery .tropical-paradise .op-stage { inset: 0; }
+.gallery .tropical-paradise .op-paper { display: none; }
+.gallery .tropical-paradise .op-door { border: 0; background: url('/wd-demo/art/tropical-leaf.svg') center / contain no-repeat; animation-name: op-curtain-left; }
+.gallery .tropical-paradise .op-door::after { display: none; }
+.gallery .tropical-paradise .op-right { animation-name: op-curtain-right; }

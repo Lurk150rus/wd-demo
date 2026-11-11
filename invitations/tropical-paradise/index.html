@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лина &amp; Максим · Tropical Paradise</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/tropical-paradise.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script type="module" src="/wd-demo/tropical-paradise.js"></script>
+</head>
+<body class="tropical-paradise" data-date="2027-11-13T16:00:00+08:00">
+<header class="occasion-nav">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Tropical Paradise</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="tp-cover">
+        <figure><img src="/wd-demo/photos/tropical-paradise.jpg" alt="Фотография пары" fetchpriority="high"></figure>
+        <div class="tp-title">
+            <p class="overline">Свадьба под открытым небом</p>
+            <h1><span>Лина</span><i>&amp;</i><span>Максим</span></h1>
+            <p class="cover-date">13 ноября 2027 · 16:00</p><a href="#welcome">К приглашению ↓</a>
+        </div>
+    </section>
+    <div class="tp-welcome">
+        <section id="welcome" class="welcome">
+            <p class="overline">Дорогие наши</p><h2>Встретимся<br><i>под пальмами</i></h2>
+            <p>Мы выбрали сад под открытым небом, чтобы сказать друг другу «да». Приезжайте обниматься, ужинать среди зелени и танцевать до темноты.</p><div class="sign">Лина &amp; Максим</div>
+        </section>
+        <figure><img src="/wd-demo/photos/tropical-paradise.jpg" alt="Фотография пары" loading="lazy"></figure>
+    </div>
+    <div class="tp-calendar"><section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">13 ноября 2027 · 16:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+</div>
+    <div class="tp-details">
+        <section class="tp-venue">
+            <div class="location-copy"><p class="overline">Место встречи</p><h2>Садовая вилла</h2><p>Убуд, Бали</p></div>
+        </section>
+        <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>План дня</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>16:00</time><div><h3>Встреча</h3><p>Собираемся в саду.</p></div></li>
+                    <li><span class="event-number">02</span><time>16:45</time><div><h3>Церемония</h3><p>В кругу близких.</p></div></li>
+                    <li><span class="event-number">03</span><time>18:00</time><div><h3>Ужин</h3><p>Встречаем закат вместе.</p></div></li>
+                    <li><span class="event-number">04</span><time>20:30</time><div><h3>Танцы</h3><p>Празднуем под открытым небом.</p></div></li>
+            </ol>
+</section>
+    </div>
+    <section class="dress tp-dress"><p class="overline">Дресс-код</p><h2>Цвет и солнце</h2><p>Лён, лёгкие ткани и сочные природные цвета. Для церемонии на газоне подойдёт обувь на плоской подошве.</p></section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Встретимся?</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="tp-footer"><span>Лина &amp; Максим</span><p>13 ноября 2027 · 16:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
+<dialog class="tp-opening" data-occasion-opening aria-label="Приглашение в тропический сад" hidden>
+    <div class="tp-leaves" aria-hidden="true"><i></i><i></i></div>
+    <div class="tp-opening-copy">
+        <h2 data-opening-names></h2><p data-opening-date></p>
+        <button type="button" data-open>Открыть приглашение</button>
+        <form method="dialog"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body></html>

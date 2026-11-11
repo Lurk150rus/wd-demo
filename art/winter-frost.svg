@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 390" fill="none" stroke="#f8fcff" stroke-linecap="round">
+  <defs>
+    <g id="ice">
+      <path d="M0 0v-100m0 23 24-20M0-62l-24-19M0-44l31-30M0-28l-30-24M0-12l39-25M0-90l-12-10"/>
+      <path d="m17-37 4-19m-35 16-3-15m31-3 1-15m-31 0-3-13m46 54 1-10" opacity=".72"/>
+    </g>
+  </defs>
+  <g stroke-width="1.7">
+    <use href="#ice" transform="translate(31 42) rotate(123) scale(2.3)"/>
+    <use href="#ice" transform="translate(14 28) rotate(163) scale(1.8)"/>
+    <use href="#ice" transform="translate(14 86) rotate(123) scale(1.35)"/>
+    <use href="#ice" transform="translate(41 18) rotate(95) scale(2.7)"/>
+    <use href="#ice" transform="translate(103 44) rotate(133) scale(1.6)"/>
+    <use href="#ice" transform="translate(48 84) rotate(143) scale(2)"/>
+    <use href="#ice" transform="translate(23 159) rotate(154) scale(1.8)"/>
+    <use href="#ice" transform="translate(36 220) rotate(104) scale(1.2)"/>
+    <use href="#ice" transform="translate(185 42) rotate(127) scale(1.08)"/>
+  </g>
+</svg>

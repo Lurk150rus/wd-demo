@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Соня &amp; Артур · Winter Fairytale</title>
+    <link rel="stylesheet" href="/wd-demo/collection.css">
+    <link rel="stylesheet" href="/wd-demo/winter-fairytale.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script type="module" src="/wd-demo/winter-fairytale.js"></script>
+</head>
+<body class="winter-fairytale" data-date="2027-12-18T15:00:00+03:00">
+<header class="occasion-nav">
+    <a href="/wd-demo/">← Коллекция</a>
+    <span>Winter Fairytale</span>
+    <a href="#rsvp">RSVP ↗</a>
+</header>
+<main>
+    <section class="wf-cover">
+        <figure><img src="/wd-demo/photos/winter-fairytale.jpg" alt="Фотография пары" fetchpriority="high"></figure>
+        <div class="wf-title">
+            <p class="overline">Зимняя свадьба</p>
+            <h1><span>Соня</span><i>&amp;</i><span>Артур</span></h1>
+            <p class="cover-date">18 декабря 2027 · 15:00</p>
+        </div>
+    </section>
+    <section id="welcome" class="welcome wf-note">
+        <p class="overline">Дорогие наши</p><h2>В самый <i>светлый</i> день зимы</h2>
+        <p>В декабре мы соберём самых близких в доме у заснеженного леса. После церемонии будем греться у огня, ужинать и танцевать.</p><div class="sign">Соня &amp; Артур</div>
+    </section>
+    <div class="wf-calendar"><section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">18 декабря 2027 · 15:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+</div>
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>Зимний день</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>15:00</time><div><h3>Встреча</h3><p>Согреваемся горячими напитками.</p></div></li>
+                    <li><span class="event-number">02</span><time>15:45</time><div><h3>Церемония</h3><p>Встречаемся у камина.</p></div></li>
+                    <li><span class="event-number">03</span><time>17:00</time><div><h3>Ужин</h3><p>Уютный вечер за общим столом.</p></div></li>
+                    <li><span class="event-number">04</span><time>20:00</time><div><h3>Танцы</h3><p>Продолжаем праздник.</p></div></li>
+            </ol>
+</section>
+    <section class="wf-venue">
+        <div class="location-copy"><p class="overline">Место встречи</p><h2>Лесная резиденция</h2><p>Ленинградская область</p></div>
+        <figure><img src="/wd-demo/photos/winter-fairytale.jpg" alt="Фотография пары" loading="lazy"></figure>
+    </section>
+    <section class="dress wf-dress"><p class="overline">Дресс-код</p><h2>Свет зимы</h2><p>Глубокие зимние тона, серебристые детали и тёплая верхняя одежда для прогулки.</p></section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Будем ждать вас</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="wf-footer"><span>Соня &amp; Артур</span><p>18 декабря 2027 · 15:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
+<dialog class="wf-opening" data-occasion-opening aria-label="Морозное стекло" hidden>
+    <div class="wf-frost" aria-hidden="true"></div>
+    <div class="wf-opening-copy">
+        <p class="overline">Зимняя свадьба</p><h2 data-opening-names></h2><p data-opening-date></p>
+        <button type="button" data-open>Открыть приглашение</button>
+        <form method="dialog"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body></html>
