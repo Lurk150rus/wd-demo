@@ -111,15 +111,24 @@
   gap: 12px; min-height: 100%; padding: 22px;
   background: url('/wd-demo/art/boho-meadow.svg') right bottom / min(30vw,350px) auto no-repeat, radial-gradient(ellipse, #fbf4e6 18%, #e3c6a5);
 }
-.rb-scroll { width: min(480px,100%); position: relative; margin-block: 16px; isolation: isolate; }
+.rb-scroll { width: min(480px,100%); position: relative; margin-block: 16px; isolation: isolate; perspective: 850px; }
 .rb-scroll-paper {
   position: relative; display: grid; place-items: center; min-height: 170px; padding: 30px 22px;
   border-radius: 17px 12px 12px 17px;
   background: repeating-linear-gradient(9deg,#65402309 0 1px,transparent 1px 4px), linear-gradient(0deg,#c2a37e,#f7e9ce 20%,#fff5e1 55%,#d7b992);
   box-shadow: 0 24px 30px -12px #58392265, inset 10px 0 0 #d4b998;
-  transform: scaleY(.32) rotate(-5deg);
+  transform: rotate(-3deg);
 }
-.rb-scroll-message { opacity: 0; text-align: center; }
+.rb-scroll-message { text-align: center; }
+.rb-paper-fold {
+  position: absolute;
+  inset: 0;
+  transform-origin: top;
+  border: 1px solid #b88e64;
+  border-radius: 5px;
+  background: repeating-linear-gradient(9deg,#6540230a 0 1px,transparent 1px 4px), linear-gradient(#e6c7a5,#d0a67e);
+  box-shadow: 0 8px 22px #58392240;
+}
 .rb-scroll-message p { margin-top: 8px; }
 .rb-scroll-message h2 { font-size: clamp(28px,7vw,62px); }
 .rb-ribbon,.rb-bow { position: absolute; display: block; background: #914e3c; left: 50%; top: 50%; }
@@ -131,10 +140,10 @@
 .rb-open,.rb-skip { min-height: 44px; }
 .rb-open { color: #fff5e5; background: var(--clay); border: 1px solid var(--clay); padding: 8px 22px; }
 .rb-skip { border: 0; background: none; color: inherit; text-decoration: underline; text-underline-offset: 4px; }
-.is-opening .rb-ribbon { animation: rb-untie .56s ease-in both; }
-.is-opening .rb-bow { animation: rb-untie .45s ease-in both; }
-.is-opening .rb-scroll-paper { animation: rb-unroll 1.15s .24s cubic-bezier(.19,.82,.29,1) both; }
-.is-opening .rb-scroll-message { animation: rb-letter .54s .66s ease-out both; }
+.is-opening:not([data-gsap-motion]) .rb-ribbon { animation: rb-untie .56s ease-in both; }
+.is-opening:not([data-gsap-motion]) .rb-bow { animation: rb-untie .45s ease-in both; }
+.is-opening:not([data-gsap-motion]) .rb-scroll-paper { animation: rb-unroll 1.15s .24s cubic-bezier(.19,.82,.29,1) both; }
+.is-opening:not([data-gsap-motion]) .rb-scroll-message { animation: rb-letter .54s .66s ease-out both; }
 @keyframes rb-untie { to { opacity: 0; transform: translate(360%,30%) rotate(35deg) scaleX(1.8); } }
 @keyframes rb-unroll { to { transform: scaleY(1) rotate(0); border-radius: 3px; } }
 @keyframes rb-letter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }

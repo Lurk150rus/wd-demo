@@ -96,9 +96,9 @@
 .iv-opening-actions button { padding: 8px 16px; min-height: 44px; color: inherit; background: none; border: 0; }
 .iv-opening-actions [data-open] { border: 1px solid var(--ink); }
 .iv-opening-actions form button { text-decoration: underline; text-underline-offset: .3em; }
-.iv-opening.is-opening .iv-leaf { animation: iv-open-leaf .69s cubic-bezier(.35,.05,.26,1) both; }
-.iv-opening.is-opening .iv-fold { animation: iv-to-cover .99s .54s cubic-bezier(.27,.1,.24,1) both; }
-.iv-opening.is-opening .iv-opening-actions { animation: iv-actions-out .35s ease-out both; }
+.iv-opening.is-opening:not([data-gsap-motion]) .iv-leaf { animation: iv-open-leaf .69s cubic-bezier(.35,.05,.26,1) both; }
+.iv-opening.is-opening:not([data-gsap-motion]) .iv-fold { animation: iv-to-cover .99s .54s cubic-bezier(.27,.1,.24,1) both; }
+.iv-opening.is-opening:not([data-gsap-motion]) .iv-opening-actions { animation: iv-actions-out .35s ease-out both; }
 @keyframes iv-open-leaf { 78% { opacity: 1; } to { transform: rotateY(170deg); opacity: 0; } }
 @keyframes iv-to-cover { to { transform: translate(var(--iv-x,0px),var(--iv-y,0px)) scale(var(--iv-scale,1)); box-shadow: none; } }
 @keyframes iv-actions-out { to { opacity: 0; } }

@@ -60,10 +60,10 @@
 .wm-intro [data-open] { border: 1px solid var(--ink); margin-top: 9px; }
 .wm-intro form button { text-decoration: underline; text-underline-offset: .3em; }
 .wm-opening.is-opening .wm-flowers i { animation: wm-sway 1.55s ease-in-out both; }
-.wm-opening.is-opening .wm-flowers i:nth-child(2) { animation-name: wm-sway-right; }
-.wm-opening.is-opening .wm-flowers i:last-child { animation-name: wm-sink; }
-@keyframes wm-sway { to { transform: translateX(-40%) rotate(-38deg); opacity: 0; } }
-@keyframes wm-sway-right { to { transform: translateX(40%) rotate(38deg); opacity: 0; } }
+.wm-opening.is-opening .wm-flowers i:nth-child(2) { animation-name: wm-sway-right; animation-delay: 85ms; }
+.wm-opening.is-opening .wm-flowers i:last-child { animation-name: wm-sink; animation-delay: 130ms; }
+@keyframes wm-sway { 24% { transform: rotate(19deg); } to { transform: translateX(-40%) rotate(-38deg); opacity: 0; } }
+@keyframes wm-sway-right { 23% { transform: rotate(-18deg); } to { transform: translateX(40%) rotate(38deg); opacity: 0; } }
 @keyframes wm-sink { to { transform: translateY(40%); opacity: 0; } }
 @media(max-width:700px) {
   .wm-cover { grid-template-columns: minmax(0,1fr); gap: 19px; }

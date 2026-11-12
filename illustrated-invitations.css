@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Album Script";
+  src: url("/wd-demo/fonts/MarckScript-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+.ill {
+  --paper:#f4e7d3;
+  --ink:#4c3629;
+  --accent:#79513c;
+  --edge:#b18e6f;
+  --grain:url("/wd-demo/art/print-grain.svg");
+  --botanical:url("/wd-demo/art/sepia-botanical.svg");
+  margin:0;
+  color:var(--ink);
+  background:var(--grain),#e7d3ba;
+  font:1rem/1.65 Georgia,serif;
+  overflow-wrap:anywhere;
+}
+.ill *, .ill *::before, .ill *::after {box-sizing:border-box}
+.ill h1,.ill h2,.ill h3,.ill figure {margin:0}
+.ill h1,.ill h2 {font:400 clamp(2.25rem,6vw,4.25rem)/1.07 "Album Script",Georgia,serif;color:var(--accent)}
+.ill h1 {font-size:clamp(2.85rem,9vw,7rem)}
+.ill h1 i {font-size:.6em;font-style:normal;margin-inline:.22em}
+.ill a {color:inherit;text-underline-offset:.25em}
+.ill :focus-visible {outline:2px solid currentColor;outline-offset:4px}
+.ill main h1[tabindex="-1"]:focus {outline:none}
+.ill .overline,.ill-nav,.ill-down,.ill .cover-date {
+  font:600 .7rem/1.55 Georgia,serif;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.ill-nav {display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:.45rem clamp(.7rem,4vw,3rem);gap:.5rem;background:var(--paper)}
+.ill-nav span {grid-column:2;text-align:center}
+.ill-nav a {min-height:44px;display:flex;align-items:center;text-decoration:none}
+.ill-nav a:last-child {grid-column:3;justify-self:end}
+.ill main {max-width:76rem;margin:auto;background:var(--grain),var(--paper)}
+.ill main section {text-align:center}
+.ill-cover {position:relative;display:grid;justify-items:center;align-content:center;gap:.8rem;padding:clamp(2.6rem,6vw,5rem) max(13%,1.35rem) 1.9rem;isolation:isolate}
+.sepia-romance .ill-cover::before,.sepia-romance .ill-cover::after {
+  content:"";position:absolute;z-index:-1;inset:1.5rem auto;left:1.2%;width:clamp(2.3rem,12vw,8.7rem);
+  background:var(--botanical) center/contain no-repeat;pointer-events:none;
+}
+.sepia-romance .ill-cover::after {left:auto;right:1.2%;transform:scaleX(-1)}
+.ill-cover .overline,.ill-cover .cover-date {margin:0}
+.ill-down {display:grid;place-items:center;min-height:44px}
+.ill-oval {padding:.33rem;border:3px double var(--edge);border-radius:50%;width:min(100%,28rem);box-shadow:0 7px 20px #76533338}
+.ill img {display:block;width:100%;height:auto;object-fit:cover}
+.ill-oval img {aspect-ratio:1.5;border-radius:50%;object-position:center 38%}
+.sepia-romance main img {filter:grayscale(.92) sepia(.62) contrast(.89)}
+.ill-welcome {position:relative;margin:0 auto;padding:3rem 1.55rem;width:min(calc(100% - 2.5rem),38rem);white-space:pre-line}
+.ill-welcome p,.ill .dress>p,.location-copy>p {white-space:pre-line}
+.sepia-romance .ill-welcome {
+  width:100%;padding:clamp(2.5rem,6vw,5rem) max(12%,calc((100% - 34rem)/2)) clamp(9rem,35vw,19rem);
+  background:url("/wd-demo/art/sepia-estate.svg") center bottom/min(100%,55rem) auto no-repeat;
+}
+.sepia-romance .ill-welcome::before {
+  content:"";position:absolute;inset:1rem max(6%,calc((100% - 40rem)/2)) auto;height:calc(100% - clamp(9rem,35vw,19rem));
+  border:3px double #9a755c8c;border-radius:22% 22% 15% 15% / 17% 17% 15% 15%;pointer-events:none;
+}
+.ill .sign {color:var(--accent);font:1.55rem/1.2 "Album Script",Georgia,serif}
+.ill-calendar {padding:2.4rem 1.1rem;max-width:38rem;margin:auto;border-block:3px double var(--edge);text-align:center}
+.ill .ni-date h2 {font:600 .83rem/1.5 Georgia,serif}
+.ill .digits {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.35rem;margin:1rem auto 0;max-width:29rem}
+.ill .digits b,.ill .digits span {display:block}
+.ill .digits b {font:400 clamp(1.55rem,4vw,2.8rem)/1.15 Georgia,serif}
+.ill .digits span {font-size:.72rem}
+.ill-program,.ill-photos,.ill .dress,.ill .response,.ill-wishes {padding:clamp(2.7rem,7vw,5.8rem) clamp(1.25rem,6vw,5rem)}
+.ill-program ol {list-style:none;padding:0;margin:1.5rem auto 0;max-width:52rem}
+.ill-program li {display:grid;grid-template-columns:3.25rem minmax(0,1fr);gap:.5rem;text-align:left;border-top:1px solid var(--edge);padding:.8rem 0;align-items:baseline}
+.ill-program h3 {font:600 1rem/1.4 Georgia,serif}
+.ill-program li p {font-size:.9rem;margin:.25rem 0 0}
+.ill-program time {color:var(--accent);font-style:italic}
+.ill .event-number {display:none}
+.ill-monogram {
+  display:grid;place-items:center;width:4.3rem;min-height:4.3rem;margin:1.15rem auto 0;padding:.15rem;
+  border:3px double currentColor;border-radius:50%;color:var(--accent);font:1.9rem/1 "Album Script",Georgia,serif;
+}
+.ill-photos {background:var(--grain),#ead8c0}
+.ill-photos>div {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.35rem,3vw,1.65rem);max-width:52rem;margin:1.6rem auto 0}
+.ill-photos figure {padding:clamp(.22rem,1vw,.7rem);background:#fff3df;border:1px solid #b59a80;box-shadow:1px 5px 10px #75523d24}
+.ill-photos img {aspect-ratio:3/4}
+.ill-photos figure:nth-child(2) img {object-position:42% 40%}
+.ill-photos figure:nth-child(3) img {object-position:62% 40%}
+.ill-venue {display:grid;justify-items:center;align-content:start;padding:clamp(2.8rem,8vw,6rem) 1.4rem clamp(8.5rem,33vw,19rem);background:url("/wd-demo/art/sepia-estate.svg") center bottom/min(95%,52rem) auto no-repeat}
+.ill .location-copy {max-width:38rem}
+.ill .dress {background:var(--botanical) right 3% center/auto 70% no-repeat,var(--grain),#f0dfcb}
+.ill .dress>p {max-width:33rem;margin-inline:auto}
+.ill-swatches {display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem 1.1rem;margin:1.4rem auto 0;padding:0;list-style:none}
+.ill-swatches li {display:grid;justify-items:center;gap:.3rem;font-size:.78rem}
+.ill-swatches i {width:2.8rem;aspect-ratio:1;border:1px solid #62423540;border-radius:50%;background:var(--grain),var(--swatch)}
+.ill .response {display:grid;gap:1.2rem;border:3px double var(--edge);margin:clamp(1.2rem,4vw,3rem);padding:clamp(1.25rem,4vw,3rem)}
+.ill .response form {display:grid;text-align:left;gap:.55rem}
+.ill .response input:not([type=radio]),.ill textarea {width:100%;padding:.68rem;font:inherit;color:var(--ink);background:#fffaf0;border:1px solid var(--edge);border-radius:0}
+.ill .response fieldset {margin:.3rem 0;padding:.65rem;border:1px solid var(--edge)}
+.ill .response fieldset label {display:block}
+.ill input[type=radio] {accent-color:var(--accent)}
+.ill .response button,.ill-opening button {padding:.65rem .95rem;min-height:44px;background:var(--accent);color:#fffaf0;font:inherit;border:1px solid transparent;cursor:pointer}
+.ill .response button:hover,.ill-opening button:hover {filter:brightness(1.12)}
+.ill-footer {padding:2rem 1rem;text-align:center;background:var(--grain),#dac3a8}
+.ill-footer>span {font:2.4rem/1.2 "Album Script",Georgia,serif}
+.ill-footer p,.ill-footer a {font-size:.8rem}
+@media(min-width:720px) {
+  .sepia-romance .ill-program ol {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(4rem,11vw,9rem)}
+  .sepia-romance .ill-program .ill-monogram {margin-bottom:-.75rem}
+  .ill .response {grid-template-columns:1fr 1fr;align-items:center;gap:2rem}
+}
+.love-doodles {
+  --paper:#fcf1dd;
+  --ink:#443732;
+  --accent:#923e55;
+  --edge:#b37c7d;
+  background:var(--grain),#eac0c2;
+}
+.love-doodles main {width:min(calc(100% - 1.4rem),62rem);margin:1.1rem auto;box-shadow:2px 8px 20px #723d4c27}
+.love-doodles .ill-cover {padding:clamp(1.6rem,5vw,3.2rem) 1rem 1.9rem;gap:.35rem}
+.ill-couple-art {width:min(91%,25rem);height:auto}
+.love-doodles h1 {transform:rotate(-2deg);max-width:100%;font-size:clamp(2.65rem,8vw,5.9rem)}
+.love-doodles .ill-cover .cover-date {font:1.35rem "Album Script",Georgia,serif;color:var(--accent);letter-spacing:.045em}
+.love-doodles .ill-welcome {background:repeating-linear-gradient(transparent 0 1.63rem,#b96c7928 1.63rem 1.65rem);transform:rotate(-1deg);border-left:2px solid #b96c794a;margin-bottom:2.4rem}
+.love-doodles .ill-calendar {width:min(calc(100% - 2.5rem),24rem);padding:1.15rem;border:2px solid #b4767c;border-radius:4% 7% 5% 9% / 6% 5% 9% 5%;background:#fff7e8}
+.ill-month>strong {color:var(--accent);font:1.8rem "Album Script",Georgia,serif}
+.ill-month>div {display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.22rem;margin-top:.6rem;font-size:.82rem}
+.ill-month mark {background:#f1c6c9;color:#753248;outline:1px solid #a24962;border-radius:46% 53% 49% 42%;justify-self:center;min-width:1.5rem}
+.love-doodles .ill-program li {grid-template-columns:2.75rem 2.85rem minmax(0,1fr);align-items:center;gap:.45rem;border-top:1px dashed var(--edge)}
+.love-doodles .ill-program li::before {content:"";width:2.75rem;aspect-ratio:1;background:url("/wd-demo/art/doodle-events.svg") 0 center/400% auto no-repeat}
+.love-doodles .ill-program li:nth-child(4n+2)::before {background-position:33.333% center}
+.love-doodles .ill-program li:nth-child(4n+3)::before {background-position:66.667% center}
+.love-doodles .ill-program li:nth-child(4n+4)::before {background-position:100% center}
+.love-doodles .ill-photos {background:var(--grain),#f0d3ce}
+.love-doodles .ill-photos>div {grid-template-columns:repeat(2,minmax(0,1fr));max-width:39rem;gap:1rem}
+.love-doodles .ill-photos figure:first-child {transform:rotate(-4deg)}
+.love-doodles .ill-photos figure:last-child {transform:rotate(4deg)}
+.love-doodles .ill-venue {background-image:url("/wd-demo/art/doodle-venue.svg");background-size:min(90%,30rem);padding-bottom:clamp(8rem,38vw,15rem)}
+.love-doodles .dress {background:var(--grain),#f4e1d0}
+.love-doodles .ill-swatches i {border-radius:49% 44% 53% 46%;border-style:dashed;transform:rotate(-14deg)}
+.ill-wishes {display:flex;flex-wrap:wrap;justify-content:center;gap:1.4rem;align-items:center}
+.ill-wishes svg {width:7rem}
+.ill-wishes div {max-width:25rem}
+.love-doodles .response {border-style:dashed;border-radius:2% 4% 3% 5%}
+.love-doodles .ill-footer {background:var(--grain),#efd1d0}
+
+.ill-opening[hidden] {display:none}
+.ill:has(.ill-opening[open]) {overflow:hidden}
+.ill-opening {
+  --opening-ready:1;
+  width:100%;height:100%;max-width:none;max-height:none;inset:0;margin:0;border:0;padding:1rem;
+  color:var(--ink);background:var(--grain),#dcc7ab;
+}
+.love-doodles .ill-opening {background:var(--grain),#fff2dc}
+.ill-opening::backdrop {background:#dcc7ab}
+.love-doodles .ill-opening::backdrop {background:#fff2dc}
+.ill-opening-inner {min-height:100%;display:grid;justify-items:center;align-content:center;gap:.65rem;text-align:center}
+.ill-opening form button {background:transparent;color:inherit;text-decoration:underline;font-size:.83rem}
+.ill-book {width:min(72vw,19rem,49svh);min-height:clamp(15rem,51svh,24rem);position:relative;perspective:980px;background:#d5bfa1;border-radius:.25rem .6rem .6rem .25rem;box-shadow:.55rem .42rem 0 #aa8968,0 1.3rem 1.9rem #57371f47;margin-bottom:1rem}
+.ill-book-leaf,.ill-book-cover {position:absolute;inset:0;transform-origin:left center;border-radius:inherit;backface-visibility:visible}
+.ill-book-leaf {background:var(--grain),linear-gradient(90deg,#b79875,#f9eed5 13%,#ecdbbf);box-shadow:inset 0 0 0 7px #d8bd9d}
+.ill-book-cover {display:grid;align-content:center;gap:.42rem;background:var(--grain),linear-gradient(90deg,#563927,#805840 14%,#6d4635);color:#f4dfbf;border:3px double #dab585;padding:.65rem;outline:1px solid #c99d72;outline-offset:-10px}
+.ill-book-cover h2,.ill-book-cover .ill-monogram {color:inherit}
+.ill-book-cover h2 {font-size:clamp(1.35rem,5vw,2.3rem)}
+.ill-book-cover .ill-monogram {margin:.2rem auto}
+.ill-book-cover p {margin:0;font-size:.73rem}
+.ill-sketch {width:min(85vw,24rem,53svh);aspect-ratio:1;display:grid;align-content:center;position:relative;isolation:isolate;padding:clamp(2.4rem,12vw,4.4rem) clamp(1.5rem,8vw,3.4rem)}
+.ill-sketch h2 {font-size:clamp(1.75rem,6vw,3.25rem)}
+.ill-sketch p {margin:.4rem 0}
+.ill-opening-heart {position:absolute;inset:0;width:100%;z-index:-1;overflow:visible}
+.ill-opening-heart path {stroke:#a84960;stroke-width:2.3;stroke-linecap:round;fill:none;stroke-dasharray:1;stroke-dashoffset:0}
+.ill-opening-flowers {position:absolute;right:-9%;bottom:-3%;width:34%;z-index:-1}
+.ill-opening[open] .ill-opening-heart path {animation:ill-draw .8s ease-out both}
+.ill-opening[open] .ill-sketch h2 {animation:ill-appear .45s .28s both}
+.ill-opening[open] .ill-opening-flowers {animation:ill-appear .45s .45s both}
+.ill-opening[open] .ill-sketch p {animation:ill-appear .4s .6s both}
+.ill-opening.is-opening::backdrop {animation:ill-clear .46s .89s ease both}
+.love-doodles .ill-opening.is-opening::backdrop {animation-delay:.38s}
+@keyframes ill-draw {from {stroke-dashoffset:1}}
+@keyframes ill-appear {from {opacity:0;translate:0 6px}}
+@keyframes ill-clear {to {opacity:0}}
+@media(prefers-reduced-motion:reduce) {
+  .ill-opening[open] .ill-sketch > *,.ill-opening[open] .ill-opening-heart path,.ill-opening.is-opening::backdrop {animation:none}
+}
+.ill-opening.is-opening .ill-sketch > *,
+.ill-opening.is-opening .ill-opening-heart path {animation:none}
+@media(min-width:720px) {
+  .sepia-romance .ill-program {position:relative}
+  .sepia-romance .ill-program .ill-monogram {
+    position:absolute;left:50%;top:58%;transform:translateX(-50%);margin:0;
+  }
+}
+.ill-love-note {margin:.15rem 0 0;font-style:italic}
+.ill-book-cover {overflow:auto;align-content:safe center}
+.ill-book-cover h2 {overflow-wrap:anywhere}
+@media(max-width:390px) {
+  .ill-nav {letter-spacing:.075em}
+}

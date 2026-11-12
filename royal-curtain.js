@@ -58,6 +58,7 @@
     if (names.length !== 2 || names.some(name => !name)) return;
     dialog.querySelector('[data-rc-first]').textContent = names[0];
     dialog.querySelector('[data-rc-second]').textContent = names[1];
+    dialog.querySelector('[data-rc-date]').textContent = document.querySelector('.cover .cover-date')?.textContent.trim() ?? '';
     dialog.toggleAttribute('data-rc-long', names.some(name => name.length > 16));
     dialog.classList.remove('rc-is-opening');
     button.disabled = false;

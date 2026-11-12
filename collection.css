@@ -21,3 +21,31 @@
 .gallery .newspaper-wedding .preview img { object-position: center 73%; }
 .gallery .french-chateau .preview img { object-position: center 62%; }
 .gallery .retro-love .preview img { object-position: 61% 48%; }
+
+/* Print-inspired gallery entries */
+.gallery .print-preview {isolation:isolate;display:grid;place-content:center;gap:.7rem;padding:2.8rem 15%;text-align:center;color:#71394c;background:url('/wd-demo/art/print-grain.svg'),#53553b}
+.gallery .print-preview::before {content:"";position:absolute;z-index:-1;inset:10% 13%;background:url('/wd-demo/art/ribbon-lace.svg') center/100% 100% no-repeat;filter:drop-shadow(2px 8px 7px #29271d85)}
+.gallery .print-preview::after {content:"";position:absolute;inset:6% auto auto 25%;width:50%;height:25%;background:url('/wd-demo/art/print-bow.svg') center/contain no-repeat;pointer-events:none}
+.gallery .print-preview span {font:italic clamp(1.4rem,3vw,2.4rem)/1.1 Georgia,serif;overflow-wrap:anywhere}
+.gallery .print-preview small {position:static;color:inherit;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em}
+.gallery .blue-heirloom .print-preview {background:url('/wd-demo/art/print-grain.svg'),linear-gradient(125deg,#4f687b,#94a8b6 42%,#4b657b);color:#385769}
+.gallery .blue-heirloom .print-preview::before {inset:17% 7%;background-image:url('/wd-demo/art/heirloom-lace.svg')}
+.gallery .blue-heirloom .print-preview::after {inset:5% auto auto 1%;width:35%;height:43%;background-image:url('/wd-demo/art/heirloom-flowers.svg')}
+
+.gallery .illustrated-preview {
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.85rem;
+  padding:1rem 15%;text-align:center;
+  color:#76513f;background:url("/wd-demo/art/print-grain.svg"),#f0e3cf;
+}
+.gallery .illustrated-preview span {font:italic clamp(1.6rem,3vw,2.55rem)/1.13 Georgia,serif}
+.gallery .sepia-romance .illustrated-preview::before,.gallery .sepia-romance .illustrated-preview::after {
+  content:"";position:absolute;inset:6% auto 6% 0;width:23%;
+  background:url("/wd-demo/art/sepia-botanical.svg") center/contain no-repeat;pointer-events:none;
+}
+.gallery .sepia-romance .illustrated-preview::after {left:auto;right:0;transform:scaleX(-1)}
+.gallery .sepia-romance .illustrated-preview img {
+  position:static;width:90%;height:auto;aspect-ratio:1.5;object-fit:cover;
+  border:3px double #a98667;border-radius:50%;filter:grayscale(.92) sepia(.62);
+}
+.gallery .love-doodles .illustrated-preview {background:url("/wd-demo/art/print-grain.svg"),#efc8c8;color:#923e55}
+.gallery .love-doodles .illustrated-preview svg {width:min(105%,19rem);height:auto;display:block}

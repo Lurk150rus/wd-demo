@@ -33,6 +33,8 @@
       try { if (sessionStorage.getItem(key) === 'opened') return; } catch { /* Storage is optional. */ }
     }
     nameLabel.textContent = names().join(' & ');
+    const date = dialog.querySelector('.ni-opening-date');
+    if (date) date.textContent = document.querySelector('.ni-cover .cover-date').textContent.trim();
     dialog.hidden = false;
     try { dialog.showModal(); active = true; }
     catch { dialog.hidden = true; }

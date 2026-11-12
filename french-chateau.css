@@ -81,9 +81,9 @@
 .fc-opening-copy button { padding: 8px 16px; min-height: 44px; color: var(--ink); background: transparent; border: 0; }
 .fc-opening-copy [data-open] { background: var(--ink); color: var(--paper); margin-top: 14px; }
 .fc-opening-copy form button { text-decoration: underline; text-underline-offset: .3em; }
-.fc-opening.is-opening .fc-door { animation: fc-door-left 1.48s .08s cubic-bezier(.55,.08,.22,1) both; }
-.fc-opening.is-opening .fc-door + .fc-door { animation-name: fc-door-right; }
-.fc-opening.is-opening .fc-opening-copy { animation: fc-card-out .46s ease-in both; }
+.fc-opening.is-opening:not([data-gsap-motion]) .fc-door { animation: fc-door-left 1.48s .08s cubic-bezier(.55,.08,.22,1) both; }
+.fc-opening.is-opening:not([data-gsap-motion]) .fc-door + .fc-door { animation-name: fc-door-right; }
+.fc-opening.is-opening:not([data-gsap-motion]) .fc-opening-copy { animation: fc-card-out .46s ease-in both; }
 @keyframes fc-door-left { to { transform: rotateY(-96deg); } }
 @keyframes fc-door-right { to { transform: rotateY(96deg); } }
 @keyframes fc-card-out { to { opacity: 0; transform: translateY(-9px) scale(.98); } }

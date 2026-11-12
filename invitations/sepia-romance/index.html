@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Софья &amp; Андрей · Sepia Romance</title>
+    <link rel="stylesheet" href="/wd-demo/illustrated-invitations.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script defer src="/wd-demo/experiments/gsap-3.15.0.min.js"></script>
+    <script type="module" src="/wd-demo/illustrated-invitations.js"></script>
+</head>
+<body class="ill sepia-romance" data-date="2027-09-04T16:00:00+03:00">
+<header class="ill-nav"><a href="/wd-demo/">← Коллекция</a><span>Sepia Romance</span><a href="#rsvp">RSVP ↗</a></header>
+<main>
+    <section class="ill-cover">
+                <p class="overline">Свадебное приглашение</p>
+        <h1><span>Софья</span><i>&amp;</i><span>Андрей</span></h1>
+                    <figure class="ill-oval"><img src="/wd-demo/photos/french-chateau.webp" alt="Портрет пары" fetchpriority="high"></figure>
+                <p class="cover-date">4 сентября 2027 · 16:00</p>
+                <a class="ill-down" href="#welcome">Читать приглашение ↓</a>
+    </section>
+
+    <section class="welcome ill-welcome" id="welcome">
+        <p class="overline">Письмо к близким</p>
+        <h2>Дорогие наши</h2>
+        <p>Приглашаем вас провести с нами сентябрьский день в старом саду. После церемонии соберёмся за одним столом, чтобы поднять бокалы и пополнить наш семейный альбом.</p>
+        <div class="sign">Софья &amp; Андрей</div>
+    </section>
+
+    <div class="ill-calendar">
+                <section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">4 сентября 2027 · 16:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+    </div>
+
+    <section class="schedule ill-program">
+        <div class="section-title"><p class="overline">Программа дня</p><h2>Порядок торжества</h2></div>
+        <span class="ill-monogram" aria-hidden="true">СА</span>        <ol>
+                            <li><span class="event-number">1</span><time>16:00</time><div><h3>Сбор гостей</h3><p>Встречаемся у павильона.</p></div></li>
+                            <li><span class="event-number">2</span><time>16:45</time><div><h3>Церемония</h3><p>Скажем друг другу «да».</p></div></li>
+                            <li><span class="event-number">3</span><time>18:00</time><div><h3>Ужин и торт</h3><p>Сядем за общий стол.</p></div></li>
+                            <li><span class="event-number">4</span><time>20:30</time><div><h3>Танцы</h3><p>Первый танец и музыка до вечера.</p></div></li>
+                    </ol>
+    </section>
+
+    <section class="ill-photos" aria-labelledby="ill-photo-title">
+        <h2 id="ill-photo-title">Страницы альбома</h2>
+        <div>
+                                            <figure><img src="/wd-demo/photos/french-chateau.webp" alt="Фотография из свадебного альбома" loading="lazy"></figure>
+                                            <figure><img src="/wd-demo/photos/old-money.webp" alt="Фотография из свадебного альбома" loading="lazy"></figure>
+                                            <figure><img src="/wd-demo/photos/royal-classic.jpg" alt="Фотография из свадебного альбома" loading="lazy"></figure>
+                    </div>
+    </section>
+
+    <section class="ill-venue">
+        <div class="location-copy">
+            <p class="overline">Место встречи</p><h2>Усадьба «Старый сад»</h2><p>Московская область, парковый павильон</p>
+        </div>
+    </section>
+
+    <section class="dress"><p class="overline">Дресс-код</p><h2>Оттенки вечера</h2><p>Подойдут тёплые, приглушённые оттенки и мягкие ткани.</p>
+        <ul class="ill-swatches"><li><i style="--swatch:#eadbc6"></i>Кремовый</li><li><i style="--swatch:#b8947b"></i>Сепия</li><li><i style="--swatch:#bc8e8a"></i>Пыльная роза</li><li><i style="--swatch:#806654"></i>Ореховый</li></ul>
+    </section>
+        <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Будем рады видеть вас</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="ill-footer"><span>Софья &amp; Андрей</span><p>4 сентября 2027 · 16:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
+<dialog class="ill-opening" data-occasion-opening aria-label="Семейный альбом" hidden>
+    <div class="ill-opening-inner">
+                    <div class="ill-book">
+                <div class="ill-book-leaf" aria-hidden="true"></div>
+                <div class="ill-book-cover"><p class="overline">Семейный альбом</p><span class="ill-monogram" aria-hidden="true">СА</span><h2 data-opening-names></h2><p data-opening-date></p></div>
+            </div>
+                <button type="button" data-open>Открыть альбом</button>
+        <form method="dialog"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body>
+</html>

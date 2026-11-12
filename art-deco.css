@@ -75,10 +75,10 @@
 .ad-opening-copy button { padding: 8px 17px; min-height: 44px; color: inherit; background: transparent; border: 0; }
 .ad-opening-copy [data-open] { background: #e4c99b; color: #2b211a; margin-top: 14px; }
 .ad-opening-copy form button { text-decoration: underline; text-underline-offset: .3em; }
-.ad-opening.is-opening .ad-panels > div { animation: ad-slide-left 1.3s .37s cubic-bezier(.5,.05,.24,1) both; }
-.ad-opening.is-opening .ad-panels > div + div { animation-name: ad-slide-right; }
+.ad-opening.is-opening:not([data-gsap-motion]) .ad-panels > div { animation: ad-slide-left 1.3s .37s cubic-bezier(.5,.05,.24,1) both; }
+.ad-opening.is-opening:not([data-gsap-motion]) .ad-panels > div + div { animation-name: ad-slide-right; }
 .ad-opening.is-opening .ad-panels > div::before { animation: ad-light .89s ease-out both; }
-.ad-opening.is-opening .ad-opening-copy { animation: ad-copy-away .51s .13s ease-out both; }
+.ad-opening.is-opening:not([data-gsap-motion]) .ad-opening-copy { animation: ad-copy-away .51s .13s ease-out both; }
 @keyframes ad-light { 46% { opacity: 1; filter: brightness(1.5) drop-shadow(0 0 8px #e2bc79); } }
 @keyframes ad-slide-left { to { transform: translate(-101%,-4%); } }
 @keyframes ad-slide-right { to { transform: translate(101%,-4%); } }

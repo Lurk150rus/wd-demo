@@ -62,8 +62,8 @@
 .ce-opening-stage button { min-height: 44px; color: inherit; background: transparent; border: 0; padding: 8px 16px; }
 .ce-opening-stage [data-open] { margin-top: 9px; border: 1px solid var(--starlight); }
 .ce-opening-stage form button { text-decoration: underline; text-underline-offset: .3em; }
-.ce-opening.is-opening .ce-constellation circle { animation: ce-gather .79s ease-in-out both; }
-.ce-opening.is-opening .ce-constellation path { animation: ce-trace .65s .72s ease-out both; }
+.ce-opening.is-opening:not([data-gsap-motion]) .ce-constellation circle { animation: ce-gather .79s ease-in-out both; }
+.ce-opening.is-opening:not([data-gsap-motion]) .ce-constellation path { animation: ce-trace .65s .72s ease-out both; }
 @keyframes ce-gather { to { transform: translate(0,0); } }
 @keyframes ce-trace { to { stroke-dashoffset: 0; } }
 @media(max-width:700px) {

@@ -66,8 +66,8 @@
 .nw-opening-stage button { min-height: 44px; padding: 7px 15px; background: transparent; color: inherit; border: 0; }
 .nw-opening-stage [data-open] { border: 1px solid var(--ink); margin-top: 10px; }
 .nw-opening-stage form button { text-decoration: underline; text-underline-offset: .3em; }
-.nw-opening.is-opening .nw-fold { animation: nw-unfold 1.1s cubic-bezier(.32,.12,.22,1) both; }
-.nw-opening.is-opening .nw-paper { animation: nw-sheet 1.5s ease-in-out both; }
+.nw-opening.is-opening:not([data-gsap-motion]) .nw-fold { animation: nw-unfold 1.1s cubic-bezier(.32,.12,.22,1) both; }
+.nw-opening.is-opening:not([data-gsap-motion]) .nw-paper { animation: nw-sheet 1.5s ease-in-out both; }
 @keyframes nw-unfold { 75% { opacity: 1; } to { transform: rotateX(-175deg); opacity: 0; } }
 @keyframes nw-sheet { to { transform: scale(1.16); } }
 @media(max-width:700px) {

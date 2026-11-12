@@ -1,16 +1,20 @@
 import {initializeOpening} from './occasion-opening.js';
+import {playOpeningTimeline} from './opening-timeline.js';
 
-initializeOpening(dialog => {
-  const card = dialog.querySelector('.iv-fold');
-  const cover = document.querySelector('.iv-cover-copy');
+initializeOpening(dialog => playOpeningTimeline(dialog, (timeline, select) => {
+  const [card] = select('.iv-fold');
   const from = card.getBoundingClientRect();
-  const to = cover.getBoundingClientRect();
-  dialog.style.setProperty('--iv-x', (to.left - from.left) + 'px');
-  dialog.style.setProperty('--iv-y', (to.top - from.top) + 'px');
-  dialog.style.setProperty('--iv-scale', Math.min(2.25, to.width / Math.max(1, from.width)));
-  return dialog.animate([
-    {opacity: 1, offset: 0},
-    {opacity: 1, offset: .50},
-    {opacity: 0},
-  ], {duration: 1670, easing: 'ease-in-out', fill: 'forwards'});
-});
+  const to = document.querySelector('.iv-cover-copy').getBoundingClientRect();
+  timeline
+    .to(select('.iv-opening-actions'), {opacity: 0, duration: .25}, 0)
+    .to(select('.iv-leaf'), {rotationY: 165, duration: .65, ease: 'power2.inOut'}, .06)
+    .to(select('.iv-leaf'), {opacity: 0, duration: .22}, .48)
+    .to(card, {
+      x: to.left - from.left,
+      y: to.top - from.top,
+      scale: Math.min(2.25, to.width / Math.max(1, from.width)),
+      duration: .74,
+      ease: 'power2.inOut'
+    }, .57)
+    .to(dialog, {opacity: 0, duration: .46, ease: 'sine.inOut'}, 1.06);
+}));

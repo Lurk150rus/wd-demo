@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pencil" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M-2 6 6-2M1 8l8-8" stroke="#b65769" stroke-width=".65" opacity=".32"/>
+    </pattern>
+    <g id="bloom" stroke="#9b3f55" stroke-width="1.4" stroke-linecap="round">
+      <path fill="#efb8bd" d="M0-3C-9-11-15-2-8 2c-8 7 2 13 7 7 5 8 14 1 9-5 10-2 7-11-1-9 1-7-6-9-7 2Z"/>
+      <path d="M-3 2q4-4 6 0t-5 2" fill="none"/>
+    </g>
+  </defs>
+  <symbol id="couple" viewBox="0 0 360 310">
+    <path d="M179 246C122 214 52 167 48 100c-4-50 49-70 84-51 19 9 34 29 42 43 9-28 52-56 87-44 54 16 56 67 27 112-23 37-61 67-109 86Z" fill="#f0c3c4"/>
+    <path d="M179 246C122 214 52 167 48 100c-4-50 49-70 84-51 19 9 34 29 42 43 9-28 52-56 87-44 54 16 56 67 27 112-23 37-61 67-109 86Z" fill="url(#pencil)"/>
+    <g stroke="#6b413e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path fill="#e9d9c4" d="M137 192q-2 36-5 76l13 6 13-55 5 53 15 2 6-83z"/>
+      <path fill="#686950" d="m132 267-14 8q-5 7 8 6l19-5 1-5m16 1v8q13 4 30 0l-3-5-13-5"/>
+      <path fill="#828169" d="M143 126q-18 3-26 17l-12 51 12 7 13-38-3 51q15 8 29-4l8-20 4 20q15 8 27-4l-10-49 5 17 20 6 5-9-15-10-11-25q-9-8-25-10z"/>
+      <path fill="#f6e9d7" d="m145 126 17 56 11-55-12-8z"/>
+      <path fill="#944659" d="m155 132 9 4 7-5 1 10-8-4-7 5z"/>
+      <path d="m143 129-6 14 9 4-4 8 15 22m18-47 8 13-7 6 4 6-13 24m-32 14 12-2m22-6 4 1m-4 11 4 1m-52-40-5 27m67-36 9 13" fill="none"/>
+      <path fill="#e5ba9f" d="M145 100q-4-7-9-2-2 6 6 9l2 18q9 9 18-1l1-11q10-3 9-11l5-3-8-8-1-10-25-1z"/>
+      <path fill="#573b34" d="M140 103q-8-8-8-19-10-7-2-16 6-5 13-2 4-10 14-5 10-4 17 4 13 2 8 11-5 7-16 3-11 11-23 10l-2 14z"/>
+      <path d="M135 74q10 4 15-4m6 5 10-8m-8 27 6-1m1 13-6-1" fill="none"/>
+      <path fill="#faf0dd" d="M211 109q21-13 37 2l34 66-24-3 7 23-38-9-11-57z"/>
+      <path fill="#e1af9a" d="M211 102q-4 4-9 2l4-8 1-13 26-1 6 17-9 17 6 14q-13 13-25 0l7-11-1-7q-7-2-6-10z"/>
+      <path fill="#8b5948" d="M203 89q-2-20 14-23 16-5 24 10 13-1 12 10 0 9-12 10l-9-1q-10-4-10-13-8 9-19 7z"/>
+      <path d="M229 76q8 4 10 12m-25-17q-7 5-8 12m3 12 5 1m-4 11 5 1" fill="none"/>
+      <path fill="#f7e8d6" d="M210 132q12 9 24-6l9 8-10 36q18 38 38 103-14 9-32 3-17 8-34 1-15 5-35-2 16-56 32-105l-3-34z"/>
+      <path d="M203 174q11 5 29-2m-13 9-8 87m13-75 10 76m-17-65-17 62m31-47 18 49" stroke="#bb8a79" fill="none"/>
+      <path fill="#e8bda3" d="M203 135q-9-3-12 10l-4 20 20 16 6-6-15-15 7-17zm37-1q9 1 11 11l-2 21-28 16-5-7 22-16-2-17z"/>
+      <path d="m212 166 8 29m5-30-8 30m-15-32 17 26" stroke="#657147"/>
+      <use href="#bloom" transform="translate(209 165) scale(.57)"/><use href="#bloom" transform="translate(224 162) scale(.62)"/><use href="#bloom" transform="translate(217 151) scale(.55)"/>
+    </g>
+    <g fill="none" stroke="#9b3f55" stroke-width="2" stroke-linecap="round">
+      <path d="M33 67Q9 50 21 44q6-4 12 6 8-13 14-6 8 9-14 23zm284 32q-23-16-14-21 7-4 14 6 3-13 11-9 10 6-11 24zM71 224l-12 9m16-3-6 15m223-12 13 7m-11-16 15 1"/>
+      <path d="M88 27q6 10 13 9-11 4-11 13-2-9-12-10 9-3 10-12zm207 153q2 8 11 10-8 1-11 10-2-8-10-10 8-2 10-10z" stroke="#68734e"/>
+    </g>
+  </symbol>
+  <symbol id="flowers" viewBox="0 0 160 180">
+    <g fill="none" stroke="#657147" stroke-width="2" stroke-linecap="round">
+      <path d="M75 163q23-68-35-113m37 110q31-66 30-114m-31 114q-8-29-40-38m45 24q21-33 46-39"/>
+      <path fill="#aeb58f" d="M74 137q-36-4-36-33 30 11 36 33zm16-15q26-20 44-9-12 21-44 9zM69 99q-28-9-25-26 20 6 25 26zm28-17q-4-24 14-28 5 16-14 28z"/>
+    </g>
+    <use href="#bloom" transform="translate(38 45) scale(1.45)"/><use href="#bloom" transform="translate(108 37) scale(1.55)"/><use href="#bloom" transform="translate(33 120) scale(.9)"/><use href="#bloom" transform="translate(130 103) scale(1.05)"/>
+    <path d="M77 152q-21-24-28-7-1 9 27 7 15-20 26-13 7 10-26 13l-11 19m11-19 10 19" stroke="#9b3f55" stroke-width="1.7" fill="none"/>
+  </symbol>
+  <symbol id="letter" viewBox="0 0 100 80">
+    <g stroke="#963f54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-11 48 42)">
+      <path d="M13 23q32-4 72 0l-2 44q-39 4-69 0z" fill="#f8ddd5"/><path d="M13 24q18 14 36 25 18-11 35-25M15 66l23-24m43 24L62 43" fill="none"/><path d="M49 55q-15-10-7-12 5-2 7 3 8-8 11-2 3 6-11 11z" fill="#b4596b"/>
+    </g>
+    <path d="m13 11 8 8m6-13 2 9m62 49 5 4m-7 4 2 6" stroke="#697653" stroke-width="2" fill="none"/>
+  </symbol>
+</svg>

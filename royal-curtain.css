@@ -25,7 +25,12 @@ html:has(#royal-curtain[open]){overflow:hidden;scrollbar-gutter:stable}
 .rc-curtain.rc-is-opening .rc-panel{will-change:transform;animation:rc-curtain-draw 1500ms cubic-bezier(.25,.65,.2,1) both}
 .rc-curtain.rc-is-opening .rc-content{animation:rc-curtain-copy-away 260ms ease-out both;pointer-events:none}
 .rc-curtain.rc-is-opening .rc-rail{animation:rc-curtain-copy-away 400ms 1050ms ease-out both}
-@keyframes rc-curtain-draw{0%{transform:translateX(0) skewY(0) scaleX(1)}12%{transform:translateX(0) skewY(calc(var(--rc-direction) * .35deg)) scaleX(1.018)}24%{transform:translateX(calc(var(--rc-direction) * 2%)) skewY(0) scaleX(1)}100%{transform:translateX(calc(var(--rc-direction) * 108%)) skewY(calc(var(--rc-direction) * -.8deg)) scaleX(.94)}}
+@keyframes rc-curtain-draw {
+  0% { transform: translateX(0) scaleX(1); }
+  16% { transform: translateX(calc(var(--rc-direction) * 3%)) skewY(calc(var(--rc-direction) * .6deg)) scaleX(.98); }
+  55% { transform: translateX(calc(var(--rc-direction) * 55%)) skewY(calc(var(--rc-direction) * 1.1deg)) scaleX(.86); }
+  100% { transform: translateX(calc(var(--rc-direction) * 108%)) skewY(calc(var(--rc-direction) * -.45deg)) scaleX(.81); }
+}
 @keyframes rc-curtain-copy-away{to{opacity:0;transform:translateY(-9px)}}
 .rc-curtain[data-rc-long] h2{font-size:clamp(26px,3.5vw,46px)}
 .rc-replay[hidden]{display:none!important}

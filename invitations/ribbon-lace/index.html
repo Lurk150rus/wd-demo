@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Виктория &amp; Артём · Ribbon &amp; Lace</title>
+    <link rel="stylesheet" href="/wd-demo/print-invitations.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script defer src="/wd-demo/experiments/gsap-3.15.0.min.js"></script>    <script type="module" src="/wd-demo/print-invitations.js"></script>
+</head>
+<body class="print-invitation ribbon-lace" data-date="2027-05-29T16:00:00+03:00">
+<header class="pi-nav"><a href="/wd-demo/">← Коллекция</a><span>Ribbon &amp; Lace</span><a href="#rsvp">RSVP ↗</a></header>
+<main>
+    <section class="pi-cover">
+        <div class="pi-hero-art">
+            <div class="pi-stock pi-paper">
+                <span class="pi-bow" aria-hidden="true"></span>                <p class="overline">Мы женимся</p>
+                <h1><span>Виктория</span><i>&amp;</i><span>Артём</span></h1>
+                <p class="cover-date">29 мая 2027 · 16:00</p>
+            </div>
+        </div>
+        <a class="pi-down" href="#welcome">Читать приглашение ↓</a>
+    </section>
+    <div class="pi-spread">
+        <figure class="pi-portrait pi-paper"><img src="/wd-demo/photos/cherry-romance.webp" alt="Портрет пары" width="600" height="800" loading="lazy"></figure>
+        <section class="welcome pi-paper" id="welcome">
+            <p class="overline">Письмо для вас</p>
+            <h2>Дорогие наши!</h2>
+            <p>Среди майских цветов мы скажем друг другу «да». Нам хочется, чтобы вы были рядом: на церемонии в саду, за длинным столом и на первом танце.</p>
+            <div class="sign">Виктория &amp; Артём</div>
+        </section>
+    </div>
+    <div class="pi-date-band">
+        <div class="pi-calendar pi-paper">
+            <div class="pi-month" aria-hidden="true"></div>
+            <section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">29 мая 2027 · 16:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+        </div>
+    </div>
+    <section class="schedule ni-program">
+    <div class="section-title">
+        <p class="overline">Программа дня</p>
+        <h2>Как пройдёт наш день</h2>
+    </div>
+    <ol>
+                    <li><span class="event-number">01</span><time>16:00</time><div><h3>Сбор гостей</h3><p>Встречаемся у павильона.</p></div></li>
+                    <li><span class="event-number">02</span><time>16:45</time><div><h3>Церемония</h3><p>Скажем друг другу «да».</p></div></li>
+                    <li><span class="event-number">03</span><time>18:00</time><div><h3>Праздничный ужин</h3><p>Ужин и тосты в кругу близких.</p></div></li>
+                    <li><span class="event-number">04</span><time>20:30</time><div><h3>Первый танец</h3><p>Продолжаем вечер под музыку.</p></div></li>
+            </ol>
+</section>
+    <section class="pi-venue">
+        <figure class="pi-postcard pi-paper"><img src="/wd-demo/photos/cherry-romance-detail.webp" alt="Свадебная деталь" width="600" height="450" loading="lazy"></figure>
+        <div class="location-copy pi-paper"><p class="overline">Место встречи</p><h2>Усадьба «Сиреневый сад»</h2><p>Московская область, садовый павильон</p></div>
+    </section>
+    <section class="dress"><p class="overline">Дресс-код</p><h2>Палитра дня</h2><p>Пудровый розовый, сливочный, бордовый и оливковый — оттенки нашего весеннего дня.</p>
+        <ul class="pi-swatches"><li><i style="--swatch:#c79594"></i><span>Пудровый</span></li><li><i style="--swatch:#f1e0c6"></i><span>Кремовый</span></li><li><i style="--swatch:#70313d"></i><span>Бордо</span></li><li><i style="--swatch:#656341"></i><span>Оливковый</span></li></ul>
+    </section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Будем ждать вас</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="pi-footer"><span>Виктория &amp; Артём</span><p>29 мая 2027 · 16:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
+<dialog class="pi-opening" data-occasion-opening aria-label="Открытие свадебного приглашения" hidden>
+    <div class="pi-opening-set">
+        <div class="pi-parcel">
+                        <div class="pi-insert pi-paper">
+                <p class="overline">Приглашение на свадьбу</p>
+                <h2 data-opening-names></h2>
+                <p data-opening-date></p>
+            </div>
+                            <span class="pi-band" aria-hidden="true"></span>
+                <span class="pi-tie" aria-hidden="true"><i></i><b></b></span>
+                    </div>
+        <div class="pi-opening-actions">
+            <button type="button" data-open>Развязать ленту</button>
+            <form method="dialog"><button type="submit">Пропустить</button></form>
+        </div>
+    </div>
+</dialog>
+</body>
+</html>

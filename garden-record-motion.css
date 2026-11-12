@@ -1,0 +1,11 @@
+.ni-opening .ni-opening-date { margin: 9px 0 0; font-size: 13px; }
+.ni-opening.is-revealing .ni-petal {
+  animation-duration: 1.06s;
+  animation-delay: calc(var(--bloom-order, 0) * 28ms);
+}
+.ni-petal:nth-child(2), .ni-petal:nth-child(7) { --bloom-order: 3; }
+.ni-petal:nth-child(3), .ni-petal:nth-child(6) { --bloom-order: 2; }
+.ni-petal:nth-child(4), .ni-petal:nth-child(5) { --bloom-order: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .ni-opening.is-revealing .ni-petal { animation: none !important; }
+}

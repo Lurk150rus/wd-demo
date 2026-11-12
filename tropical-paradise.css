@@ -64,9 +64,9 @@
 .tp-opening-copy [data-open] { border: 1px solid #f0a2ad; margin-top: 11px; }
 .tp-opening-copy form button { text-decoration: underline; text-underline-offset: .3em; }
 .tp-opening.is-opening .tp-leaves i { animation: tp-part 1.6s cubic-bezier(.4,.03,.25,1) both; }
-.tp-opening.is-opening .tp-leaves i:last-child { animation-name: tp-part-right; }
-@keyframes tp-part { to { transform: translateX(-79%) rotate(-36deg); } }
-@keyframes tp-part-right { to { transform: translateX(79%) scaleX(-1) rotate(-36deg); } }
+.tp-opening.is-opening .tp-leaves i:last-child { animation-name: tp-part-right; animation-delay: .09s; }
+@keyframes tp-part { 21% { transform: translateX(-6%) rotate(-10deg); } to { transform: translateX(-79%) rotate(-36deg); } }
+@keyframes tp-part-right { 21% { transform: translateX(6%) scaleX(-1) rotate(-10deg); } to { transform: translateX(79%) scaleX(-1) rotate(-36deg); } }
 @media(max-width:700px) {
   .tp-cover,.tp-welcome,.tp-calendar .ni-date,.tp-details,.tropical-paradise .response { grid-template-columns: minmax(0,1fr); }
   .tp-title { grid-row: 1; }

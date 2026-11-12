@@ -45,19 +45,19 @@
 .cr-opening { --opening-ready: 1; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; padding: 0; background: radial-gradient(ellipse,#85435b,#46152b); color: #faebdf; }
 .cr-opening::backdrop { background: transparent; }
 .cr-opening-stage { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 22px; overflow: clip; }
-.cr-gift { position: relative; width: min(530px,100%); background: #f7ede3; color: #60283c; text-align: center; padding: clamp(29px,6vw,65px) 16px clamp(48px,7vw,89px); border: 4px double #be8a92; box-shadow: 0 15px 50px #240b1970; }
+.cr-gift { position: relative; width: min(530px,100%); background: #f7ede3; color: #60283c; text-align: center; padding: clamp(29px,6vw,65px) 16px clamp(64px,8vw,98px); border: 4px double #be8a92; box-shadow: 0 15px 50px #240b1970; }
 .cr-gift h2 { font-size: clamp(35px,8vw,82px); }
 .cr-gift p { margin-top: 10px; }
-.cr-ribbon { position: absolute; bottom: 17%; left: -5px; right: -5px; height: 12px; background: linear-gradient(#691d39,#be6884 50%,#651931); }
+.cr-ribbon { position: absolute; bottom: 10px; left: -5px; right: -5px; height: 12px; background: linear-gradient(#691d39,#be6884 50%,#651931); }
 .cr-ribbon i { position: absolute; left: 50%; bottom: 6px; width: 54px; height: 27px; border: 8px solid #9d4a68; border-radius: 55% 59% 44% 46%; transform-origin: left bottom; transform: rotate(-27deg); }
 .cr-ribbon i:first-child { transform: scaleX(-1) rotate(-28deg); }
 .cr-opening-stage button { min-height: 44px; color: inherit; background: transparent; border: 0; padding: 8px 16px; }
 .cr-opening-stage [data-open] { border: 1px solid #d5a5a9; margin-top: 10px; }
 .cr-opening-stage form button { text-decoration: underline; text-underline-offset: .3em; }
-.cr-opening.is-opening .cr-ribbon { animation: cr-untie 1s ease-in-out both; }
-.cr-opening.is-opening .cr-ribbon i { animation: cr-loop .66s ease-in both; }
-.cr-opening.is-opening .cr-ribbon i:first-child { animation-direction: normal; animation-name: cr-loop-left; }
-.cr-opening.is-opening .cr-gift { animation: cr-paper 1.2s .18s ease-out both; }
+.cr-opening.is-opening:not([data-gsap-motion]) .cr-ribbon { animation: cr-untie 1s ease-in-out both; }
+.cr-opening.is-opening:not([data-gsap-motion]) .cr-ribbon i { animation: cr-loop .66s ease-in both; }
+.cr-opening.is-opening:not([data-gsap-motion]) .cr-ribbon i:first-child { animation-direction: normal; animation-name: cr-loop-left; }
+.cr-opening.is-opening:not([data-gsap-motion]) .cr-gift { animation: cr-paper 1.2s .18s ease-out both; }
 @keyframes cr-loop { to { transform: translateX(75px) rotate(28deg) scaleY(.2); } }
 @keyframes cr-loop-left { to { transform: translateX(-75px) scaleX(-1) rotate(28deg) scaleY(.2); } }
 @keyframes cr-untie { 40% { opacity: 1; } to { transform: translateX(67%) rotate(11deg); opacity: 0; } }
