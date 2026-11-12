@@ -1,7 +1,7 @@
 import {initializeOpening} from './occasion-opening.js';
 
 const label = document.querySelector('[data-opening-names]');
-const monogram = document.querySelector('.om-monogram');
+const monogram = document.querySelector('[data-mail-monogram]');
 
 if (label && monogram) {
   const observer = new MutationObserver(() => {
@@ -16,6 +16,6 @@ if (label && monogram) {
 
 initializeOpening(dialog => dialog.animate([
   {opacity: 1, offset: 0},
-  {opacity: 1, offset: .69},
+  {opacity: 1, offset: .84},
   {opacity: 0},
-], {duration: 1780, easing: 'ease-in-out', fill: 'forwards'}));
+], {duration: 1980, easing: 'ease-in-out', fill: 'forwards'}));

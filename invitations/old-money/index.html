@@ -6,7 +6,7 @@
     <title>Ева &amp; Николай · Old Money</title>
     <link rel="stylesheet" href="/wd-demo/collection.css">
     <link rel="stylesheet" href="/wd-demo/old-money.css">
-    <style>main h1[tabindex="-1"]:focus { outline: none; }</style>
+    <link rel="stylesheet" href="/wd-demo/envelope-opening.css">    <style>main h1[tabindex="-1"]:focus { outline: none; }</style>
 
     <script defer src="/wd-demo/collection.js"></script>
         <script type="module" src="/wd-demo/old-money.js"></script>
@@ -88,12 +88,15 @@
     <p><a href="https://www.pexels.com/photo/elegant-wedding-couple-descending-stairs-indoors-35106518/">Фото: Pexels</a></p></footer>
 <dialog class="om-opening" data-occasion-opening aria-label="Письмо с монограммой" hidden>
     <div class="om-opening-stage">
-        <div class="om-envelope">
-            <div class="om-insert"><h2 data-opening-names></h2><p data-opening-date></p></div>
-            <div class="om-flap" aria-hidden="true"></div>
-            <div class="om-pocket" aria-hidden="true"></div>
-            <span class="om-monogram" aria-hidden="true"></span>
-        </div>
+        <div class="mail-envelope">
+    <div class="mail-back" aria-hidden="true"></div>
+    <div class="mail-card">
+                    <h2 class="mail-names" data-opening-names></h2><p data-opening-date></p>
+            </div>
+    <div class="mail-front" aria-hidden="true"></div>
+    <div class="mail-hinge" aria-hidden="true"><div class="mail-flap"></div></div>
+    <span class="mail-seal" aria-hidden="true" data-mail-monogram ></span>
+</div>
         <button type="button" data-open>Открыть письмо</button>
         <form method="dialog"><button type="submit">Пропустить</button></form>
     </div>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Александра &amp; Михаил · Blue Porcelain</title>
+    <link rel="stylesheet" href="/wd-demo/ceramic-atlas.css">
+
+    <script defer src="/wd-demo/collection.js"></script>
+    <script defer src="/wd-demo/experiments/gsap-3.15.0.min.js"></script>
+    <script type="module" src="/wd-demo/ceramic-atlas.js"></script>
+</head>
+<body class="ca blue-porcelain" data-date="2027-07-10T16:00:00+03:00">
+<header class="ca-nav"><a href="/wd-demo/">← Коллекция</a><span>Blue Porcelain</span><a href="#rsvp">RSVP ↗</a></header>
+<main>
+    <section class="ca-cover">
+        <div class="ca-inscription">
+            <p class="overline">Приглашение на свадьбу</p>
+            <h1><span>Александра</span><i>&amp;</i><span>Михаил</span></h1>
+            <p class="cover-date">10 июля 2027 · 16:00</p>
+        </div>
+                    <figure class="ca-portrait"><img src="/wd-demo/photos/french-chateau.webp" alt="Портрет пары" fetchpriority="high"></figure>
+            <a class="ca-link" href="#welcome">Читать приглашение ↓</a>
+            </section>
+
+    <section id="welcome" class="welcome ca-welcome">
+        <p class="overline">Для самых близких</p>
+        <h2>Дорогие наши</h2>
+        <p>Мы приглашаем вас на церемонию и ужин в садовом павильоне. Нам хочется разделить с вами этот день и сохранить его в семейной памяти.</p>
+        <div class="sign">Александра &amp; Михаил</div>
+    </section>
+
+    <div class="ca-date"><section class="ni-date" aria-label="Дата свадьбы">
+    <p class="overline">Отметьте в календаре</p>
+    <h2 class="cover-date">10 июля 2027 · 16:00</h2>
+    <div class="digits" aria-label="До свадьбы">
+                    <div><b data-unit="0">00</b><span>дней</span></div>
+                    <div><b data-unit="1">00</b><span>часов</span></div>
+                    <div><b data-unit="2">00</b><span>минут</span></div>
+                    <div><b data-unit="3">00</b><span>секунд</span></div>
+            </div>
+</section>
+</div>
+
+    <section id="route" class="schedule ca-program">
+        <div class="section-title"><p class="overline">Программа дня</p><h2>Порядок торжества</h2></div>
+        <ol>
+                            <li id="route-1"><span class="event-number">1</span><time>16:00</time><div><h3>Встреча гостей</h3><p>Собираемся у входа в сад.</p></div></li>
+                            <li id="route-2"><span class="event-number">2</span><time>16:45</time><div><h3>Церемония</h3><p>Обещания друг другу и семейные фотографии.</p></div></li>
+                            <li id="route-3"><span class="event-number">3</span><time>18:00</time><div><h3>Праздничный ужин</h3><p>Встречаемся за общим столом.</p></div></li>
+                            <li id="route-4"><span class="event-number">4</span><time>20:30</time><div><h3>Танцы</h3><p>Первый танец и музыка до вечера.</p></div></li>
+                    </ol>
+    </section>
+
+    <section class="ca-venue">
+        <figure>
+                        <img src="/wd-demo/photos/french-chateau-venue.webp" alt="Фотография площадки" loading="lazy">
+        </figure>
+        <div class="location-copy">
+            <p class="overline">Место встречи</p><h2>Павильон «Белый зал»</h2><p>Московская область, Липовый парк</p>
+                    </div>
+    </section>
+
+    <section class="dress"><p class="overline">Дресс-код</p><h2>Палитра дня</h2><p>Будем рады сине-белой гамме: молочным, дымчато-голубым и глубоким кобальтовым оттенкам.</p>
+        <ul class="ca-swatches"><li><i style="--swatch:#f4f5ee"></i>Фарфор</li><li><i style="--swatch:#b7cad9"></i>Дымчатый</li><li><i style="--swatch:#688cba"></i>Голубой</li><li><i style="--swatch:#244a87"></i>Кобальт</li></ul>
+    </section>
+    <section id="rsvp" class="response ni-rsvp">
+    <div>
+        <p class="overline">RSVP</p>
+        <h2>Будем ждать вас</h2>
+        <p>Будем рады разделить этот день с вами. Сообщите нам, сможете ли вы прийти.</p>
+    </div>
+    <form>
+        <label for="guest">Имя и фамилия</label>
+        <input id="guest" name="guest" autocomplete="name" required placeholder="Как к вам обращаться?">
+        <fieldset>
+            <legend>Вы разделите с нами этот день?</legend>
+            <label><input type="radio" name="attend" value="yes" checked> Да, с удовольствием</label>
+            <label><input type="radio" name="attend" value="no"> К сожалению, не смогу</label>
+        </fieldset>
+        <label for="wish">Несколько слов для нас</label>
+        <textarea id="wish" placeholder="По желанию" rows="2"></textarea>
+        <button type="submit">Отправить ответ <span aria-hidden="true">↗</span></button>
+        <small>Демонстрационная форма · ответы не сохраняются</small>
+        <p class="response-status" role="status" hidden></p>
+    </form>
+</section>
+</main>
+<footer class="ca-footer"><span>Александра &amp; Михаил</span><p>10 июля 2027 · 16:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
+
+<dialog class="ca-opening" data-occasion-opening aria-label="Фарфоровая шкатулка" hidden>
+    <div class="ca-opening-layout">
+                    <div class="ca-box">
+                <div class="ca-box-base" aria-hidden="true"></div>
+                <div class="ca-box-card"><h2 data-opening-names></h2><p data-opening-date></p></div>
+                <div class="ca-box-lid" aria-hidden="true"><span></span></div>
+            </div>
+                <button type="button" data-open>Открыть приглашение</button>
+        <form method="dialog"><button type="submit">Пропустить</button></form>
+    </div>
+</dialog>
+</body>
+</html>

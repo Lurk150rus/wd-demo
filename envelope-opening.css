@@ -1,0 +1,94 @@
+/* The flap moves behind the pocket before the letter rises. */
+.mail-envelope {
+  --mail-paper:#f8f2df;
+  --mail-edge:#a7aa93;
+  --mail-fold:linear-gradient(145deg,#f0ead5,#cecbb0);
+  --mail-front:linear-gradient(150deg,#e7e1c8,#f5efd9 66%,#d9d4b8);
+  --mail-back:#c7c4a9;
+  position:relative;
+  isolation:isolate;
+  perspective:850px;
+  width:min(88vw,27rem,69svh);
+  aspect-ratio:1.58;
+  margin-top:clamp(3rem,14svh,8rem);
+  text-align:center;
+}
+.mail-envelope.heirloom {
+  --mail-paper:#faf0e0;
+  --mail-edge:#b39d82;
+  --mail-fold:url('/wd-demo/art/heirloom-embroidery.svg') center/58px 58px,linear-gradient(150deg,#efdfc5,#c6b399);
+  --mail-front:url('/wd-demo/art/heirloom-embroidery.svg') center/58px 58px,linear-gradient(155deg,#dccbb2,#f1e3ce 70%,#c6b49b);
+  --mail-back:#bba98e;
+}
+.mail-back,.mail-card,.mail-front,.mail-hinge {position:absolute;inset:0}
+.mail-back {z-index:0;background:var(--mail-back);border-radius:4px;box-shadow:0 14px 24px #242d394d}
+.mail-hinge {z-index:4;pointer-events:none}
+.mail-flap {
+  position:absolute;inset:0 0 auto;height:60%;
+  transform-origin:50% 0;clip-path:polygon(0 0,100% 0,50% 100%);
+  background:var(--mail-fold);border-top:1px solid var(--mail-edge);
+}
+.mail-card {
+  z-index:2;inset:8% 9% 6%;display:grid;align-content:safe center;gap:.3em;
+  padding:5%;background:var(--mail-paper);border:4px double var(--mail-edge);
+  box-shadow:0 5px 11px #30282038;overflow:auto;overflow-wrap:anywhere;
+}
+.mail-envelope .mail-names {margin:0;font:400 clamp(23px,5.7vw,48px)/1.05 'Cormorant Garamond',Georgia,serif}
+.mail-envelope.heirloom .mail-names {font-family:"Print Script",'Cormorant Garamond',Georgia,serif}
+.mail-card p {margin:0;font-size:.75rem}
+.mail-front {
+  z-index:3;clip-path:polygon(0 1%,50% 60%,100% 1%,100% 100%,0 100%);
+  background:var(--mail-front);border-bottom:1px solid var(--mail-edge);border-radius:4px;
+}
+.mail-front::after {
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top right,transparent 49.5%,#66543b49 50%,transparent 50.7%) bottom left/50% 74% no-repeat,
+    linear-gradient(to top left,transparent 49.5%,#66543b49 50%,transparent 50.7%) bottom right/50% 74% no-repeat;
+}
+.mail-seal {
+  position:absolute;z-index:5;top:60%;left:50%;translate:-50% -50%;
+  display:grid;place-items:center;width:13%;aspect-ratio:1;
+  background:#eae4cc;color:#4a563d;border:3px double #9b9e81;border-radius:50%;
+  box-shadow:0 2px 4px #5e514451;font:500 clamp(12px,3vw,22px)/1 'Cormorant Garamond',Georgia,serif;
+}
+.heirloom .mail-seal {width:8%;border:0;background:radial-gradient(circle at 32% 29%,#fff9ed,#ded5cc 55%,#a69484)}
+.is-opening .mail-seal,.card.preview-playing .mail-seal {animation:mail-unseal .28s ease both}
+.is-opening .mail-flap,.card.preview-playing .mail-flap {animation:mail-open .58s .14s cubic-bezier(.3,.1,.25,1) both}
+.is-opening .mail-hinge,.card.preview-playing .mail-hinge {animation:mail-behind .58s .14s linear both}
+.is-opening .mail-card,.card.preview-playing .mail-card {animation:mail-rise .96s .66s cubic-bezier(.22,.68,.18,1) both}
+.is-opening .mail-front,.is-opening .mail-back,
+.card.preview-playing :is(.mail-front,.mail-back) {animation:mail-clear .42s 1.24s ease both}
+@keyframes mail-unseal {to {opacity:0;scale:.72}}
+@keyframes mail-open {to {transform:rotateX(174deg)}}
+@keyframes mail-behind {0%,23% {z-index:4} 24%,100% {z-index:1}}
+@keyframes mail-rise {
+  0% {transform:translateY(0);z-index:2}
+  69% {transform:translateY(-104%);z-index:2}
+  70% {transform:translateY(-105%);z-index:5}
+  100% {transform:translateY(-105%) scale(1.11);z-index:5}
+}
+@keyframes mail-clear {to {opacity:0}}
+.gallery .mail-preview {
+  position:absolute;inset:0;z-index:2;display:grid;place-items:center;
+  background:#e3e3d0;color:#354232;pointer-events:none;overflow:hidden;
+}
+.gallery .blue-heirloom .mail-preview {background:linear-gradient(125deg,#4f687b,#94a8b6 42%,#4b657b);color:#385769}
+.gallery .mail-envelope {width:min(76%,20rem);margin-top:24%}
+.gallery .mail-names {font-size:clamp(21px,3.25vw,38px)}
+.gallery .card.preview-playing .mail-preview {animation:mail-clear .38s 1.58s ease both}
+@media (prefers-reduced-motion:reduce) {
+  .mail-envelope * {animation:none!important}
+}
+
+.gallery .italian-summer .mail-preview {background:#e8dfcb;color:#414b36}
+.gallery .italian-summer .mail-envelope {
+  --mail-paper:#fff9e9;
+  --mail-edge:#9da481;
+  --mail-fold:linear-gradient(155deg,#faf0d8,#d2bc93);
+  --mail-front:linear-gradient(145deg,#e5d4b0,#f8ead1 60%,#d4be98);
+  --mail-back:#bca680;
+}
+.gallery .italian-summer .mail-seal {background:#5d684b;color:#fff8dd;border-color:#8a9571}
+@media (prefers-reduced-motion:reduce) {
+  .gallery .mail-preview {display:none}
+}

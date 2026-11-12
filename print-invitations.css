@@ -135,29 +135,15 @@
 .blue-heirloom .pi-postcard img {aspect-ratio:4/4;border-radius:inherit}
 .blue-heirloom .pi-venue .location-copy {background:none;box-shadow:none;border:0;outline:0}
 .blue-heirloom .pi-footer {background:var(--silk);text-shadow:0 1px 4px #243443;color:#fff}
-.blue-heirloom .pi-parcel {width:min(86vw,27rem,66svh);aspect-ratio:1.52; margin-top:clamp(3.2rem,17svh,9rem);perspective:840px}
-.blue-heirloom .pi-insert {inset:5% 11% 3%;padding:8%;z-index:2}
-.pi-envelope-back,.pi-envelope-front,.pi-flap {position:absolute;inset:0;display:block}
-.pi-envelope-back {background:var(--grain),#e8d9bd;border-radius:4px;box-shadow:0 13px 20px #2434439e;z-index:1}
-.pi-envelope-front,.pi-flap {background:var(--lace) center/100% 100%,var(--grain),linear-gradient(150deg,#f7edd8,#dacbb3);filter:drop-shadow(0 3px 2px #6d594a52)}
-.pi-envelope-front {z-index:3;clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%)}
-.pi-flap {height:61%;z-index:4;transform-origin:50% 0;clip-path:polygon(0 0,100% 0,50% 100%);backface-visibility:visible}
-.pi-pearl {position:absolute;z-index:5;top:47%;left:calc(50% - .8rem);width:1.6rem;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 29%,#fff8eb,#dfd7cf 48%,#a99c93 85%);box-shadow:0 2px 6px #66564d99}
-.blue-heirloom .is-opening .pi-insert {z-index:3}
 @media (min-width:720px) {
   .blue-heirloom .pi-stock h1 span {display:inline}
   .blue-heirloom .pi-stock h1 i {display:inline-block;vertical-align:middle;margin:0 .2em}
   .blue-heirloom .pi-venue .pi-postcard {grid-column:2;grid-row:1}
   .blue-heirloom .pi-venue .location-copy {grid-column:1;grid-row:1}
 }
-.pi-envelope-front,.pi-flap {
-  background:url('/wd-demo/art/heirloom-embroidery.svg') center/62px 62px repeat,
-    var(--grain),linear-gradient(150deg,#ddcfb9,#c0ae95);
-}
 @media (max-width:430px) {
   .pi-nav {letter-spacing:.09em}
   .pi-spread {gap:2.7rem}
-  .blue-heirloom .pi-parcel {margin-top:clamp(3.2rem,17svh,7rem)}
 }
 @font-face {
   font-family:"Print Script";src:url('/wd-demo/fonts/MarckScript-Regular.ttf') format('truetype');
@@ -170,8 +156,6 @@
 .ribbon-lace .pi-insert h2 {font-size:clamp(1.45rem,5.2vw,2.55rem)}
 .pi-band {inset:71% 2% 19%;background:linear-gradient(0deg,#7c3e52,#d28a94 24%,#efb2af 47%,#a15c72 90%)}
 .pi-tie {top:48%;left:9%;width:82%}
-.pi-flap {background-color:#ebdcc6;background-image:url('/wd-demo/art/heirloom-embroidery.svg'),var(--grain),linear-gradient(165deg,#f2e6d0,#cfbea5)}
-.pi-flap::after {content:"";position:absolute;inset:0;background:#a59074;clip-path:polygon(0 0,50% 97%,100% 0,50% 100%);opacity:.58}
 .blue-heirloom .pi-hero-art::after {z-index:0}
 .blue-heirloom .pi-hero-art::before {pointer-events:none}
 @media(min-width:720px) {
@@ -180,7 +164,7 @@
 .print-invitation:has(.pi-opening[open]) {overflow:hidden}
 @keyframes pi-clear-backdrop {to {opacity:0}}
 .pi-opening.is-opening::backdrop {animation:pi-clear-backdrop .42s .9s ease both}
-.blue-heirloom .pi-opening.is-opening::backdrop {animation-delay:1.05s}
+.blue-heirloom .pi-opening.is-opening::backdrop {animation-delay:1.59s}
 @media (prefers-reduced-motion:reduce) {
   .pi-opening.is-opening::backdrop {animation:none}
 }

@@ -8,9 +8,11 @@
       <path d="M-3 2q4-4 6 0t-5 2" fill="none"/>
     </g>
   </defs>
-  <symbol id="couple" viewBox="0 0 360 310">
+  <symbol id="couple-background" viewBox="0 0 360 310">
     <path d="M179 246C122 214 52 167 48 100c-4-50 49-70 84-51 19 9 34 29 42 43 9-28 52-56 87-44 54 16 56 67 27 112-23 37-61 67-109 86Z" fill="#f0c3c4"/>
     <path d="M179 246C122 214 52 167 48 100c-4-50 49-70 84-51 19 9 34 29 42 43 9-28 52-56 87-44 54 16 56 67 27 112-23 37-61 67-109 86Z" fill="url(#pencil)"/>
+  </symbol>
+  <symbol id="couple-figures" viewBox="0 0 360 310">
     <g stroke="#6b413e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
       <path fill="#e9d9c4" d="M137 192q-2 36-5 76l13 6 13-55 5 53 15 2 6-83z"/>
       <path fill="#686950" d="m132 267-14 8q-5 7 8 6l19-5 1-5m16 1v8q13 4 30 0l-3-5-13-5"/>
@@ -31,10 +33,17 @@
       <path d="m212 166 8 29m5-30-8 30m-15-32 17 26" stroke="#657147"/>
       <use href="#bloom" transform="translate(209 165) scale(.57)"/><use href="#bloom" transform="translate(224 162) scale(.62)"/><use href="#bloom" transform="translate(217 151) scale(.55)"/>
     </g>
+  </symbol>
+  <symbol id="couple-details" viewBox="0 0 360 310">
     <g fill="none" stroke="#9b3f55" stroke-width="2" stroke-linecap="round">
       <path d="M33 67Q9 50 21 44q6-4 12 6 8-13 14-6 8 9-14 23zm284 32q-23-16-14-21 7-4 14 6 3-13 11-9 10 6-11 24zM71 224l-12 9m16-3-6 15m223-12 13 7m-11-16 15 1"/>
       <path d="M88 27q6 10 13 9-11 4-11 13-2-9-12-10 9-3 10-12zm207 153q2 8 11 10-8 1-11 10-2-8-10-10 8-2 10-10z" stroke="#68734e"/>
     </g>
+  </symbol>
+  <symbol id="couple" viewBox="0 0 360 310">
+    <use href="#couple-background"/>
+    <use href="#couple-figures"/>
+    <use href="#couple-details"/>
   </symbol>
   <symbol id="flowers" viewBox="0 0 160 180">
     <g fill="none" stroke="#657147" stroke-width="2" stroke-linecap="round">

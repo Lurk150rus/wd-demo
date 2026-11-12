@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Варвара &amp; Константин · Blue Heirloom</title>
     <link rel="stylesheet" href="/wd-demo/print-invitations.css">
-
+    <link rel="stylesheet" href="/wd-demo/envelope-opening.css">
     <script defer src="/wd-demo/collection.js"></script>
         <script type="module" src="/wd-demo/print-invitations.js"></script>
 </head>
@@ -90,18 +90,16 @@
 <footer class="pi-footer"><span>Варвара &amp; Константин</span><p>14 августа 2027 · 16:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
 <dialog class="pi-opening" data-occasion-opening aria-label="Открытие свадебного приглашения" hidden>
     <div class="pi-opening-set">
-        <div class="pi-parcel">
-                            <span class="pi-envelope-back" aria-hidden="true"></span>
-                <span class="pi-flap" aria-hidden="true"></span>
-                        <div class="pi-insert pi-paper">
-                <p class="overline">Приглашение на свадьбу</p>
-                <h2 data-opening-names></h2>
-                <p data-opening-date></p>
+                    <div class="mail-envelope heirloom">
+    <div class="mail-back" aria-hidden="true"></div>
+    <div class="mail-card">
+                    <h2 class="mail-names" data-opening-names></h2><p data-opening-date></p>
             </div>
-                            <span class="pi-envelope-front" aria-hidden="true"></span>
-                <span class="pi-pearl" aria-hidden="true"></span>
-                    </div>
-        <div class="pi-opening-actions">
+    <div class="mail-front" aria-hidden="true"></div>
+    <div class="mail-hinge" aria-hidden="true"><div class="mail-flap"></div></div>
+    <span class="mail-seal" aria-hidden="true" ></span>
+</div>
+                <div class="pi-opening-actions">
             <button type="button" data-open>Открыть конверт</button>
             <form method="dialog"><button type="submit">Пропустить</button></form>
         </div>

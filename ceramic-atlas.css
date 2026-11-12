@@ -1,0 +1,195 @@
+@font-face {
+  font-family:"Invitation Script";
+  src:url("/wd-demo/fonts/MarckScript-Regular.ttf") format("truetype");
+  font-display:swap;
+}
+.ca {
+  --paper:#f9fbf8;
+  --ink:#1b3452;
+  --accent:#234f88;
+  --rule:#829bb8;
+  --ground:#e3ebf2;
+  --sprig:url("/wd-demo/art/porcelain-sprig.svg");
+  --rim:url("/wd-demo/art/porcelain-rim.svg");
+  --grain:url("/wd-demo/art/print-grain.svg");
+  --map:url("/wd-demo/art/atlas-map.svg");
+  margin:0;
+  font:1rem/1.65 Georgia,serif;
+  color:var(--ink);
+  background:var(--ground);
+  overflow-wrap:anywhere;
+}
+.ca *, .ca *::before, .ca *::after {box-sizing:border-box}
+.ca h1,.ca h2,.ca h3,.ca figure {margin:0}
+.ca h1,.ca h2 {font:400 clamp(2.2rem,5.5vw,4.2rem)/1.1 "Invitation Script",Georgia,serif;color:var(--accent)}
+.ca h1 {font-size:clamp(2.55rem,8vw,6.25rem)}
+.ca h1 i {font-size:.55em;font-style:normal;margin-inline:.19em}
+.ca a {color:inherit;text-underline-offset:.25em}
+.ca :focus-visible {outline:2px solid currentColor;outline-offset:4px}
+.ca main h1[tabindex="-1"]:focus {outline:none}
+.ca .overline,.ca-nav,.ca-link,.ca .cover-date {
+  font:600 .7rem/1.6 Georgia,serif;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.ca-nav {display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:.45rem clamp(.65rem,4vw,3rem);gap:.5rem;background:var(--paper)}
+.ca-nav span {grid-column:2;text-align:center}
+.ca-nav a {min-height:44px;display:flex;align-items:center;text-decoration:none}
+.ca-nav a:last-child {grid-column:3;justify-self:end}
+.ca main {max-width:77rem;margin:auto;background:var(--paper)}
+.ca main section {text-align:center}
+.ca-cover {display:grid;justify-items:center;align-content:center;padding:clamp(2rem,6vw,5rem) 1.1rem;gap:.85rem}
+.blue-porcelain .ca-cover {background:radial-gradient(ellipse,#f7fafb 38%,#ccdbea);padding-inline:clamp(.75rem,5vw,4rem)}
+.blue-porcelain .ca-inscription {
+  width:min(100%,55rem);min-height:clamp(19rem,52vw,38rem);padding:12% 14%;
+  display:grid;align-content:center;justify-items:center;text-align:center;
+  background:var(--rim) center/100% 100% no-repeat,radial-gradient(ellipse at 43% 36%,#fff 40%,#e7edf4 68%,#b4c8de);
+  border-radius:50%;box-shadow:inset 0 0 0 4px #f8fbff,inset 0 0 0 6px #819dbc,0 15px 32px #2947673d;
+}
+.blue-porcelain h1 span {display:block}
+.blue-porcelain h1 i {display:block;margin:.04em 0}
+.ca-inscription p {margin:.4rem 0}
+.ca-link {display:inline-grid;place-items:center;min-height:44px}
+.ca img {display:block;width:100%;height:auto;object-fit:cover}
+.ca-portrait {
+  position:relative;width:min(61%,23rem);padding:.5rem;border:3px double #41668f;
+  border-radius:50%;background:#fafbfb;box-shadow:0 8px 23px #1c385633;
+}
+.ca-portrait img {aspect-ratio:1.56;border-radius:50%;object-position:center 42%;filter:saturate(.78)}
+.ca-welcome,.ca-program,.ca .dress,.ca .response {padding:clamp(2.8rem,7vw,6rem) clamp(1.25rem,7vw,5rem)}
+.ca-welcome {position:relative;isolation:isolate;overflow:hidden}
+.ca-welcome>p:not(.overline),.ca .dress>p,.location-copy>p {max-width:34rem;margin-inline:auto;white-space:pre-line}
+.blue-porcelain .ca-welcome::before,.blue-porcelain .ca-welcome::after {
+  content:"";position:absolute;z-index:-1;inset:auto auto 0 -2.5rem;width:clamp(7rem,21vw,15rem);aspect-ratio:1;
+  background:var(--sprig) center/contain no-repeat;opacity:.45;pointer-events:none;
+}
+.blue-porcelain .ca-welcome::after {left:auto;right:-2.5rem;transform:scaleX(-1)}
+.ca .sign {font:1.5rem/1.4 "Invitation Script",Georgia,serif;color:var(--accent)}
+.ca-date {padding:2.6rem 1.15rem;text-align:center;background:var(--ground);border-block:3px double var(--rule)}
+.ca .ni-date h2 {font:400 clamp(1.55rem,5vw,3rem)/1.2 Georgia,serif;text-transform:none;letter-spacing:0}
+.ca .digits {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin:1.3rem auto 0;max-width:28rem}
+.ca .digits b,.ca .digits span {display:block}
+.ca .digits b {font:400 clamp(1.4rem,4vw,2.55rem)/1.15 Georgia,serif}
+.ca .digits span {font-size:.75rem}
+.ca-program ol {list-style:none;padding:0;margin:1.5rem auto 0;max-width:42rem}
+.ca-program li {display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding:1rem .15rem;border-bottom:1px solid var(--rule);text-align:left;scroll-margin-top:1rem}
+.ca-program h3 {font:600 1.12rem/1.35 Georgia,serif}
+.ca-program li p {margin:.32rem 0 0;font-size:.95rem}
+.ca-program time {font-style:italic;color:var(--accent)}
+.ca .event-number {display:none}
+.blue-porcelain .ca-program li {grid-template-columns:2.4rem 3rem minmax(0,1fr)}
+.blue-porcelain .ca-program li::before {content:"";width:2.35rem;aspect-ratio:1;background:var(--sprig) center/contain no-repeat}
+.ca-venue {display:grid;justify-items:center;align-items:center;gap:1.25rem;padding:clamp(2.8rem,7vw,5rem) 1.35rem;background:var(--ground)}
+.ca-venue figure {width:min(100%,24rem);position:relative}
+.blue-porcelain .ca-venue figure {border:4px double #315f91;border-radius:49% 49% 45% 45%;padding:.55rem;background:#f8fafc}
+.blue-porcelain .ca-venue img {aspect-ratio:1.2;border-radius:inherit}
+.ca-swatches {display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem 1.15rem;padding:0;margin:1.3rem 0 0;list-style:none}
+.ca-swatches li {display:grid;justify-items:center;gap:.4rem;font-size:.78rem}
+.ca-swatches i {width:2.85rem;aspect-ratio:1;border-radius:50%;background:var(--swatch);border:1px solid #293d5b36}
+.blue-porcelain .ca-swatches i {box-shadow:inset 2px 4px 7px #ffffff70,0 3px 5px #29405b28}
+.ca .response {display:grid;gap:1.25rem;margin:0 clamp(1rem,4vw,4rem) 0;border:4px double var(--rule);background:var(--paper)}
+.ca .response form {display:grid;gap:.55rem;text-align:left}
+.ca .response input:not([type=radio]),.ca textarea {width:100%;padding:.7rem;font:inherit;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:0}
+.ca .response fieldset {margin:.3rem 0;padding:.65rem;border:1px solid var(--rule)}
+.ca .response fieldset label {display:block}
+.ca input[type=radio] {accent-color:var(--accent)}
+.ca .response button,.ca-opening button {min-height:44px;padding:.6rem 1rem;border:1px solid transparent;background:var(--accent);color:#fff;font:inherit;cursor:pointer}
+.ca .response button:hover,.ca-opening button:hover {filter:brightness(1.12)}
+.ca-footer {padding:2.2rem 1rem;text-align:center;background:var(--ground)}
+.ca-footer>span {font:2.15rem/1.2 "Invitation Script",Georgia,serif}
+.ca-footer p,.ca-footer a {font-size:.85rem}
+@media(min-width:750px) {
+  .ca .response,.ca-venue {grid-template-columns:1fr 1fr;align-items:center}
+  .ca-venue {padding-inline:max(2rem,calc((100% - 58rem)/2))}
+  .blue-porcelain h1 span,.blue-porcelain h1 i {display:inline}
+}
+
+.wedding-atlas {
+  --paper:#f8efdb;--ink:#3f3c2e;--accent:#844631;--rule:#9b8c6c;--ground:#e9ddbf;
+  background:var(--grain),#e3d2ac;
+}
+.wedding-atlas main {background:var(--grain),var(--paper)}
+.wedding-atlas .ca-cover {gap:0;padding:1.25rem clamp(.65rem,3vw,2.4rem) 2.1rem}
+.wedding-atlas .ca-inscription {
+  z-index:1;width:min(94%,47rem);padding:1.05rem 1rem;text-align:center;
+  border:3px double #9d8d68;background:var(--grain),#fff4dc;box-shadow:0 7px 15px #594c342b;
+  transform:rotate(-1.1deg);margin-bottom:-.95rem;
+}
+.wedding-atlas h1 {font:italic 400 clamp(2.45rem,7.7vw,5.45rem)/1.06 Georgia,serif;letter-spacing:-.045em}
+.wedding-atlas .ca-map {position:relative;width:min(100%,61rem);container-type:inline-size}
+.ca-map-art {aspect-ratio:760/590;background:var(--map) center/100% 100% no-repeat;box-shadow:0 12px 24px #53412229}
+.ca-map figcaption {font-size:.81rem;margin-top:.55rem;color:#5f563f}
+.ca-pin {position:absolute;display:grid;place-items:center;width:44px;aspect-ratio:1;border:1px solid #633a2a;border-radius:50%;color:#fff9e8!important;background:#874735;font:bold .9rem Georgia,serif;text-decoration:none;transform:translate(-50%,-50%);box-shadow:0 0 0 2px #f6e7c9}
+.ca-pin[hidden] {display:none}
+.ca-pin:nth-of-type(1) {top:23cqw;left:20%}
+.ca-pin:nth-of-type(2) {top:25cqw;left:73%}
+.ca-pin:nth-of-type(3) {top:43cqw;left:65%}
+.ca-pin:nth-of-type(4) {top:60cqw;left:21%}
+.wedding-atlas .ca-welcome {margin:0 auto 2rem;width:min(92%,44rem);background:repeating-linear-gradient(transparent 0 1.64rem,#9b89662c 1.64rem 1.67rem);border-left:1px solid #a9665868}
+.wedding-atlas .ca-date {background:var(--grain),#dbe1cc}
+.wedding-atlas .ca-program {background:var(--grain),#f3e6cb}
+.wedding-atlas .ca-program ol {position:relative;max-width:49rem}
+.wedding-atlas .ca-program ol::before {
+  content:"";position:absolute;inset:0 auto 0 8%;width:24%;pointer-events:none;
+  background:url("/wd-demo/art/atlas-path.svg") left top/100% 100% no-repeat;opacity:.65;
+}
+.wedding-atlas .ca-program li {
+  position:relative;grid-template-columns:clamp(4.8rem,19vw,9rem) minmax(0,1fr);gap:.4rem 1rem;
+  align-items:center;padding:.7rem 0;border:0;min-height:7.1rem;
+}
+.wedding-atlas .ca-program li::before {content:"";grid-column:1;grid-row:1/3;align-self:center;width:100%;aspect-ratio:1.28;background:url("/wd-demo/art/atlas-stops.svg") 0 center/400% auto no-repeat}
+.wedding-atlas .ca-program li:nth-child(4n+2)::before {background-position:33.333% center}
+.wedding-atlas .ca-program li:nth-child(4n+3)::before {background-position:66.667% center}
+.wedding-atlas .ca-program li:nth-child(4n+4)::before {background-position:100% center}
+.wedding-atlas .ca-program time {grid-column:2;align-self:end}
+.wedding-atlas .ca-program li>div {grid-column:2;align-self:start}
+.wedding-atlas .ca-venue {background:var(--grain),#dbe1cc}
+.wedding-atlas .ca-venue figure,.ca-postcard {padding:.5rem;background:#fff6df;border:1px solid #a39373;box-shadow:0 7px 16px #493d2630;transform:rotate(-3deg)}
+.wedding-atlas .ca-venue figure svg {width:34%;position:absolute;right:-7%;bottom:-11%;filter:drop-shadow(1px 2px 2px #e8d3ab)}
+.wedding-atlas .ca-venue img,.ca-postcard img {aspect-ratio:1.5;filter:saturate(.83)}
+.ca-postcard {width:min(70%,28rem);margin:2rem auto 0!important;transform:rotate(3deg)}
+.wedding-atlas .ca-swatches i {border-radius:44% 53% 45% 53%;background:var(--grain),var(--swatch);box-shadow:inset 0 0 7px #fff7df86}
+.wedding-atlas .response {border:5px solid transparent;border-image:repeating-linear-gradient(135deg,#a66e58 0 12px,#fff2d4 12px 25px,#7c9ba0 25px 38px,#fff2d4 38px 50px) 5}
+@media(min-width:750px) {
+  .wedding-atlas .ca-program li {width:53%;margin-left:47%}
+  .wedding-atlas .ca-program li:nth-child(odd) {margin-left:0}
+  .wedding-atlas .ca-program ol::before {left:10%;width:59%}
+}
+.ca-opening[hidden] {display:none}
+.ca:has(.ca-opening[open]) {overflow:hidden}
+.ca-opening {
+  --opening-ready:1;
+  inset:0;margin:0;width:100%;height:100%;max-width:none;max-height:none;border:0;padding:1rem;
+  color:var(--ink);background:radial-gradient(ellipse,#f5f9fd,#b4c8dc);
+}
+.ca-opening::backdrop {background:#c5d6e6}
+.wedding-atlas .ca-opening {background:var(--grain),#e9d9b5}
+.wedding-atlas .ca-opening::backdrop {background:#e9d9b5}
+.ca-opening-layout {min-height:100%;display:grid;justify-items:center;align-content:center;gap:.65rem;text-align:center}
+.ca-opening form button {background:transparent;color:inherit;text-decoration:underline;font-size:.85rem}
+.ca-opening h2 {font-size:clamp(1.55rem,6vw,3rem)}
+.ca-opening p {margin:.4rem 0}
+.ca-box {position:relative;width:min(86vw,27rem,60svh);aspect-ratio:1.4;perspective:850px;margin-bottom:1.1rem}
+.ca-box-base,.ca-box-card,.ca-box-lid {position:absolute}
+.ca-box-base {inset:9% 0 -4%;border-radius:50%;background:linear-gradient(0deg,#244870,#a6bcd0 45%,#f9fbff 77%);box-shadow:0 13px 19px #24466657}
+.ca-box-card {inset:9% 12% 8%;display:grid;align-content:center;padding:8%;border:3px double var(--rule);background:#fbfcfc;box-shadow:0 5px 13px #3a526940;overflow:auto}
+.ca-box-lid {inset:0;border-radius:50%;transform-origin:50% 12%;overflow:hidden;background:var(--rim) center/100% 100%,radial-gradient(ellipse at 36% 28%,#fff 35%,#cfdeec 80%);box-shadow:0 5px 0 #5d80a5,inset 0 0 0 3px #eff6fc}
+.ca-box-lid span {position:absolute;inset:0;opacity:0;background:linear-gradient(108deg,transparent 30%,#fff 48%,transparent 64%);pointer-events:none}
+.ca-fold {position:relative;width:min(86vw,31rem,64svh);aspect-ratio:1.46;perspective:850px;margin-bottom:1rem;background:#efe1c3;box-shadow:0 12px 20px #513c2935}
+.ca-fold-sheet,.ca-fold-wing,.ca-fold-label {position:absolute}
+.ca-fold-sheet {inset:0;background:var(--map) center/cover no-repeat}
+.ca-fold-wing {inset:0 auto 0 0;width:50%;transform-origin:left center;background:var(--grain),linear-gradient(90deg,#e9daba,#f6ead0 92%,#cab58f);backface-visibility:hidden}
+.ca-fold-wing.right {left:auto;right:0;transform-origin:right center;background:var(--grain),linear-gradient(90deg,#ccba96,#f4e7ca 8%,#e5d1aa)}
+.ca-fold-label {inset:13% 12%;display:grid;align-content:safe center;padding:.75rem;border:1px solid #aa906b;background:var(--grain),#fff2d7;transform:rotate(-2deg);overflow:auto}
+.ca-opening.is-opening::backdrop {animation:ca-unveil .46s 1.02s ease both}
+@keyframes ca-unveil {to {opacity:0}}
+@media(prefers-reduced-motion:reduce) {.ca-opening.is-opening::backdrop {animation:none}}
+@media(max-width:430px) {.ca-nav {letter-spacing:.065em}.blue-porcelain .ca-inscription {padding-inline:16%}}
+.wedding-atlas .ca-venue figure {width:min(88%,24rem)}
+.wedding-atlas .ca-venue figure svg {right:-4%}
+@media(min-width:750px) {
+  .blue-porcelain .ca-cover {padding-block:3rem}
+  .blue-porcelain .ca-inscription {min-height:34rem;padding-block:6.5rem}
+  .blue-porcelain h1 span,.blue-porcelain h1 i {display:block}
+  .blue-porcelain h1 {font-size:clamp(3.75rem,7vw,5.45rem)}
+}

@@ -46,22 +46,9 @@
 .om-opening { --opening-ready: 1; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; padding: 0; border: 0; background: #e3e3d0; color: var(--ink); }
 .om-opening::backdrop { background: transparent; }
 .om-opening-stage { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 20px; text-align: center; }
-.om-envelope { position: relative; isolation: isolate; width: min(520px,100%); perspective: 900px; background: #dddac1; margin-top: 40px; box-shadow: 0 17px 37px #3e483323; }
-.om-insert { min-height: 155px; padding: 24px 17px; background: #fbf6e7; border: 4px double #a8ac92; position: relative; z-index: 2; }
-.om-insert h2 { font-size: clamp(32px,7vw,67px); }
-.om-insert p { margin-top: 8px; }
-.om-flap { position: absolute; inset: 0; z-index: 4; clip-path: polygon(0 0,100% 0,50% 62%); background: linear-gradient(#efebd8,#d6d3b9); transform-origin: top center; }
-.om-pocket { position: absolute; inset: 0; z-index: 3; clip-path: polygon(0 10%,50% 64%,100% 10%,100% 100%,0 100%); background: linear-gradient(150deg,#dddac1,#f4efdc 65%); }
-.om-monogram { display: grid; place-items: center; position: absolute; width: 57px; aspect-ratio: 1; left: calc(50% - 28px); top: calc(59% - 28px); z-index: 5; border: 4px double #9b9e81; border-radius: 50%; background: #eae4cc; color: #4a563d; font: 500 24px/1 'Cormorant Garamond',Georgia,serif; text-shadow: 1px 1px #fff7de; }
 .om-opening-stage button { min-height: 44px; color: inherit; background: transparent; border: 0; padding: 8px 15px; }
 .om-opening-stage [data-open] { margin-top: 12px; border: 1px solid #66705a; }
 .om-opening-stage form button { text-decoration: underline; text-underline-offset: .3em; }
-.om-opening.is-opening .om-monogram { animation: om-seal-out .47s ease-out both; }
-.om-opening.is-opening .om-flap { animation: om-flap-open .74s .17s ease-in-out both; }
-.om-opening.is-opening .om-insert { animation: om-letter-rise 1.13s .5s cubic-bezier(.27,.07,.19,1) both; }
-@keyframes om-seal-out { to { opacity: 0; transform: scale(.87); } }
-@keyframes om-flap-open { to { transform: rotateX(176deg); } }
-@keyframes om-letter-rise { 48% { z-index: 2; } 49%,100% { z-index: 5; } to { transform: translateY(-41%) scale(1.06); } }
 @media(max-width:700px) {
   .om-cover,.om-letter,.om-venue,.old-money .schedule,.old-money .response { grid-template-columns: minmax(0,1fr); }
   .om-title { padding-bottom: 0; }

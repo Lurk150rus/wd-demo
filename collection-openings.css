@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500&family=Instrument+Serif&family=PT+Serif:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Roboto+Condensed:wght@700&display=swap');
+
 /* Lightweight looping samples on collection cards. Links and full intros are unchanged. */
 .gallery .card{--op-delay:0s}.gallery .card:nth-child(2){--op-delay:-1.2s}.gallery .card:nth-child(3){--op-delay:-2.4s}.gallery .card:nth-child(4){--op-delay:-.6s}
 .gallery .opening-preview{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;background:#f4e6ea;animation:op-scene 7.4s ease-in-out infinite;animation-delay:var(--op-delay)}
@@ -216,8 +218,343 @@
 @keyframes op-chart { 0%,22%,100% { transform: scale(.82) rotate(-13deg); opacity: .5; } 52%,94% { transform: scale(1.1); opacity: 1; } }
 .gallery .old-money .preview { background: #ebe5d0; }
 .gallery .old-money .preview-name { color: #354232; }
-.gallery .old-money .opening-preview { background: #e3e3d0; }
-.gallery .old-money .op-paper { background: #f5f0df; border: 4px double #a7aa93; animation-name: op-letter; }
-.gallery .old-money .op-door { display: none; }
-.gallery .old-money .op-flap { display: block; position: absolute; inset: 0 0 42%; clip-path: polygon(0 0,100% 0,50% 100%); background: linear-gradient(#f0ead5,#d6d3b9); transform-origin: top; animation: op-flap 7.4s ease-in-out infinite; }
-.gallery .old-money .op-names { color: #354232; }
+
+/* Feedback on individual gallery cards. */
+.gallery .royal-classic .op-door {
+  background: linear-gradient(#10030b70, transparent 46%, #10030b91),
+    repeating-linear-gradient(90deg, #20070f 0%, #4a1425 8%, #59192e 12%, #290a18 20%);
+}
+.gallery .royal-classic .op-left { right: 49.8%; }
+.gallery .royal-classic .op-right { left: 49.8%; }
+.gallery .retro-love .op-stage { inset: 24% 18% 26%; }
+.gallery .retro-love .op-paper { inset: auto auto auto 46%; top: 50%; width: 57%; translate: 0 -50%; }
+.gallery .retro-love .op-names { inset: 6% 30% 6% 0; padding: 12px; }
+
+.gallery .card .reviewed-cover {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  container-type: inline-size;
+}
+.reviewed-sheet { width: 87%; height: 85%; display: grid; min-width: 0; }
+.reviewed-title { display: grid; align-content: center; justify-items: center; text-align: center; }
+.reviewed-names { font: 400 clamp(27px, 9cqw, 62px)/.98 'Cormorant Garamond', Georgia, serif; }
+.reviewed-kicker { font: 600 clamp(8px, 2cqw, 11px)/1.4 Manrope, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+.gallery .reviewed-sheet figure { min-height: 0; min-width: 0; overflow: hidden; }
+.gallery .reviewed-sheet img { width: 100%; height: 100%; object-fit: cover; }
+.gallery .botanical-garden .reviewed-cover { background: #e5e9db; color: #334634; }
+.botanical-garden .reviewed-sheet {
+  position: relative;
+  grid-template-columns: .9fr 1fr;
+  gap: 5%;
+  padding: 5%;
+  border: 1px solid #a7b095;
+  background: #f7f4e9;
+}
+.botanical-garden .reviewed-sheet figure { border: 1px solid #87977b; padding: 4px; border-radius: 50% 50% 0 0 / 32% 32% 0 0; }
+.gallery .botanical-garden .reviewed-sheet img { border-radius: inherit; object-position: 50% 42%; }
+.botanical-garden .reviewed-sheet::after {
+  content: ""; position: absolute; left: -5%; bottom: -5%; width: 24%; height: 48%;
+  background: url('/wd-demo/art/garden-sprig.svg') bottom left / contain no-repeat; pointer-events: none;
+}
+
+.gallery .wildflower-meadow .reviewed-cover { background: #f2eedd; color: #485239; }
+.wildflower-meadow .reviewed-sheet {
+  grid-template-rows: 1fr 2fr;
+  padding: 5%;
+  border: 1px solid #b1ae8c;
+  background: url('/wd-demo/art/wildflower-stems.svg') 94% 2% / 27% 40% no-repeat, #f7f3e7;
+}
+.wildflower-meadow .reviewed-title { padding-right: 15%; }
+.gallery .wildflower-meadow .reviewed-sheet img { object-position: 50% 70%; }
+
+.gallery .newspaper-wedding .reviewed-cover { background: #d7d0c4; color: #211f1b; }
+.newspaper-wedding .reviewed-sheet {
+  grid-template-rows: auto 1fr;
+  gap: 3%;
+  padding: 4%;
+  background: #f6f0e3;
+  box-shadow: 2px 7px 14px #211d2538;
+}
+.newspaper-wedding .reviewed-title { border-block: 3px double; padding-block: 4%; gap: 6px; }
+.newspaper-wedding .reviewed-names { font-weight: 600; }
+.gallery .newspaper-wedding .reviewed-sheet img { filter: grayscale(1); object-position: 50% 67%; }
+
+.gallery .cherry-romance .reviewed-cover {
+  background: linear-gradient(140deg, #651e38, #3d1026);
+  color: #f7e6dd;
+}
+.cherry-romance .reviewed-sheet {
+  padding: 5%;
+  border: 3px double #d8a6ab;
+  background: radial-gradient(ellipse at 50% 27%, #782b47, #4c132a 75%);
+}
+.cherry-romance .reviewed-title { border: 1px solid #d8a6ab76; padding: 6%; }
+.cherry-romance .reviewed-names { font-style: italic; }
+
+.gallery .card .reviewed-motion {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  opacity: 1;
+  animation: none;
+}
+.gallery .card.preview-playing .reviewed-motion { animation: reviewed-reveal 2.5s ease both; }
+@keyframes reviewed-reveal { 0%, 58% { opacity: 1; } 85%, 100% { opacity: 0; } }
+.gallery .cinema-love .reviewed-motion { background: #211f20; color: #f2ebe0; }
+.reviewed-leader {
+  display: grid; place-items: center; isolation: isolate; position: relative;
+  width: clamp(92px, 14vw, 156px); aspect-ratio: 1; border-radius: 50%;
+  border: 4px double #514b48; color: #242021; background: #d7cfc0;
+}
+.reviewed-leader::before {
+  content: ""; position: absolute; z-index: -1; inset: 9%; border-radius: 50%;
+  border: 1px solid #6e645e; background: conic-gradient(#81726875 92deg, transparent 93deg);
+}
+.reviewed-leader i {
+  grid-area: 1/1;
+  visibility: hidden;
+  font: 700 clamp(46px, 8vw, 84px)/1 "Roboto Condensed", Arial, sans-serif;
+}
+.reviewed-leader i:first-child { visibility: visible; }
+.gallery .cinema-love.preview-playing .reviewed-leader::before { animation: reviewed-sweep .4s linear 3; }
+.gallery .cinema-love.preview-playing .reviewed-leader i { animation: reviewed-digit .4s steps(1,end) forwards; }
+.gallery .cinema-love.preview-playing .reviewed-leader i:nth-child(2) { animation-delay: .4s; }
+.gallery .cinema-love.preview-playing .reviewed-leader i:nth-child(3) { animation-delay: .8s; }
+@keyframes reviewed-sweep { to { transform: rotate(1turn); } }
+@keyframes reviewed-digit { from { visibility: visible; } to { visibility: hidden; } }
+.reviewed-credit { font: 400 clamp(24px, 4vw, 42px)/1.1 'Cormorant Garamond', Georgia, serif; }
+
+.gallery .rustic-boho .reviewed-motion {
+  place-content: stretch; align-items: center;
+  background: url('/wd-demo/art/boho-meadow.svg') 96% 92% / 32% 58% no-repeat, #ecdbc2;
+}
+.reviewed-scroll {
+  grid-area: 1/1; display: grid; place-items: center; overflow: hidden;
+  width: 72%; aspect-ratio: 1.4; padding: 10px;
+  background: linear-gradient(#ab7b58, #f5e6cb 13%, #fff4de 47%, #e5cba5 90%, #a97753);
+  border: 1px solid #b98a66; border-radius: 5px; box-shadow: 0 9px 22px #76543442;
+  transform: scaleY(.24); color: #60382a; text-align: center;
+}
+.reviewed-scroll > span { opacity: 0; font: 400 clamp(25px, 4vw, 45px)/1.05 'Cormorant Garamond', Georgia, serif; }
+.reviewed-tie {
+  grid-area: 1/1; z-index: 1; width: 27%; aspect-ratio: 2;
+  background: url('/wd-demo/art/print-bow.svg') center / contain no-repeat; filter: saturate(.73) sepia(.2);
+}
+.gallery .card.preview-playing .reviewed-scroll { animation: reviewed-unroll .95s .17s cubic-bezier(.19,.82,.29,1) both; }
+.gallery .card.preview-playing .reviewed-scroll > span { animation: reviewed-fade-in .4s .58s both; }
+.gallery .card.preview-playing .reviewed-tie { animation: reviewed-untie .47s ease-in both; }
+@keyframes reviewed-unroll { to { transform: scaleY(1); } }
+@keyframes reviewed-fade-in { to { opacity: 1; } }
+@keyframes reviewed-untie { to { opacity: 0; transform: translateY(13px) rotate(17deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .gallery .card .reviewed-motion { display: none; }
+}
+.gallery .royal-classic .preview img { object-position: 54% 47%; }
+.gallery .minimal-ivory .preview img { object-position: 52% 53%; }
+.gallery .ocean-breeze .preview img { object-position: 77% 57%; }
+.gallery .art-deco .preview img { object-position: 52% 65%; }
+.gallery .tropical-paradise .preview img { object-position: 52% 53%; }
+
+@font-face {
+  font-family: "Gallery Marck Script";
+  src: url("/wd-demo/fonts/MarckScript-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+.gallery .card {
+  --preview-font: "Cormorant Garamond", Georgia, serif;
+  --preview-weight: 400;
+  --preview-style: normal;
+}
+.gallery .royal-classic, .gallery .art-deco { --preview-font: Prata, Georgia, serif; }
+.gallery .modern-editorial { --preview-font: Manrope, Arial, sans-serif; --preview-weight: 600; }
+.gallery .retro-love { --preview-font: "Playfair Display", Georgia, serif; --preview-weight: 700; }
+.gallery .minimal-ivory { --preview-font: "Playfair Display", Georgia, serif; }
+.gallery .tropical-paradise { --preview-font: "Playfair Display", Georgia, serif; --preview-weight: 600; }
+.gallery .midnight-elegance { --preview-font: Cormorant, "Cormorant Garamond", Georgia, serif; }
+.gallery .rustic-boho { --preview-font: "Instrument Serif", "Cormorant Garamond", Georgia, serif; }
+.gallery .newspaper-wedding { --preview-font: "PT Serif", Georgia, serif; --preview-weight: 700; }
+.gallery .cinema-love { --preview-font: "Roboto Condensed", Arial, sans-serif; --preview-weight: 700; }
+.gallery .cherry-romance { --preview-weight: 500; }
+.gallery :is(.ribbon-lace,.blue-heirloom,.sepia-romance,.love-doodles,.blue-porcelain) { --preview-font: "Gallery Marck Script", Georgia, serif; }
+.gallery .wedding-atlas { --preview-font: Georgia, serif; --preview-style: italic; }
+.gallery .card .preview :is(.preview-name,.op-names,.reviewed-names,.reviewed-credit,.reviewed-scroll > span,.mail-envelope .mail-names),
+.gallery .card :is(.print-preview,.illustrated-preview,.ca-preview) > span {
+  font-family: var(--preview-font);
+  font-weight: var(--preview-weight);
+  font-style: var(--preview-style);
+}
+.gallery .cinema-love .preview :is(.preview-name,.reviewed-credit) { text-transform: uppercase; }
+.gallery .card-caption p { color: #626658; font-size: 12px; line-height: 1.45; }
+.gallery .reviewed-title { gap: .7rem; }
+.reviewed-title .reviewed-names i { font-size: .55em; margin-inline: .22em; }
+.gallery .cherry-romance .reviewed-cover {
+  background: url('/wd-demo/art/print-grain.svg'), radial-gradient(ellipse at 32% 18%,#943a52,#491126 75%);
+  color:#793049;
+}
+.cherry-romance .reviewed-sheet {
+  position:relative;
+  width:76%;height:76%;padding:7%;border:3px double #b47a88;
+  background:url('/wd-demo/art/print-grain.svg'),#fbefdf;
+  box-shadow:4px 13px 26px #26081880;
+}
+.cherry-romance .reviewed-sheet::after {
+  content:"";position:absolute;top:-12%;left:19%;width:62%;height:31%;
+  background:url('/wd-demo/art/print-bow.svg') center/contain no-repeat;pointer-events:none;
+}
+.cherry-romance .reviewed-title { border:1px solid #b47a8880; padding:10% 4% 4%; }
+.cherry-romance .reviewed-names > span,.cherry-romance .reviewed-names > i,
+.ribbon-lace .reviewed-names > span,.ribbon-lace .reviewed-names > i { display:block; }
+.cherry-romance .reviewed-names,.ribbon-lace .reviewed-names { font-size:clamp(28px,10cqw,67px); line-height:1.03; }
+
+.gallery .tropical-paradise .reviewed-cover {background:#143c2d;color:#f9eed5}
+.tropical-paradise .reviewed-sheet { grid-template-rows: 35% minmax(0,1fr); height:89%; border:1px solid #b1bf8c75; padding:3%; }
+.tropical-paradise .reviewed-title { position:relative; isolation:isolate; }
+.tropical-paradise .reviewed-title::before {
+  content:"";position:absolute;inset:2% auto 0 -2%;width:32%;z-index:-1;opacity:.55;
+  background:url('/wd-demo/art/tropical-leaf.svg') left center/contain no-repeat;
+}
+.tropical-paradise .reviewed-names {font-size:clamp(24px,8.5cqw,55px)}
+.gallery .tropical-paradise .reviewed-sheet img {object-position:center 60%;filter:saturate(.87)}
+
+.gallery .ribbon-lace .reviewed-cover {
+  background:url('/wd-demo/art/print-grain.svg'), radial-gradient(ellipse at 48% 26%,#777553,#4f5036 78%);
+  color:#813d52;
+}
+.ribbon-lace .reviewed-sheet {
+  position:relative;width:77%;height:76%;padding:13% 9% 5%;
+  background:url('/wd-demo/art/ribbon-lace.svg') center/100% 100% no-repeat;
+  filter:drop-shadow(3px 10px 8px #25221682);
+}
+.ribbon-lace .reviewed-sheet::before {
+  content:"";position:absolute;width:64%;height:33%;left:18%;top:-10%;
+  background:url('/wd-demo/art/print-bow.svg') center/contain no-repeat;pointer-events:none;
+}
+
+.gallery .winter-fairytale .preview {
+  display:grid;grid-template-rows:minmax(0,1fr) auto;padding:0;background:#eaf2f5;
+}
+.gallery .winter-fairytale .preview > img {min-height:0;object-position:center 53%}
+.gallery .winter-fairytale .preview > .preview-name {
+  position:static;display:block;padding:.4em .3em .5em;color:#243e52;
+  font-size:clamp(27px,4vw,46px);line-height:1.05;background:#eaf2f5;
+}
+.gallery .winter-fairytale .preview > small:not(.opening-badge) {display:none}
+.gallery .winter-fairytale .opening-badge {bottom:auto;top:12px}
+.gallery .winter-fairytale .opening-preview {animation-name:winter-cover-reveal}
+@keyframes winter-cover-reveal {0%,48%,100% {opacity:1} 62%,92% {opacity:0}}
+
+.gallery .celestial-love .reviewed-motion {
+  background:url('/wd-demo/art/celestial-chart.svg') center/cover no-repeat,#23283c;
+  color:#f1eadf;
+}
+.reviewed-constellation {width:clamp(150px,22vw,290px);overflow:visible;fill:#f3ddac}
+.reviewed-constellation path {fill:none;stroke:#e0d3b4;stroke-width:1.15;stroke-dasharray:1;stroke-dashoffset:1}
+.reviewed-constellation circle {transform:translate(var(--x),var(--y))}
+.gallery .card.preview-playing .reviewed-constellation circle {animation:reviewed-gather .6s ease-in-out both}
+.gallery .card.preview-playing .reviewed-constellation circle:nth-of-type(2n) {animation-delay:.075s}
+.gallery .card.preview-playing .reviewed-constellation path {animation:reviewed-trace .57s .62s ease-out both}
+@keyframes reviewed-gather {to {transform:translate(0,0)}}
+@keyframes reviewed-trace {to {stroke-dashoffset:0}}
+
+.gallery .love-doodles .doodle-figures {transform-origin:center bottom;transform-box:fill-box}
+@media (prefers-reduced-motion:no-preference) {
+  .gallery .love-doodles.preview-playing .doodle-figures {
+    animation:doodle-dance 1.35s ease-in-out both;
+  }
+}
+@keyframes doodle-dance {
+  25% {transform:translateY(-4px) rotate(-4deg)}
+  56% {transform:translateY(-3px) rotate(4deg)}
+  79% {transform:rotate(-1.5deg)}
+}
+
+.gallery .art-deco .op-door::after {
+  display: block;
+  inset: 0;
+  border: 0;
+  border-radius: 0;
+  background: url('/wd-demo/art/deco-panel.svg') center / 95% 96% no-repeat;
+  opacity: 0;
+  animation: op-deco-light 7.4s ease-in-out infinite;
+  animation-delay: var(--op-delay);
+}
+@keyframes op-deco-light {
+  0%, 18%, 58%, 100% { opacity: 0; }
+  32%, 43% { opacity: 1; filter: brightness(1.8) drop-shadow(0 0 7px #efc77d); }
+}
+
+.gallery :is(.rustic-boho,.french-chateau,.minimal-ivory) .preview {
+  display: grid;
+  grid-template-rows: auto minmax(0,1fr);
+  padding: 0;
+}
+.gallery :is(.rustic-boho,.french-chateau,.minimal-ivory) .preview > img {
+  grid-row: 2;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  border: 0;
+}
+.gallery :is(.rustic-boho,.french-chateau,.minimal-ivory) .preview > .preview-name {
+  position: static;
+  grid-row: 1;
+  padding: .5em .25em;
+  max-width: none;
+  text-align: center;
+  font-size: clamp(24px,3.3vw,42px);
+  line-height: 1.1;
+}
+.gallery .rustic-boho .preview > .preview-name { background: #f2e4cf; color: #623d2e; }
+.gallery .french-chateau .preview > .preview-name { background: #eaf0f3; color: #253e56; }
+.gallery .minimal-ivory .preview > .preview-name { background: #faf5e9; color: #39342e; }
+
+.gallery .cherry-romance .reviewed-cover { display: block; }
+.cherry-preview-portrait {
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(0,1fr) auto;
+  background: #fbefdf;
+}
+.gallery .cherry-preview-portrait img { width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center 43%; }
+.cherry-preview-portrait .reviewed-names {
+  padding: .55em .35em;
+  text-align: center;
+  font-size: clamp(25px,8cqw,51px);
+}
+.cherry-preview-opening {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: url('/wd-demo/art/print-grain.svg'), radial-gradient(ellipse at 32% 18%,#943a52,#491126 75%);
+  pointer-events: none;
+}
+.gallery .cherry-romance.preview-playing .cherry-preview-opening { animation: cherry-preview-reveal .65s .95s ease both; }
+.gallery .cherry-romance.preview-playing .reviewed-sheet { animation: cherry-preview-lift .8s .4s ease both; }
+.gallery .cherry-romance.preview-playing .reviewed-sheet::after { animation: cherry-preview-untie .65s ease both; }
+@keyframes cherry-preview-untie { to { opacity: 0; transform: translate(28%,-38%) rotate(16deg) scale(.72); } }
+@keyframes cherry-preview-lift { to { opacity: 0; transform: translateY(-17%) rotate(-4deg); } }
+@keyframes cherry-preview-reveal { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .cherry-preview-opening { display: none; }
+}
+
+.gallery .cinema-love .preview {
+  display: grid;
+  grid-template-rows: minmax(0,1fr) auto;
+}
+.gallery .cinema-love .preview > img { min-height: 0; }
+.gallery .cinema-love .preview > .preview-name {
+  position: static;
+  padding: .55em .35em;
+  background: #211f20;
+  color: #f2ebe0;
+  font-size: clamp(24px,3.3vw,42px);
+  line-height: 1.1;
+}
+.gallery .cinema-love .preview > small { display: none; }
+.gallery .cinema-love .opening-badge { top: 12px; bottom: auto; }

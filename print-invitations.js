@@ -48,25 +48,8 @@ initializeOpening(dialog => {
     }};
   }
 
-  const animations = [];
-  function animate(selector, frames, duration, delay = 0) {
-    animations.push((selector ? get(selector) : dialog).animate(frames, {
-      duration, delay, fill: 'both', easing: 'cubic-bezier(.38,.05,.23,1)'
-    }));
-  }
-  if (get('.pi-flap')) {
-    animate('.pi-pearl', [{opacity: 1}, {opacity: 0}], 220);
-    animate('.pi-flap', [{transform: 'rotateX(0deg)'}, {transform: 'rotateX(171deg)'}], 580);
-    animate('.pi-insert', [
-      {transform: 'translateY(0)'}, {transform: 'translateY(-65%) scale(1.02)', offset: .59},
-      {transform: 'translateY(-54%) scale(1.24)'}
-    ], 940, 390);
-    for (const part of ['.pi-envelope-back', '.pi-envelope-front', '.pi-flap']) {
-      animate(part, [{opacity: 1}, {opacity: 0}], 460, 840);
-    }
-  }
-  animate(null, [{opacity: 1}, {opacity: 0}], 430, get('.pi-flap') ? 1050 : 0);
-  return {finished: Promise.all(animations.map(animation => animation.finished)), cancel() {
-    animations.forEach(animation => animation.cancel());
-  }};
+  const isHeirloom = Boolean(get('.mail-envelope'));
+  return dialog.animate([
+    {opacity: 1}, {opacity: 1, offset: isHeirloom ? .83 : 0.05}, {opacity: 0},
+  ], {duration: isHeirloom ? 1980 : 430, easing: 'ease-in-out', fill: 'forwards'});
 });

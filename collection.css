@@ -49,3 +49,11 @@
 }
 .gallery .love-doodles .illustrated-preview {background:url("/wd-demo/art/print-grain.svg"),#efc8c8;color:#923e55}
 .gallery .love-doodles .illustrated-preview svg {width:min(105%,19rem);height:auto;display:block}
+
+.gallery .ca-preview {display:grid;place-items:center;padding:1rem 18%;text-align:center;color:#234f88}
+.gallery .ca-preview span {font:italic clamp(1.5rem,3vw,2.4rem)/1.2 Georgia,serif}
+.gallery .blue-porcelain .ca-preview {
+  background:url("/wd-demo/art/porcelain-rim.svg") center/94% auto no-repeat,radial-gradient(ellipse,#fff 38%,#ceddea);
+}
+.gallery .wedding-atlas .ca-preview {background:url("/wd-demo/art/atlas-map.svg") center/cover no-repeat;color:#844631}
+.gallery .wedding-atlas .ca-preview span {background:#fff3d9;padding:.55rem .8rem;border:3px double #a19070;transform:rotate(-3deg)}
