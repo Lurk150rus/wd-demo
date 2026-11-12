@@ -590,3 +590,81 @@
 }
 .gallery .retro-love .preview > small { display: none; }
 .gallery .retro-love .opening-badge { top: 12px; bottom: auto; }
+
+.gallery .blue-porcelain .ca-preview,.gallery .wedding-atlas .ca-preview {
+  display: grid;
+  grid-template-rows: minmax(0,1fr) auto;
+  gap: 0;
+  padding: 6%;
+}
+.gallery .blue-porcelain .ca-preview { background: #e2ebf4; }
+.gallery .ca-preview figure {
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: .4rem;
+  border: 1px solid #829bb8;
+  background: #f9fbf8;
+}
+.gallery .ca-preview img { display:block; width:100%;height:100%;object-fit:cover;object-position:center 45%; }
+.gallery .blue-porcelain .ca-preview > span {
+  width:100%;padding:.65em .3em;
+  border:3px double #829bb8;
+  background:url('/wd-demo/art/porcelain-sprig.svg') right center/20% auto no-repeat,#f9fbf8;
+}
+.gallery .wedding-atlas .ca-preview { background:url('/wd-demo/art/atlas-map.svg') center/cover no-repeat; }
+.gallery .wedding-atlas .ca-preview figure { border-color:#a19070;transform:rotate(-2deg); }
+.gallery .wedding-atlas .ca-preview > span { z-index:1;margin-top:-.3rem; }
+.gallery .ribbon-lace.preview-playing .reviewed-sheet::before {
+  transform-origin: 50% 30%;
+  animation: ribbon-preview-sway 1.15s .18s ease-in-out both;
+}
+@keyframes ribbon-preview-sway {
+  30% { transform: rotate(-4deg) translateY(-2px); }
+  62% { transform: rotate(3deg); }
+  82% { transform: rotate(-1deg); }
+}
+.gallery .winter-fairytale .opening-preview {
+  background:
+    linear-gradient(155deg,#d7e4ebcd,#edf4f7e8 49%,#b7ccd8dc),
+    url('/wd-demo/photos/winter-fairytale.jpg') center 35%/cover;
+}
+.gallery .winter-fairytale .op-stage {
+  inset: 19% 11%;
+  border: 3px double #718da1;
+  background: linear-gradient(145deg,#f7fbfbe8,#e5eff3d9);
+  box-shadow: 0 12px 32px #25425726;
+}
+.gallery .winter-fairytale .op-stage::before,
+.gallery .winter-fairytale .op-stage::after {
+  content: "";
+  position: absolute;
+  width: 28%;
+  height: 25%;
+  background: url('/wd-demo/art/winter-frost.svg') top left/contain no-repeat;
+  opacity: .3;
+}
+.gallery .winter-fairytale .op-stage::before { inset: 5% auto auto 5%; }
+.gallery .winter-fairytale .op-stage::after { inset: auto 5% 5% auto; transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  .gallery .ribbon-lace.preview-playing .reviewed-sheet::before { animation: none; }
+}
+.tropical-paradise .reviewed-title::before {
+  background-image: url('/wd-demo/art/tropical-frond.svg');
+  inset: -10% auto -10% -1%;
+  opacity: .83;
+  width: 35%;
+}
+.tropical-paradise .reviewed-title::after {
+  content: "";
+  position: absolute;
+  inset: -10% -1% -10% auto;
+  z-index: -1;
+  width: 35%;
+  background: url('/wd-demo/art/tropical-frond.svg') left center/contain no-repeat;
+  opacity: .65;
+  transform: scaleX(-1);
+}

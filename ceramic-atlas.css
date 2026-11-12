@@ -193,3 +193,58 @@
   .blue-porcelain h1 span,.blue-porcelain h1 i {display:block}
   .blue-porcelain h1 {font-size:clamp(3.75rem,7vw,5.45rem)}
 }
+
+/* Stationery and photographic postcards frame the couple on the first screen. */
+.ca .ca-cover {
+  width: min(100%,67rem);
+  margin-inline: auto;
+  padding: clamp(1rem,5vw,3.75rem);
+  display: grid;
+  gap: 1rem;
+  background: var(--grain),var(--paper);
+}
+.ca .ca-cover .ca-inscription {
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: clamp(1.8rem,4vw,3rem) .9rem;
+  border-radius: 0;
+  transform: none;
+  box-shadow: none;
+}
+.blue-porcelain .ca-cover .ca-inscription {
+  border: 3px double #829bb8;
+  background: var(--sprig) left top / 25% auto no-repeat,var(--sprig) right bottom / 23% auto no-repeat,#f9fbf8;
+}
+.ca .ca-cover .ca-portrait {
+  width: min(100%,36rem);
+  padding: .4rem;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  background: var(--paper);
+  box-shadow: 0 9px 20px #283c4b24;
+}
+.ca .ca-cover .ca-portrait img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 0;
+  object-position: center 47%;
+  filter: none;
+}
+.wedding-atlas .ca-cover .ca-portrait {
+  padding: .55rem .55rem 1.25rem;
+  border-color: #b7a585;
+  transform: rotate(-2deg);
+}
+.ca .ca-cover .ca-link { grid-column: 1/-1; }
+.wedding-atlas .ca-map { margin: 1.5rem auto 3rem; width: min(94%,61rem); }
+.ca-map-couple { position: absolute; width: 12%; height: 24%; left: 43%; top: 28%; pointer-events: none; }
+.ca-box .ca-box-base,.ca-box .ca-box-lid { border-radius: 5px; }
+.ca-box .ca-box-lid {
+  background: var(--sprig) left top / 32% auto no-repeat,var(--sprig) right bottom / 32% auto no-repeat,
+    linear-gradient(145deg,#fff,#e2ecf5);
+  border: 4px double #829bb8;
+}
+@media (min-width:750px) {
+  .ca .ca-cover { grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); align-items: center; gap: 1.8rem; }
+}

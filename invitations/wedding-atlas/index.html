@@ -14,20 +14,26 @@
 <header class="ca-nav"><a href="/wd-demo/">← Коллекция</a><span>Wedding Atlas</span><a href="#rsvp">RSVP ↗</a></header>
 <main>
     <section class="ca-cover">
+        <figure class="ca-portrait">
+            <img src="/wd-demo/photos/rustic-boho.webp" alt="Портрет пары" fetchpriority="high">
+        </figure>
         <div class="ca-inscription">
             <p class="overline">Приглашаем в путешествие</p>
             <h1><span>Вера</span><i>&amp;</i><span>Илья</span></h1>
             <p class="cover-date">7 августа 2027 · 16:00</p>
         </div>
-                    <figure class="ca-map">
+        <a class="ca-link" href="#wedding-map">Смотреть карту дня ↓</a>
+    </section>
+
+                <figure id="wedding-map" class="ca-map">
                 <div class="ca-map-art" aria-hidden="true"></div>
+                <svg class="ca-map-couple" viewBox="100 57 183 230" aria-hidden="true"><use href="/wd-demo/art/love-doodles.svg#couple-figures" width="360" height="310"/></svg>
                                     <a class="ca-pin" href="#route-1" aria-label="Встреча">1</a>
                                     <a class="ca-pin" href="#route-2" aria-label="Церемония">2</a>
                                     <a class="ca-pin" href="#route-3" aria-label="Ужин">3</a>
                                     <a class="ca-pin" href="#route-4" aria-label="Танцы">4</a>
                                 <figcaption>Иллюстрированный маршрут дня</figcaption>
             </figure>
-            </section>
 
     <section id="welcome" class="welcome ca-welcome">
         <p class="overline">Письмо путешественникам</p>
@@ -60,15 +66,13 @@
 
     <section class="ca-venue">
         <figure>
-            <svg viewBox="0 0 160 125" aria-hidden="true"><use href="/wd-demo/art/atlas-landmarks.svg#dinner"/></svg>            <img src="/wd-demo/photos/rustic-boho.webp" alt="Фотография пары" loading="lazy">
+            <svg viewBox="0 0 160 125" aria-hidden="true"><use href="/wd-demo/art/atlas-landmarks.svg#dinner"/></svg>            <img src="/wd-demo/photos/wildflower-meadow.webp" alt="Фотография пары" loading="lazy">
         </figure>
         <div class="location-copy">
             <p class="overline">Место встречи</p><h2>Усадьба «Речной сад»</h2><p>Московская область, речной павильон</p>
                             <a class="ca-link" data-atlas-directions href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D1%80%D0%B5%D1%87%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BE%D0%BD" target="_blank" rel="noopener noreferrer">Открыть адрес на карте ↗</a>
                     </div>
     </section>
-            <figure class="ca-postcard"><img src="/wd-demo/photos/wildflower-meadow.webp" alt="Фотография из свадебного альбома" loading="lazy"></figure>
-
     <section class="dress"><p class="overline">Дресс-код</p><h2>Палитра дня</h2><p>Для прогулки по саду подойдут удобные туфли и лёгкие ткани. Если хочется поддержать нашу палитру, выбирайте песочные, зелёные, небесные и терракотовые оттенки.</p>
         <ul class="ca-swatches"><li><i style="--swatch:#ead9b5"></i>Песочный</li><li><i style="--swatch:#9ba47d"></i>Шалфей</li><li><i style="--swatch:#a5bfc7"></i>Небесный</li><li><i style="--swatch:#ad755a"></i>Терракота</li></ul>
     </section>
