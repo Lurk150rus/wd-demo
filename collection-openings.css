@@ -558,3 +558,35 @@
 }
 .gallery .cinema-love .preview > small { display: none; }
 .gallery .cinema-love .opening-badge { top: 12px; bottom: auto; }
+
+.gallery .old-money .preview {
+  display: grid;
+  grid-template-rows: minmax(0,1fr) auto;
+}
+.gallery .old-money .preview > img { min-height: 0; }
+.gallery .old-money .preview > .preview-name {
+  position: static;
+  padding: .46em .35em .52em;
+  background: #354232;
+  color: #fbf6e7;
+  font-size: clamp(25px,3.3vw,44px);
+  line-height: 1.1;
+}
+.gallery .old-money .preview > small { display: none; }
+.gallery .old-money .opening-badge { top: 12px; bottom: auto; }
+
+.gallery .retro-love .preview {
+  display: grid;
+  grid-template-rows: minmax(0,1fr) auto;
+}
+.gallery .retro-love .preview > img { min-height: 0; transform: none; }
+.gallery .retro-love .preview > .preview-name {
+  position: static;
+  padding: .46em .35em .52em;
+  background: #5b2031;
+  color: #fff0d7;
+  font-size: clamp(25px,3.3vw,44px);
+  line-height: 1.1;
+}
+.gallery .retro-love .preview > small { display: none; }
+.gallery .retro-love .opening-badge { top: 12px; bottom: auto; }
