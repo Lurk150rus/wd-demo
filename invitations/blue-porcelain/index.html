@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Александра &amp; Михаил · Blue Porcelain</title>
     <link rel="stylesheet" href="/wd-demo/ceramic-atlas.css">
-
+    <link rel="stylesheet" href="/wd-demo/envelope-opening.css">
     <script defer src="/wd-demo/collection.js"></script>
     <script defer src="/wd-demo/experiments/gsap-3.15.0.min.js"></script>
     <script type="module" src="/wd-demo/ceramic-atlas.js"></script>
@@ -15,7 +15,7 @@
 <main>
     <section class="ca-cover">
         <figure class="ca-portrait">
-            <img src="/wd-demo/photos/french-chateau.webp" alt="Портрет пары" fetchpriority="high">
+            <img src="/wd-demo/photos/blue-porcelain.webp" alt="Портрет пары" fetchpriority="high">
         </figure>
         <div class="ca-inscription">
             <p class="overline">Приглашение на свадьбу</p>
@@ -57,7 +57,7 @@
 
     <section class="ca-venue">
         <figure>
-                        <img src="/wd-demo/photos/french-chateau-venue.webp" alt="Фотография площадки" loading="lazy">
+                        <img src="/wd-demo/photos/blue-porcelain.webp" alt="Фотография площадки" loading="lazy">
         </figure>
         <div class="location-copy">
             <p class="overline">Место встречи</p><h2>Павильон «Белый зал»</h2><p>Московская область, Липовый парк</p>
@@ -90,13 +90,17 @@
 </main>
 <footer class="ca-footer"><span>Александра &amp; Михаил</span><p>10 июля 2027 · 16:00 · С любовью</p><a href="/wd-demo/">Вся коллекция ↗</a></footer>
 
-<dialog class="ca-opening" data-occasion-opening aria-label="Фарфоровая шкатулка" hidden>
+<dialog class="ca-opening" data-occasion-opening aria-label="Конверт с кобальтовой печатью" hidden>
     <div class="ca-opening-layout">
-                    <div class="ca-box">
-                <div class="ca-box-base" aria-hidden="true"></div>
-                <div class="ca-box-card"><h2 data-opening-names></h2><p data-opening-date></p></div>
-                <div class="ca-box-lid" aria-hidden="true"><span></span></div>
+                    <div class="mail-envelope">
+    <div class="mail-back" aria-hidden="true"></div>
+    <div class="mail-card">
+                    <h2 class="mail-names" data-opening-names></h2><p data-opening-date></p>
             </div>
+    <div class="mail-front" aria-hidden="true"></div>
+    <div class="mail-hinge" aria-hidden="true"><div class="mail-flap"></div></div>
+    <span class="mail-seal" aria-hidden="true" data-mail-monogram >✦</span>
+</div>
                 <button type="button" data-open>Открыть приглашение</button>
         <form method="dialog"><button type="submit">Пропустить</button></form>
     </div>

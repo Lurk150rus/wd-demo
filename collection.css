@@ -57,3 +57,6 @@
 }
 .gallery .wedding-atlas .ca-preview {background:url("/wd-demo/art/atlas-map.svg") center/cover no-repeat;color:#844631}
 .gallery .wedding-atlas .ca-preview span {background:#fff3d9;padding:.55rem .8rem;border:3px double #a19070;transform:rotate(-3deg)}
+
+/* Keep both faces in frame when the portrait is placed in a wide landscape slot. */
+.royal-classic main :is(.cover,.location) img[src$="/royal-classic.webp"] { object-position: 50% 4%; }

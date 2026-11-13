@@ -90,22 +90,7 @@
 
 .gallery .rustic-boho .preview { background: #efe0c9; }
 .gallery .rustic-boho .preview-name { color: #623d2e; }
-.gallery .rustic-boho .preview img { transform: rotate(4deg); border: 5px solid #fff7e9; }
-.gallery .rustic-boho .opening-preview { background: url('/wd-demo/art/boho-meadow.svg') right bottom / auto 80% no-repeat, #ecdbc2; }
-.gallery .rustic-boho .op-paper {
-  background: linear-gradient(#d9ba94,#fff2db 45% 55%,#d9ba94);
-  border-radius: 5px;
-  animation-name: op-unroll;
-}
-.gallery .rustic-boho .op-door { display: none; }
-.gallery .rustic-boho .op-seal {
-  position: absolute; display: block; inset: 28% auto 28% calc(50% - 4px); width: 8px;
-  background: #954d39; box-shadow: 1px 2px 4px #5a302555; animation: op-type 7.4s ease-in-out infinite;
-}
-.gallery .rustic-boho .op-names { color: #60382a; animation-name: op-paper-names; }
-@keyframes op-unroll { 0%,23%,100% { transform: scaleY(.35) rotate(-5deg); } 52%,94% { transform: scaleY(1); } }
-@keyframes op-paper-names { 0%,33%,100% { opacity: 0; } 50%,86% { opacity: 1; } }
-
+.gallery .rustic-boho .preview img { object-position: center 8%; }
 .gallery .midnight-elegance .preview { background: #1a181c; color: #e8d6be; }
 .gallery .midnight-elegance .preview-name { color: #eedfc9; }
 .gallery .midnight-elegance .preview img { filter: saturate(.62) brightness(.77); }
@@ -149,8 +134,25 @@
 .gallery .ocean-breeze .op-names { color: #173e4c; }
 @keyframes op-tide { 0%,24%,100% { transform: translateY(0); } 59%,95% { transform: translateY(-113%); } }
 
-.gallery .art-deco .preview { background: #211d1b; color: #f3e7d1; }
-.gallery .art-deco .preview-name { color: #f3e7d1; font-family: Prata,Georgia,serif; }
+.gallery .art-deco .preview {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  background: #211d1b;
+  color: #f3e7d1;
+}
+.gallery .art-deco .preview > img {
+  grid-row: 2;
+  min-height: 0;
+}
+.gallery .art-deco .preview > .preview-name {
+  position: static;
+  grid-row: 1;
+  padding: .65em .35em .55em;
+  border-bottom: 1px solid #a88854;
+  color: #f3e7d1;
+  font-size: clamp(22px, 3.3vw, 39px);
+  line-height: 1.2;
+}
 .gallery .art-deco .opening-preview { background: transparent; }
 .gallery .art-deco .op-stage { inset: 0; }
 .gallery .art-deco .op-paper { display: none; }
@@ -327,34 +329,36 @@
 .reviewed-credit { font: 400 clamp(24px, 4vw, 42px)/1.1 'Cormorant Garamond', Georgia, serif; }
 
 .gallery .rustic-boho .reviewed-motion {
-  place-content: stretch; align-items: center;
-  background: url('/wd-demo/art/boho-meadow.svg') 96% 92% / 32% 58% no-repeat, #ecdbc2;
+  inset: auto 0 0;
+  height: 100%;
+  background: #f2e4cf;
+  pointer-events: none;
+  visibility: hidden;
 }
-.reviewed-scroll {
-  grid-area: 1/1; display: grid; place-items: center; overflow: hidden;
-  width: 72%; aspect-ratio: 1.4; padding: 10px;
-  background: linear-gradient(#ab7b58, #f5e6cb 13%, #fff4de 47%, #e5cba5 90%, #a97753);
-  border: 1px solid #b98a66; border-radius: 5px; box-shadow: 0 9px 22px #76543442;
-  transform: scaleY(.24); color: #60382a; text-align: center;
+@media (prefers-reduced-motion: no-preference) {
+  .gallery .rustic-boho.preview-playing .preview > img {
+    animation: meadow-print-develop 1.4s ease-out both;
+  }
+  .gallery .rustic-boho.card.preview-playing .reviewed-motion {
+    visibility: visible;
+    animation: meadow-paper-clear 1.15s ease-out both;
+  }
 }
-.reviewed-scroll > span { opacity: 0; font: 400 clamp(25px, 4vw, 45px)/1.05 'Cormorant Garamond', Georgia, serif; }
-.reviewed-tie {
-  grid-area: 1/1; z-index: 1; width: 27%; aspect-ratio: 2;
-  background: url('/wd-demo/art/print-bow.svg') center / contain no-repeat; filter: saturate(.73) sepia(.2);
+@keyframes meadow-print-develop {
+  from { filter: sepia(.65) saturate(.55) brightness(1.14) contrast(.8); }
+  to { filter: none; }
 }
-.gallery .card.preview-playing .reviewed-scroll { animation: reviewed-unroll .95s .17s cubic-bezier(.19,.82,.29,1) both; }
-.gallery .card.preview-playing .reviewed-scroll > span { animation: reviewed-fade-in .4s .58s both; }
-.gallery .card.preview-playing .reviewed-tie { animation: reviewed-untie .47s ease-in both; }
-@keyframes reviewed-unroll { to { transform: scaleY(1); } }
-@keyframes reviewed-fade-in { to { opacity: 1; } }
-@keyframes reviewed-untie { to { opacity: 0; transform: translateY(13px) rotate(17deg); } }
+@keyframes meadow-paper-clear {
+  from { opacity: .74; }
+  to { opacity: 0; }
+}
 @media (prefers-reduced-motion: reduce) {
   .gallery .card .reviewed-motion { display: none; }
 }
 .gallery .royal-classic .preview img { object-position: 54% 47%; }
 .gallery .minimal-ivory .preview img { object-position: 52% 53%; }
 .gallery .ocean-breeze .preview img { object-position: 77% 57%; }
-.gallery .art-deco .preview img { object-position: 52% 65%; }
+.gallery .art-deco .preview img { object-position: 52% top; }
 .gallery .tropical-paradise .preview img { object-position: 52% 53%; }
 
 @font-face {
@@ -379,7 +383,7 @@
 .gallery .cherry-romance { --preview-weight: 500; }
 .gallery :is(.ribbon-lace,.blue-heirloom,.sepia-romance,.love-doodles,.blue-porcelain) { --preview-font: "Gallery Marck Script", Georgia, serif; }
 .gallery .wedding-atlas { --preview-font: Georgia, serif; --preview-style: italic; }
-.gallery .card .preview :is(.preview-name,.op-names,.reviewed-names,.reviewed-credit,.reviewed-scroll > span,.mail-envelope .mail-names),
+.gallery .card .preview :is(.preview-name,.op-names,.reviewed-names,.reviewed-credit,.mail-envelope .mail-names),
 .gallery .card :is(.print-preview,.illustrated-preview,.ca-preview) > span {
   font-family: var(--preview-font);
   font-weight: var(--preview-weight);
@@ -459,13 +463,14 @@
 .gallery .love-doodles .doodle-figures {transform-origin:center bottom;transform-box:fill-box}
 @media (prefers-reduced-motion:no-preference) {
   .gallery .love-doodles.preview-playing .doodle-figures {
-    animation:doodle-dance 1.35s ease-in-out both;
+    animation:doodle-dance 5s ease-in-out infinite;
   }
 }
 @keyframes doodle-dance {
-  25% {transform:translateY(-4px) rotate(-4deg)}
-  56% {transform:translateY(-3px) rotate(4deg)}
-  79% {transform:rotate(-1.5deg)}
+  7% {transform:translateY(-4px) rotate(-4deg)}
+  15% {transform:translateY(-3px) rotate(4deg)}
+  22% {transform:rotate(-1.5deg)}
+  29%, 100% {transform:none}
 }
 
 .gallery .art-deco .op-door::after {
@@ -611,7 +616,7 @@
 .gallery .blue-porcelain .ca-preview > span {
   width:100%;padding:.65em .3em;
   border:3px double #829bb8;
-  background:url('/wd-demo/art/porcelain-sprig.svg') right center/20% auto no-repeat,#f9fbf8;
+  background:#f9fbf8;
 }
 .gallery .wedding-atlas .ca-preview { background:url('/wd-demo/art/atlas-map.svg') center/cover no-repeat; }
 .gallery .wedding-atlas .ca-preview figure { border-color:#a19070;transform:rotate(-2deg); }
@@ -743,9 +748,79 @@
   transform-origin: left center;
 }
 .gallery .sepia-romance.preview-playing .sepia-preview-page {
-  animation: sepia-preview-turn 1.05s .28s cubic-bezier(.4,.1,.25,1) both;
+  animation: sepia-preview-turn 6s cubic-bezier(.4,.1,.25,1) infinite;
 }
 @keyframes sepia-preview-turn {
-  55% { opacity: 1; }
-  to { opacity: 0; transform: rotateY(-115deg); }
+  10% { opacity: 1; transform: rotateY(-65deg); }
+  20%, 80% { opacity: 0; transform: rotateY(-115deg); }
+  81% { opacity: 0; transform: none; }
+  94%, 100% { opacity: 1; transform: none; }
+}
+
+.atlas-preview-route {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: url('/wd-demo/art/atlas-map.svg') center/cover no-repeat;
+  pointer-events: none;
+}
+.atlas-preview-route svg {
+  position: absolute;
+  left: 17%;
+  top: 35%;
+  width: 22%;
+  filter: drop-shadow(0 3px 3px #58453344);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .wedding-atlas.preview-playing .atlas-preview-route {
+    display: block;
+    animation: atlas-preview-reveal .65s 1.15s ease both;
+  }
+  .wedding-atlas.preview-playing .atlas-preview-route svg {
+    animation: atlas-preview-walk 1.5s ease-in-out both;
+  }
+}
+@keyframes atlas-preview-reveal { to { opacity: 0; } }
+@keyframes atlas-preview-walk {
+  33% { transform: translate(65%, -18%) rotate(-5deg); }
+  66% { transform: translate(136%, 13%) rotate(4deg); }
+  to { transform: translate(175%, 45%); }
+}
+
+.gallery .blue-heirloom .print-preview::before {
+  inset: 50% 5% auto;
+  aspect-ratio: 560 / 380;
+  transform: translateY(-50%);
+}
+.gallery .blue-heirloom .print-preview::after {
+  inset: auto auto calc(50% + min(27%, 30cqw)) 4%;
+  width: 30%;
+  height: 20%;
+}
+.gallery .heirloom-preview-content {
+  position: absolute;
+  inset: 50% 5% auto;
+  aspect-ratio: 560 / 380;
+  padding: 7% 12% 6%;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: .55rem;
+  min-width: 0;
+}
+.gallery .heirloom-preview-content img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: 62% 28%;
+  border: 1px solid #8495a0;
+  padding: 3px;
+  background: #f6eddc;
+  filter: saturate(.72);
+}
+.gallery .heirloom-preview-content span {
+  font-family: var(--preview-font);
+  font-size: clamp(1rem, 2.5vw, 1.85rem);
+  font-style: normal;
 }

@@ -40,6 +40,11 @@
 .celestial-love .schedule li p { font-size: 13px; }
 .ce-details { background: #30364e; }
 .ce-venue { display: grid; grid-template-columns: minmax(0,1.16fr) minmax(0,.84fr); align-items: center; }
+.ce-venue figure {
+  min-width: 0; margin: clamp(18px,4vw,54px) 0 0 var(--edge);
+  padding: clamp(5px,.8vw,10px);
+  border: 1px solid #cbbb923f; background: #262b40;
+}
 .ce-venue img { height: auto; aspect-ratio: 5/3; object-position: center 56%; filter: saturate(.7); }
 .ce-venue .location-copy { padding: clamp(22px,6vw,75px); }
 .ce-venue h2 { font-size: clamp(33px,5vw,67px); }
@@ -70,6 +75,7 @@
   .ce-cover { min-height: 390px; }
   .ce-title h1 :is(span,i) { display: block; }
   .ce-title h1 i { margin-block: .13em; }
+  .ce-venue figure { margin-inline: var(--edge); }
   .ce-story,.ce-date .ni-date,.ce-venue,.celestial-love .response { grid-template-columns: minmax(0,1fr); }
   .ce-date .digits { grid-column: 1; grid-row: auto; text-align: left; justify-content: start; margin-top: 14px; }
   .celestial-love .schedule ol { grid-template-columns: repeat(2,minmax(0,1fr)); }

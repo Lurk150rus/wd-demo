@@ -90,12 +90,24 @@
     <p><a href="https://www.pexels.com/photo/a-bride-and-groom-are-standing-on-the-steps-of-a-building-27939986/">Фото: Pexels</a></p></footer>
 <dialog class="nw-opening" data-occasion-opening aria-label="Свадебный выпуск" hidden>
     <div class="nw-opening-stage">
-        <div class="nw-paper">
-            <div class="nw-paper-title"><p class="overline">Свадебный выпуск</p><h2 data-opening-names></h2><p data-opening-date></p></div>
-            <div class="nw-fold" aria-hidden="true"></div>
-        </div>
-        <button type="button" data-open>Развернуть газету</button>
-        <form method="dialog"><button type="submit">Пропустить</button></form>
+        <article class="nw-broadsheet">
+            <div class="nw-edition-line"><span>Свадебная хроника</span><span>№ 01</span></div>
+            <div class="nw-broadsheet-grid">
+                <div class="nw-opening-copy">
+                    <p class="nw-edition-label">Специальный выпуск</p>
+                    <h2 data-opening-names></h2>
+                    <p class="nw-edition-date" data-opening-date></p>
+                </div>
+                <div class="nw-opening-photo" aria-hidden="true">
+                    <img src="/wd-demo/photos/newspaper-wedding.webp" alt="">
+                    <div class="nw-press-mask"><span>В печать</span></div>
+                </div>
+            </div>
+            <div class="nw-opening-actions">
+                <button type="button" data-open>Читать выпуск <span aria-hidden="true">→</span></button>
+                <form method="dialog"><button type="submit">Пропустить</button></form>
+            </div>
+        </article>
     </div>
 </dialog>
 </body></html>

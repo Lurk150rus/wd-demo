@@ -133,6 +133,9 @@
 .blue-heirloom .pi-venue {background:var(--grain),#dae2e5;gap:1.3rem}
 .blue-heirloom .pi-postcard {transform:none;border-radius:50% 50% 0 0;padding:.4rem;outline:1px solid #7c8789;outline-offset:4px}
 .blue-heirloom .pi-postcard img {aspect-ratio:4/4;border-radius:inherit}
+.blue-heirloom :is(.pi-portrait, .pi-postcard) img[src$="/blue-heirloom.webp"] {
+  object-position: 70% top;
+}
 .blue-heirloom .pi-venue .location-copy {background:none;box-shadow:none;border:0;outline:0}
 .blue-heirloom .pi-footer {background:var(--silk);text-shadow:0 1px 4px #243443;color:#fff}
 @media (min-width:720px) {

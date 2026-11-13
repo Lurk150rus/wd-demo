@@ -58,6 +58,10 @@
 .is-opening .mail-card,.card.preview-playing .mail-card {animation:mail-rise .96s .66s cubic-bezier(.22,.68,.18,1) both}
 .is-opening .mail-front,.is-opening .mail-back,
 .card.preview-playing :is(.mail-front,.mail-back) {animation:mail-clear .42s 1.24s ease both}
+.gallery .card.preview-playing .mail-flap {
+  animation: mail-open .58s .14s cubic-bezier(.3,.1,.25,1) both,
+             mail-clear .42s 1.24s ease both;
+}
 @keyframes mail-unseal {to {opacity:0;scale:.72}}
 @keyframes mail-open {to {transform:rotateX(174deg)}}
 @keyframes mail-behind {0%,23% {z-index:4} 24%,100% {z-index:1}}

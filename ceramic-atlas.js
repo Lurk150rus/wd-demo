@@ -28,6 +28,11 @@ if (route) {
 }
 
 initializeOpening(dialog => {
+  if (dialog.querySelector('.mail-envelope')) {
+    return dialog.animate([{opacity: 1}, {opacity: 1, offset: .83}, {opacity: 0}],
+      {duration: 1980, easing: 'ease-in-out', fill: 'forwards'});
+  }
+
   const gsap = window.gsap;
   if (!gsap) {
     const animation = dialog.animate([{opacity: 1}, {opacity: 0}], 280);
@@ -35,7 +40,6 @@ initializeOpening(dialog => {
   }
 
   const get = selector => dialog.querySelector(selector);
-  const atlas = Boolean(get('.ca-fold'));
   const controls = [...dialog.querySelectorAll('button')];
   const animated = [...controls, dialog];
   let done;
@@ -43,24 +47,14 @@ initializeOpening(dialog => {
   const timeline = gsap.timeline({onComplete: done});
   timeline.to(controls, {opacity: 0, duration: .23}, 0);
 
-  if (atlas) {
-    const [fold, left, right, label] = ['.ca-fold', '.left', '.right', '.ca-fold-label'].map(get);
-    animated.push(fold, left, right, label);
-    timeline
-      .to(label, {opacity: 0, y: 10, duration: .32}, 0)
-      .to(left, {rotateY: 180, opacity: .15, duration: .73, ease: 'power2.inOut'}, .16)
-      .to(right, {rotateY: -180, opacity: .15, duration: .75, ease: 'power2.inOut'}, .27)
-      .to(fold, {scale: 1.45, duration: .65, ease: 'power2.inOut'}, .75)
-      .to(dialog, {opacity: 0, duration: .45}, 1.05);
-  } else {
-    const [lid, shine, card] = ['.ca-box-lid', '.ca-box-lid span', '.ca-box-card'].map(get);
-    animated.push(lid, shine, card);
-    timeline
-      .fromTo(shine, {xPercent: -110, opacity: 0}, {xPercent: 110, opacity: .85, duration: .56}, 0)
-      .to(lid, {rotateX: 78, y: -70, opacity: 0, duration: .72, ease: 'power2.inOut'}, .31)
-      .to(card, {yPercent: -29, scale: 1.27, duration: .84, ease: 'power2.inOut'}, .62)
-      .to(dialog, {opacity: 0, duration: .45}, 1.13);
-  }
+  const [fold, left, right, label] = ['.ca-fold', '.left', '.right', '.ca-fold-label'].map(get);
+  animated.push(fold, left, right, label);
+  timeline
+    .to(label, {opacity: 0, y: 10, duration: .32}, 0)
+    .to(left, {rotateY: 180, opacity: .15, duration: .73, ease: 'power2.inOut'}, .16)
+    .to(right, {rotateY: -180, opacity: .15, duration: .75, ease: 'power2.inOut'}, .27)
+    .to(fold, {scale: 1.45, duration: .65, ease: 'power2.inOut'}, .75)
+    .to(dialog, {opacity: 0, duration: .45}, 1.05);
 
   return {finished, cancel() {
     timeline.kill();

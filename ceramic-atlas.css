@@ -145,7 +145,15 @@
 .wedding-atlas .ca-program li>div {grid-column:2;align-self:start}
 .wedding-atlas .ca-venue {background:var(--grain),#dbe1cc}
 .wedding-atlas .ca-venue figure,.ca-postcard {padding:.5rem;background:#fff6df;border:1px solid #a39373;box-shadow:0 7px 16px #493d2630;transform:rotate(-3deg)}
-.wedding-atlas .ca-venue figure svg {width:34%;position:absolute;right:-7%;bottom:-11%;filter:drop-shadow(1px 2px 2px #e8d3ab)}
+.wedding-atlas .ca-venue figure {
+  width:min(96%,27rem);display:grid;grid-template-columns:minmax(0,1fr) clamp(3.5rem,8vw,5.75rem);
+  align-items:end;gap:.6rem;
+}
+.wedding-atlas .ca-venue figure svg {
+  grid-column:2;grid-row:1;width:100%;display:block;margin-bottom:.2rem;
+  border-bottom:1px solid #a3937370;
+}
+.wedding-atlas .ca-venue figure img {grid-column:1;grid-row:1}
 .wedding-atlas .ca-venue img,.ca-postcard img {aspect-ratio:1.5;filter:saturate(.83)}
 .ca-postcard {width:min(70%,28rem);margin:2rem auto 0!important;transform:rotate(3deg)}
 .wedding-atlas .ca-swatches i {border-radius:44% 53% 45% 53%;background:var(--grain),var(--swatch);box-shadow:inset 0 0 7px #fff7df86}
@@ -169,12 +177,6 @@
 .ca-opening form button {background:transparent;color:inherit;text-decoration:underline;font-size:.85rem}
 .ca-opening h2 {font-size:clamp(1.55rem,6vw,3rem)}
 .ca-opening p {margin:.4rem 0}
-.ca-box {position:relative;width:min(86vw,27rem,60svh);aspect-ratio:1.4;perspective:850px;margin-bottom:1.1rem}
-.ca-box-base,.ca-box-card,.ca-box-lid {position:absolute}
-.ca-box-base {inset:9% 0 -4%;border-radius:50%;background:linear-gradient(0deg,#244870,#a6bcd0 45%,#f9fbff 77%);box-shadow:0 13px 19px #24466657}
-.ca-box-card {inset:9% 12% 8%;display:grid;align-content:center;padding:8%;border:3px double var(--rule);background:#fbfcfc;box-shadow:0 5px 13px #3a526940;overflow:auto}
-.ca-box-lid {inset:0;border-radius:50%;transform-origin:50% 12%;overflow:hidden;background:var(--rim) center/100% 100%,radial-gradient(ellipse at 36% 28%,#fff 35%,#cfdeec 80%);box-shadow:0 5px 0 #5d80a5,inset 0 0 0 3px #eff6fc}
-.ca-box-lid span {position:absolute;inset:0;opacity:0;background:linear-gradient(108deg,transparent 30%,#fff 48%,transparent 64%);pointer-events:none}
 .ca-fold {position:relative;width:min(86vw,31rem,64svh);aspect-ratio:1.46;perspective:850px;margin-bottom:1rem;background:#efe1c3;box-shadow:0 12px 20px #513c2935}
 .ca-fold-sheet,.ca-fold-wing,.ca-fold-label {position:absolute}
 .ca-fold-sheet {inset:0;background:var(--map) center/cover no-repeat}
@@ -185,8 +187,6 @@
 @keyframes ca-unveil {to {opacity:0}}
 @media(prefers-reduced-motion:reduce) {.ca-opening.is-opening::backdrop {animation:none}}
 @media(max-width:430px) {.ca-nav {letter-spacing:.065em}.blue-porcelain .ca-inscription {padding-inline:16%}}
-.wedding-atlas .ca-venue figure {width:min(88%,24rem)}
-.wedding-atlas .ca-venue figure svg {right:-4%}
 @media(min-width:750px) {
   .blue-porcelain .ca-cover {padding-block:3rem}
   .blue-porcelain .ca-inscription {min-height:34rem;padding-block:6.5rem}
@@ -239,11 +239,17 @@
 .ca .ca-cover .ca-link { grid-column: 1/-1; }
 .wedding-atlas .ca-map { margin: 1.5rem auto 3rem; width: min(94%,61rem); }
 .ca-map-couple { position: absolute; width: 12%; height: 24%; left: 43%; top: 28%; pointer-events: none; }
-.ca-box .ca-box-base,.ca-box .ca-box-lid { border-radius: 5px; }
-.ca-box .ca-box-lid {
-  background: var(--sprig) left top / 32% auto no-repeat,var(--sprig) right bottom / 32% auto no-repeat,
-    linear-gradient(145deg,#fff,#e2ecf5);
-  border: 4px double #829bb8;
+.blue-porcelain .mail-envelope {
+  --mail-paper:#fbfcff;
+  --mail-edge:#8098b4;
+  --mail-fold:linear-gradient(145deg,#f5f9ff,#a9bfd6);
+  --mail-front:var(--sprig) left bottom / 23% auto no-repeat,linear-gradient(145deg,#e2ebf5,#fbfcff 70%);
+  --mail-back:#a5bdd4;
+}
+.blue-porcelain .mail-seal {
+  background:#254e83;
+  color:#f6f8fc;
+  border-color:#9fb9d4;
 }
 @media (min-width:750px) {
   .ca .ca-cover { grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr); align-items: center; gap: 1.8rem; }
