@@ -442,8 +442,6 @@
 }
 .gallery .winter-fairytale .preview > small:not(.opening-badge) {display:none}
 .gallery .winter-fairytale .opening-badge {bottom:auto;top:12px}
-.gallery .winter-fairytale .opening-preview {animation-name:winter-cover-reveal}
-@keyframes winter-cover-reveal {0%,48%,100% {opacity:1} 62%,92% {opacity:0}}
 
 .gallery .celestial-love .reviewed-motion {
   background:url('/wd-demo/art/celestial-chart.svg') center/cover no-repeat,#23283c;
@@ -618,15 +616,6 @@
 .gallery .wedding-atlas .ca-preview { background:url('/wd-demo/art/atlas-map.svg') center/cover no-repeat; }
 .gallery .wedding-atlas .ca-preview figure { border-color:#a19070;transform:rotate(-2deg); }
 .gallery .wedding-atlas .ca-preview > span { z-index:1;margin-top:-.3rem; }
-.gallery .ribbon-lace.preview-playing .reviewed-sheet::before {
-  transform-origin: 50% 30%;
-  animation: ribbon-preview-sway 1.15s .18s ease-in-out both;
-}
-@keyframes ribbon-preview-sway {
-  30% { transform: rotate(-4deg) translateY(-2px); }
-  62% { transform: rotate(3deg); }
-  82% { transform: rotate(-1deg); }
-}
 .gallery .winter-fairytale .opening-preview {
   background:
     linear-gradient(155deg,#d7e4ebcd,#edf4f7e8 49%,#b7ccd8dc),
@@ -650,7 +639,7 @@
 .gallery .winter-fairytale .op-stage::before { inset: 5% auto auto 5%; }
 .gallery .winter-fairytale .op-stage::after { inset: auto 5% 5% auto; transform: rotate(180deg); }
 @media (prefers-reduced-motion: reduce) {
-  .gallery .ribbon-lace.preview-playing .reviewed-sheet::before { animation: none; }
+  .gallery .ribbon-lace .cherry-preview-opening, .sepia-preview-page { display: none; }
 }
 .tropical-paradise .reviewed-title::before {
   background-image: url('/wd-demo/art/tropical-frond.svg');
@@ -667,4 +656,96 @@
   background: url('/wd-demo/art/tropical-frond.svg') left center/contain no-repeat;
   opacity: .65;
   transform: scaleX(-1);
+}
+
+.gallery .royal-classic.card .preview {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 12px;
+  padding: 22px clamp(14px, 3vw, 30px);
+}
+.gallery .royal-classic.card .preview > img {
+  grid-row: 2;
+  min-height: 0;
+  transform: none;
+}
+.gallery .royal-classic.card .preview > .preview-name {
+  position: static;
+  grid-row: 1;
+  min-width: 0;
+  color: #672b3f;
+  font-size: clamp(22px, 2.8vw, 34px);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.gallery .royal-classic.card .preview > small { display: none; }
+
+.gallery .winter-fairytale .opening-preview,
+.gallery .winter-fairytale .op-names { animation: none; }
+.gallery .winter-fairytale.preview-playing .opening-preview {
+  animation: winter-glass-clear 1.45s .5s ease both;
+}
+.gallery .winter-fairytale .op-stage { overflow: hidden; }
+.gallery .winter-fairytale .op-stage::before {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(112deg, transparent 35%, #fff9 50%, transparent 65%);
+}
+.gallery .winter-fairytale.preview-playing .op-stage::before {
+  animation: winter-glass-shimmer 1.15s .15s ease both;
+}
+@keyframes winter-glass-clear {
+  35% { opacity: 1; }
+  to { opacity: 0; transform: scale(1.035); }
+}
+@keyframes winter-glass-shimmer {
+  from { opacity: .2; transform: translateX(-90%); }
+  45% { opacity: .8; }
+  to { opacity: 0; transform: translateX(90%); }
+}
+
+.gallery .ribbon-lace .reviewed-cover { display: block; }
+.gallery .ribbon-lace .cherry-preview-opening {
+  background: url('/wd-demo/art/print-grain.svg'), radial-gradient(ellipse at 48% 26%, #777553, #4f5036 78%);
+}
+.gallery .ribbon-lace .cherry-preview-portrait img { object-position: center 35%; }
+.gallery .ribbon-lace.preview-playing .cherry-preview-opening {
+  animation: cherry-preview-reveal .65s 1s ease both;
+}
+.gallery .ribbon-lace.preview-playing .reviewed-sheet {
+  animation: cherry-preview-lift .8s .45s ease both;
+}
+.gallery .ribbon-lace.preview-playing .reviewed-sheet::before {
+  transform-origin: center 30%;
+  animation: ribbon-preview-release .65s ease both;
+}
+@keyframes ribbon-preview-release {
+  25% { transform: rotate(-5deg); }
+  to { opacity: 0; transform: translate(24%, -18%) rotate(12deg); }
+}
+
+.gallery .sepia-preview-print {
+  position: relative;
+  width: 90%;
+  border-radius: 50%;
+  perspective: 650px;
+}
+.gallery .sepia-romance .sepia-preview-print img { width: 100%; }
+.sepia-preview-page {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 3px double #a98667;
+  background: url('/wd-demo/art/sepia-botanical.svg') center / auto 90% no-repeat,
+    url('/wd-demo/art/print-grain.svg'), linear-gradient(90deg, #ceb693, #f4e5cc 20%, #efddbe);
+  transform-origin: left center;
+}
+.gallery .sepia-romance.preview-playing .sepia-preview-page {
+  animation: sepia-preview-turn 1.05s .28s cubic-bezier(.4,.1,.25,1) both;
+}
+@keyframes sepia-preview-turn {
+  55% { opacity: 1; }
+  to { opacity: 0; transform: rotateY(-115deg); }
 }
