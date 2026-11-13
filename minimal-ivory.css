@@ -86,22 +86,34 @@
 .iv-opening { --opening-ready: 1; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; padding: 0; background: #e8e3d8; color: var(--ink); }
 .iv-opening::backdrop { background: transparent; }
 .iv-opening-stage { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%; gap: 21px; padding: 24px; overflow: clip; }
-.iv-fold { width: min(480px,100%); position: relative; perspective: 950px; transform-origin: 0 0; background: var(--paper); box-shadow: 0 17px 54px #2e241b20; }
-.iv-fold-copy { padding: clamp(20px,5vw,45px); }
-.iv-fold-copy .overline { margin: 0 0 16px; }
-.iv-fold-copy h2 { font-size: clamp(36px,7vw,67px); }
-.iv-fold-copy [data-opening-date] { margin-top: 13px; }
-.iv-leaf { position: absolute; inset: 0 0 0 57%; background: linear-gradient(90deg,#e6e0d5,#f4efe5 8%,#f7f3e9); border-left: 1px solid #bcb3a4; transform-origin: left center; pointer-events: none; }
+.iv-opening-print {
+  width: min(100%, 760px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  border-block: 1px solid var(--line);
+}
+.iv-opening-caption { padding: clamp(12px, 4vw, 42px); overflow-wrap: anywhere; }
+.iv-opening-caption .overline { margin: 0 0 12px; }
+.iv-opening-caption h2 { margin: 0; font-size: clamp(26px, 5vw, 66px); line-height: 1.05; }
+.iv-opening-caption [data-opening-date] { margin-top: 13px; }
+.iv-opening-photo { margin: 0; overflow: hidden; }
+.iv-opening-photo img {
+  display: block;
+  width: 100%;
+  height: clamp(210px, 44svh, 420px);
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1);
+}
+@media (max-width: 500px) {
+  .iv-opening-print { grid-template-columns: minmax(0, 1fr); }
+  .iv-opening-photo img { height: clamp(130px, 32svh, 280px); }
+}
 .iv-opening-actions { display: grid; text-align: center; gap: 4px; }
 .iv-opening-actions button { padding: 8px 16px; min-height: 44px; color: inherit; background: none; border: 0; }
 .iv-opening-actions [data-open] { border: 1px solid var(--ink); }
 .iv-opening-actions form button { text-decoration: underline; text-underline-offset: .3em; }
-.iv-opening.is-opening:not([data-gsap-motion]) .iv-leaf { animation: iv-open-leaf .69s cubic-bezier(.35,.05,.26,1) both; }
-.iv-opening.is-opening:not([data-gsap-motion]) .iv-fold { animation: iv-to-cover .99s .54s cubic-bezier(.27,.1,.24,1) both; }
-.iv-opening.is-opening:not([data-gsap-motion]) .iv-opening-actions { animation: iv-actions-out .35s ease-out both; }
-@keyframes iv-open-leaf { 78% { opacity: 1; } to { transform: rotateY(170deg); opacity: 0; } }
-@keyframes iv-to-cover { to { transform: translate(var(--iv-x,0px),var(--iv-y,0px)) scale(var(--iv-scale,1)); box-shadow: none; } }
-@keyframes iv-actions-out { to { opacity: 0; } }
 @media (max-width: 700px) {
   .iv-cover { grid-template-columns: minmax(0,1fr); gap: 16px; margin-top: 17px; }
   .iv-cover h1 { font-size: clamp(55px,15.5vw,88px); margin-block: 15px 21px; }

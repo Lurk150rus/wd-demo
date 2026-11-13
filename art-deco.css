@@ -92,3 +92,31 @@
   .ad-venue img { min-height: 0; height: auto; aspect-ratio: 5/3; }
 }
 @media (prefers-reduced-motion: reduce) { .ad-opening * { animation: none !important; } }
+
+@media (max-width: 700px) {
+  .ad-program .schedule ol { display: block; min-width: 0; }
+  .ad-program .schedule li {
+    grid-template-columns: 3.4rem minmax(0, 1fr);
+    align-items: start;
+    gap: .65rem;
+  }
+  .ad-program .schedule .event-number { display: none; }
+  .ad-program .schedule time { min-width: 0; white-space: nowrap; }
+  .ad-program .schedule li > div { min-width: 0; overflow-wrap: anywhere; }
+}
+
+@media (min-width: 701px) {
+  .ad-portrait {
+    width: min(90%, 42rem);
+    margin: clamp(2rem, 6vw, 5rem) auto 0;
+    padding: .65rem;
+    border: 4px double var(--line);
+  }
+  .ad-portrait img {
+    display: block;
+    height: auto;
+    max-height: 76svh;
+    object-fit: contain;
+    background: #191614;
+  }
+}
