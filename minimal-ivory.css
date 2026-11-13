@@ -59,8 +59,8 @@
 .iv-agenda .ni-date { align-self: start; }
 .iv-agenda .ni-date .overline, .iv-agenda .section-title .overline { margin-top: 0; }
 .iv-agenda .ni-date h2 { margin: 14px 0 22px; }
-.iv-agenda .digits { display: grid; grid-template-columns: repeat(4,minmax(0,66px)); justify-content: start; gap: clamp(5px,1.6vw,20px); }
-.iv-agenda .digits b { min-width: 0; font-family: var(--serif); font-size: clamp(29px,4vw,55px); }
+.iv-agenda .digits { display: grid; grid-template-columns: repeat(4, max-content); justify-content: start; gap: clamp(5px,1.6vw,20px); }
+.iv-agenda .digits b { min-width: 0; white-space: nowrap; font-family: var(--serif); font-size: clamp(29px,4vw,55px); }
 .iv-agenda .digits span { letter-spacing: .06em; }
 .iv-agenda .schedule { display: block; width: 100%; padding: 0; }
 .iv-agenda .section-title h2 { margin: 14px 0 21px; font-size: clamp(30px,4vw,54px); }
